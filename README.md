@@ -1,35 +1,32 @@
-# Protokolle zum Fortgeschrittenenpraktikum für Physikstudierende
+# Reports for the advanced lab course in the physics master degree
 
-**Beschreibung**
+**Description**
 
-Aus [Moodle](https://moodle.tu-dortmund.de/):
-> Das Physikalische Praktikum für Fortgeschrittene ist eine einsemestrige Veranstaltung und vertieft die in den Grundpraktika erlernten Techniken.
+From [Moodle](https://moodle.tu-dortmund.de/):
+> The advanced physics lab course serves to strengthen the knowledge obtained in the beginner lab courses.
 
-Die Struktur dieses Projekts und die grundlegende Methodik sind an den
-[Toolbox-Workshop](https://toolbox.pep-dortmund.org/notes/) von
-[PeP et al. e.V.](https://pep-dortmund.org/) angelehnt. Als Hilfe stellt die
+The structure of this project as well as the employed methods are based on the
+[Toolbox-Workshop](https://toolbox.pep-dortmund.org/notes/) held by
+[PeP et al. e.V.](https://pep-dortmund.org/). For reference, the
 [Fachschaft](https://fachschaft-physik.tu-dortmund.de/wordpress/studium/praktikum/altprotokolle-fp/)
-Altprotokolle zur Verfügung.
+provides previous lab reports.
 
-**Autoren**
+**Authors**
 
-Fritz Agildere ([fritz.agildere@udo.edu](mailto:fritz.agildere@udo.edu)) und
-Amelie Strathmann ([amelie.strathmann@udo.edu](mailto:amelie.strathmann@udo.edu))
+Fritz Ali Agildere ([fritz.agildere@udo.edu](mailto:fritz.agildere@udo.edu)) und
+Jan Lucca Viola ([janlucca.viola@udo.edu](mailto:janlucca.viola@udo.edu))
 
-**Struktur**
+**Structure**
 
-Die Protokolle werden mit `make` als PDF-Datei ausgegeben. Im Hauptverzeichnis wird die allgemeine Konfiguration
-vorgenommen. Die Unterverzeichnisse übernehmen diese standardmäßig. Die einzelnen Versuche enthalten wiederum die
-Verzeichnisse `build`, in dem sich alle generierten Dateien befinden, und `content`, das der Struktur des Protokolls
-entspricht:
+The reports are created as a PDF file via the `make` command. General configuration is done in the main directory and adopted in the subdirectories by default.
+Individual experiments consist of the directories `build` for all generated files as well as `content`  which represents the structure of the report:
 
-1. Zielsetzung
-2. Theorie
-3. Durchführung
-4. Auswertung
-5. Diskussion
+1. Objective
+2. Theory
+3. Procedure
+4. Results
+5. Discussion
 
-Zur graphischen Darstellung und um abgeleitete Messwerte automatisch zu berechnen, werden `python` Skripte
-mit den entsprechenden Bibliotheken genutzt. Die Dokumente werden unter Anwendung von `lualatex` kompiliert.
+For graphical presentation and the automated generation of results, `python` scripts with the required packages are used. Documents are compiled using `lualatex`.
 
-Das Projekt *Fortgeschrittenenpraktikum* ist mit GNU/Linux kompatibel.
+The project *Advanced Laboratory* is compatible with GNU/Linux.
