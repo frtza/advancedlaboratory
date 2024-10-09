@@ -7,7 +7,7 @@ From [Moodle](https://moodle.tu-dortmund.de/):
 
 The structure of this project as well as the employed methods are based on the
 [Toolbox-Workshop](https://toolbox.pep-dortmund.org/notes/) held by
-[PeP et al. e.V.](https://pep-dortmund.org/). For reference, the
+[PeP et al. e.V.](https://pep-dortmund.org/) For reference, the
 [Fachschaft](https://fachschaft-physik.tu-dortmund.de/wordpress/studium/praktikum/altprotokolle-fp/)
 provides previous lab reports.
 
