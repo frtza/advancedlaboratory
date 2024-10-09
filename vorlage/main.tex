@@ -1,0 +1,35 @@
+\input{header.tex}
+
+\subject{\texorpdfstring{\vspace{2ex}}{}V123\texorpdfstring{\vspace{-2ex}}{}} % Nummer
+\title{Vorlage} % Titel: Name des Versuchs
+\date{
+	Durchführung: 14. Oktober 2024 % Datum
+	\\ Abgabe: 21. Oktober 2024 % Datum
+}
+
+\begin{document}
+
+\selectlanguage{ngerman}
+
+\pagenumbering{gobble}
+
+\maketitle
+\thispagestyle{empty}
+
+\pagenumbering{arabic}
+
+\tableofcontents
+\newpage
+
+\input{content/zielsetzung.tex}
+\input{content/theorie.tex}
+\input{content/durchfuehrung.tex}
+\input{content/auswertung.tex}
+\input{content/diskussion.tex}
+
+\printbibliography{}
+
+\newpage
+\input{content/anhang.tex}
+
+\end{document}
