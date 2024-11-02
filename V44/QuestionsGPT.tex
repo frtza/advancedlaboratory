@@ -1,0 +1,75 @@
+\documentclass[a4paper,12pt]{article}
+
+% Packages
+\usepackage[utf8]{inputenc} % For encoding
+\usepackage{amsmath} % For mathematical symbols and equations
+\usepackage{amssymb} % For additional mathematical symbols
+\usepackage{graphicx} % For including graphics
+\usepackage{geometry} % For page layout
+\geometry{margin=1in} % Setting margins
+\usepackage{hyperref} % For hyperlinks
+
+\title{Basics of X-ray Reflectometry}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{Experimental Basics of X-ray Reflectometry}
+
+\subsection*{1. How is X-ray Radiation Produced in an X-ray Tube?}
+X-ray radiation is generated when high-energy electrons, accelerated by a voltage difference, strike a metal target (anode) inside an X-ray tube. This process involves:
+\begin{itemize}
+    \item \textbf{Bremsstrahlung Radiation}: The deceleration of electrons due to the Coulomb field of the atomic nuclei in the target produces continuous X-ray radiation.
+    \item \textbf{Characteristic X-rays}: Electrons may displace inner-shell electrons in the target atoms, and when these vacancies are filled by higher-energy electrons, X-rays with specific energies characteristic of the target material are emitted.
+\end{itemize}
+The intensity and wavelength of the X-rays depend on the accelerating voltage and the material of the anode, with common choices including copper or molybdenum.
+
+\subsection*{2. What is a Göbel Mirror and How Does it Work?}
+A Göbel mirror is a device that uses a multilayer coating with alternating layers of high and low electron densities to focus or collimate X-ray beams. Through total external reflection, it directs the X-ray beam along a precise path, enhancing beam intensity and focus, which improves signal quality in reflectometry experiments.
+
+\subsection*{3. How is the Wave Vector Transfer Defined in an X-ray Reflectometry Experiment?}
+The wave vector transfer \( q \) (or momentum transfer) quantifies the change in the X-ray wave vector during reflection or scattering and is defined as:
+\[
+q = k_f - k_i
+\]
+where \( k_i \) and \( k_f \) are the incident and reflected wave vectors, respectively. In reflectometry, this is often simplified in terms of the angle of incidence \( \theta \):
+\[
+q_z = \frac{4\pi}{\lambda} \sin \theta
+\]
+where \( q_z \) is the perpendicular component of \( q \), and \( \lambda \) is the wavelength of the X-rays. The wave vector transfer provides information about the spatial structure of the layer, with larger values of \( q \) probing finer structural details.
+
+\subsection*{4. What are Fresnel’s Formulae and What Do They Describe?}
+Fresnel’s formulae describe the reflection and transmission of electromagnetic waves at an interface between two media with different refractive indices. They determine the reflectivity \( R \) as a function of the angle of incidence and the refractive indices of the media.
+
+For X-rays, the refractive index \( n \) in materials is slightly less than 1, which leads to total external reflection at small angles. Fresnel’s equations can thus be adapted to describe the reflection of X-rays off surfaces at near-grazing incidences, essential in X-ray reflectivity studies.
+
+\subsection*{5. What are Kiessig Oscillations and How Do They Occur?}
+Kiessig oscillations are interference fringes observed in the reflectivity curve of a thin film when X-rays are reflected. These oscillations result from the constructive and destructive interference between X-rays reflected from the top and bottom interfaces of the film.
+
+The periodicity of the oscillations in the reflectivity curve is related to the film's thickness \( d \) and is given approximately by:
+\[
+\Delta q_z = \frac{2\pi}{d}
+\]
+where \( \Delta q_z \) is the spacing between oscillations in reciprocal space. Measuring these oscillations allows for the determination of layer thickness.
+
+\subsection*{6. How Does the Parratt Algorithm Work (Qualitatively)?}
+The Parratt algorithm is a recursive method used to calculate the reflectivity of X-rays at multilayer interfaces. It involves:
+\begin{itemize}
+    \item Dividing the material into discrete layers, each with its own refractive index.
+    \item Calculating the reflection and transmission at each interface, considering phase changes and interference effects.
+    \item Combining the contributions of each layer iteratively to obtain the total reflectivity.
+\end{itemize}
+The algorithm is particularly useful for multi-layer structures where simple analytical solutions are impractical.
+
+\subsection*{7. How Must the Parratt Algorithm Be Modified to Apply to Rough Surfaces?}
+For rough surfaces, the Parratt algorithm needs to account for the decreased coherence of reflected waves due to surface irregularities. This is often done by:
+\begin{itemize}
+    \item Incorporating a \textbf{Debye-Waller factor} or \textbf{roughness factor} that modifies the reflectivity at each interface.
+    \item Modeling the roughness as a Gaussian distribution, which reduces the reflectivity based on the standard deviation of the surface height \( \sigma \), typically by a term \( e^{-(q_z \sigma)^2} \) that dampens the reflectivity at higher angles (larger \( q \) values).
+\end{itemize}
+This adjustment allows the Parratt algorithm to provide more accurate predictions of reflectivity for surfaces with significant roughness.
+
+\end{document}
