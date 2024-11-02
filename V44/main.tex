@@ -1,0 +1,37 @@
+\input{header.tex}
+
+\selectlanguage{english}
+\sisetup{locale=US}
+\publishers{TU Dortmund – Department of Physics}
+
+\subject{\texorpdfstring{\vspace{2ex}}{}V44\texorpdfstring{\vspace{-2ex}}{}} % number
+\title{X-ray reflectrometry} % title: name of the experiment
+\date{
+	Experiment: November 4, 2024 % date
+	\\ Submission: November 4, 2024 % date
+}
+
+\begin{document}
+
+\pagenumbering{gobble}
+
+\maketitle
+\thispagestyle{empty}
+
+\tableofcontents
+\newpage
+
+\pagenumbering{arabic}
+
+\input{content/objective.tex}
+\input{content/background.tex}
+\input{content/procedure.tex}
+\input{content/result.tex}
+\input{content/discussion.tex}
+
+\printbibliography{}
+
+\newpage
+\input{content/appendix.tex}
+
+\end{document}
