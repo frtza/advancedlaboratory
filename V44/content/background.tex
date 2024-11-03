@@ -51,7 +51,7 @@ to second order. Rewriting Snell's law \eqref{eqn:snell} as
 \end{equation*}
 yields \cite{McMorrow_2011_3} the relationship
 \begin{equation}
-	\theta_i \cong \sqrt{\theta_t^2 + 2\delta \mp 2i\beta} \: ,
+	\theta_t \cong \sqrt{\theta_i^2 - 2\delta \pm 2i\beta} \: ,
 	\label{eqn:angles}
 \end{equation}
 where products of $\delta, \beta, \theta_t \ll 1$ are ignored in the last step. Similarly, one identifies
@@ -59,6 +59,36 @@ where products of $\delta, \beta, \theta_t \ll 1$ are ignored in the last step. 
 	\theta_c \cong \sqrt{2\delta \mp 2i\beta}
 \end{equation*}
 by setting $\theta_t = 0$ in \eqref{eqn:angles}.
+
+
+
+\subsection{Fresnel coefficients}
+
+By decomposing any electromagnetic wave into linearly polarized components with the electric field oscillations orthogonal (s-polarization) or
+parallel (p-polarization) to the plane of incidence, one can derive Fresnel's formulae due to continuity of the tangential field component. For
+the amplitude ratio of reflected to incident ray, this reads as
+\begin{equation*}
+	r_s = \pfrac{\sin\theta_i - n\sin\theta_t}{\sin\theta_i + n\sin\theta_t}
+\end{equation*}
+for the s-polarized and
+\begin{equation*}
+	r_p = \pfrac{n\sin\theta_i - \sin\theta_t}{n\sin\theta_i + \sin\theta_t}
+\end{equation*}
+for the p-polarized component. Assuming small angles, an expansion
+\begin{equation*}
+	\sin\theta \cong \theta
+\end{equation*}
+can be made to linear order. With this and by again neglecting products of $\delta, \beta, \theta_i, \theta_t \ll 1$, one finds
+\begin{equation*}
+	r_s \cong r_p \cong \pfrac{\theta_i - \theta_t}{\theta_i + \theta_t} \cong
+	\pfrac{\theta_i - \sqrt{\theta_i^2 - 2\delta \pm 2i\beta}}{\theta_i + \sqrt{\theta_i^2 - 2\delta \pm 2i\beta}} \equiv r
+\end{equation*}
+as the amplitude reflectivity, with the corresponding transmittivity $t = 1 - r$. Here, the findings from \eqref{eqn:angles} have been used.
+Accordingly,
+\begin{align*}
+	R = |r|^2 \: , && T = |t|^2
+\end{align*}
+describe the reflectivity and transmittivity in terms of intensity ratios.
 
 
 
@@ -72,12 +102,6 @@ by setting $\theta_t = 0$ in \eqref{eqn:angles}.
 	\caption{Schematic light paths inside a thin layer atop a substrate producing Kiessig oscillations according to \cite{Kiessig_1931}.}
 	\label{fig:kiessig}
 \end{figure}
-
-
-
-\subsection{Fresnel coefficients}
-
-Fresnel's formulae\footnote{In the general form given in \cite{Parratt_1954}.}
 
 
 
