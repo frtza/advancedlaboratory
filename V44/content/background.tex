@@ -74,7 +74,7 @@ for the s-polarized and
 \begin{equation*}
 	r_p = \pfrac{n\sin\theta_i - \sin\theta_t}{n\sin\theta_i + \sin\theta_t}
 \end{equation*}
-for the p-polarized component. Assuming small angles, an expansion
+for the p-polarized component \cite{Parratt_1954}. Assuming small angles, an expansion
 \begin{equation*}
 	\sin\theta \cong \theta
 \end{equation*}
@@ -83,7 +83,7 @@ can be made to linear order. With this and by again neglecting products of $\del
 	r_s \cong r_p \cong \pfrac{\theta_i - \theta_t}{\theta_i + \theta_t} \cong
 	\pfrac{\theta_i - \sqrt{\theta_i^2 - 2\delta \pm 2i\beta}}{\theta_i + \sqrt{\theta_i^2 - 2\delta \pm 2i\beta}} \equiv r
 \end{equation*}
-as the amplitude reflectivity, with the corresponding transmittivity $t = 1 - r$. Here, the findings from \eqref{eqn:angles} have been used.
+as the amplitude reflectivity, with the corresponding transmittivity $t = 1 - r$. Here, the findings from \eqref{eqn:angles} are used.
 Accordingly,
 \begin{align*}
 	R = |r|^2 \: , && T = |t|^2
@@ -94,7 +94,8 @@ describe the reflectivity and transmittivity in terms of intensity ratios.
 
 \subsection{Kiessig fringes}
 
-\cite{Kiessig_1931}
+When X-rays encounter a thin layer at low angles, oscillating dips in reflectivity are observed, named Kiessig fringes
+after their description in \cite{Kiessig_1931}. Labeling and conventions from Figure \ref{fig:kiessig} are adopted.
 
 \begin{figure}[H]
 	\centering
@@ -103,11 +104,49 @@ describe the reflectivity and transmittivity in terms of intensity ratios.
 	\label{fig:kiessig}
 \end{figure}
 
+In the first medium, the waves traverse as distance $AD$ while covering a length $n(AB + BC)$ in the second medium. Their difference is
+\begin{equation*}
+	\Delta = n(AB + BC) - AD \: .
+\end{equation*}
+Expressing $AB, BC$ in terms of $d, \psi$ and applying the small angle approximation,
+\begin{equation*}
+	AB = BC = \pfrac{d}{\sin\psi} \cong \pfrac{d}{\psi}
+\end{equation*}
+as well as
+\begin{equation*}
+	AC = (AB + BC)\cos\theta
+\end{equation*}
+for
+\begin{equation*}
+	AD = AC\cos\varphi = nAC\cos\psi = \pfrac{2dn\cos^2\psi}{\sin\psi} \cong \pfrac{2dn}{\psi}\cos^2\psi \cong \pfrac{2dn}{\psi} - 2dn\psi
+\end{equation*}
+follow, where the expansion
+\begin{equation*}
+	\cos^2\psi \cong 1 - \psi^2
+\end{equation*}
+is used. One then obtains
+\begin{equation*}
+	\Delta \cong \pfrac{2dn}{\psi} - \pfrac{2dn}{\psi} + 2dn\psi \cong 2d\psi \: ,
+\end{equation*}
+where the last step neglects products of $\delta, \beta, \psi \ll 1$. Using \eqref{eqn:angles},
+\begin{equation*}
+	\Delta \cong 2d\sqrt{\varphi^2 - 2\delta \pm 2i\beta} \: ,
+\end{equation*}
+which produces an interference minimum for $\Delta = m\lambda$ with $m \in \mathbb{Z}$ and the wavelength $\lambda$.
+When comparing minima,
+\begin{equation*}
+	m_{1, 2}\lambda \equiv 2d\sqrt{\varphi_{1, 2}^2 - 2\delta \pm 2i\beta}
+\end{equation*}
+and by subtracting, rearranging and inserting, one arrives at
+\begin{align*}
+	d = \pfrac{\lambda}{2} \sqrt{\pfrac{m_1^2 - m_2^2}{\varphi_1^2 - \varphi_2^2}} \: , &&
+	\delta = \pfrac{m_1^2 \varphi_2^2 - m_2^2 \varphi_1^2}{2 (m_1^2 - m_2^2)}
+\end{align*}
+for the thickness $d$ and real refractive correction $\delta.$
+
 
 
 \subsection{Stratified media}
-
-\cite{Parratt_1954}
 
 \begin{figure}[H]
 	\centering
@@ -115,5 +154,3 @@ describe the reflectivity and transmittivity in terms of intensity ratios.
 	\caption{Conceptual visualization of the Parratt algorithm presented in \cite{Parratt_1954}.}
 	\label{fig:parratt}
 \end{figure}
-
-\cite{xray}
