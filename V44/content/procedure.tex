@@ -14,8 +14,6 @@ To protect the detector from damage, the Absorber must first be set to Auto in t
 
 The position of the sample can be changed in X, Y, and Z directions using the Motor Drive Controls. Additionally, the position of the detector relative to the tube is changed by driving the 2θ motor. The motors are moved by typing the desired position into the Requested value field and setting the checkbox next to it. For example, to move the X-ray tube and the detector to position 0, you first type the value 0 in the corresponding field (2θ field) and set the checkmark on the right. In most situations, the program should set the corresponding checkmark by itself, so it does not have to be set manually. After pressing the Move-Drives button, the motors move to the desired position.
 
-Attention: Do not confuse the Init-Drives button with the Move-Drives button. Never press the Init-Drives button, as this moves the motors back to their reference position and they have to be adjusted again from the beginning.
-
 To measure reflectivity, the sample must be brought into the center of rotation of the diffractometer, and the sample surface must be aligned parallel to the X-ray beam. There are three available scan types: the Rocking Curve, the Detector Scan, and the Z-Scan. The measuring method can be selected via the Scantype drop-down menu at the bottom of the adjust mask. Additionally, the scanning ranges and the scan speed must be adjusted for each scan type. After performing the adjustment scans, the data should be saved in raw format, as it will be needed for later analysis.
 
 At the beginning of the adjustment, the sample must be moved out of the beam by changing the Z-coordinate. Furthermore, both the tube and the detector must be moved to an angle of 0°.
@@ -50,7 +48,7 @@ Finally, a third Z-scan can refine the half-shading position by locating the max
 \begin{figure}
 	\centering
 	\includegraphics[width=0.66\textwidth]{content/graphics/AdjustmentPlots.pdf}
-	\caption{Example measurements of different scantypes needed for the proper adjustment of the apparatus. Top left: Detector scan for beam adjustment, Top right: Rockingscan for $Y$- axis' adjustment, Bottom: Z-Scan for sample position }
+	\caption{Example measurements of different scantypes needed for the proper adjustment of the apparatus. Top left: Detector scan for beam adjustment, Top right: Rockingscan for $Y$-axis adjustment, Bottom: Z-Scan for sample position }
 	\label{fig:Adjustplot}
 \end{figure}
 
