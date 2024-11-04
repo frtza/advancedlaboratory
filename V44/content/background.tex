@@ -28,7 +28,7 @@ For X-rays, the refractive index can usually be written as
 \begin{equation*}
 	n_2 \equiv n = 1 - \delta \pm i\beta \: ,
 \end{equation*}
-with the extinction coefficient $\beta > 0$ measuring the exponential absorption and a small correction $\delta > 0$ to the real part.
+with the extinction coefficient $\beta > 0$ measuring the exponential absorption and a small correction $\delta > 0$ for the dispersion.
 The choice of $\pm$ depends on the sign convention for the wave vector. From $1 - \delta < 1$ further follows that the phase velocity
 of X-rays can exceed the speed of light in vacuum $c$. Because information travels at the group velocity, this does not violate special
 relativity. Assuming air or vacuum as the surrounding medium, one can set
@@ -49,7 +49,7 @@ to second order. Rewriting Snell's law \eqref{eqn:snell} as
 	1 - \pfrac{1}{2} \theta_i^2 \cong n \left( 1 - \pfrac{1}{2}\theta_t^2 \right) = (1 - \delta \pm i\beta) \left( 1 - \pfrac{1}{2}\theta_t^2 \right)
 	\cong 1 - \delta \pm i\beta - \pfrac{1}{2}\theta_t^2
 \end{equation*}
-yields \cite{McMorrow_2011_3} the relationship
+yields the relationship
 \begin{equation}
 	\theta_t \cong \sqrt{\theta_i^2 - 2\delta \pm 2i\beta} \: ,
 	\label{eqn:angles}
@@ -58,7 +58,17 @@ where products of $\delta, \beta, \theta_t \ll 1$ are ignored in the last step. 
 \begin{equation*}
 	\theta_c \cong \sqrt{2\delta \mp 2i\beta}
 \end{equation*}
-by setting $\theta_t = 0$ in \eqref{eqn:angles}.
+by setting $\theta_t = 0$ in \eqref{eqn:angles}. Noting $k \rightarrow nk$ for the wave propagating in the medium,
+\begin{equation*}
+	e^{\pm i nkz} = e^{i(1 - \delta)kz} e^{-\beta kz}
+\end{equation*}
+and from this
+\begin{align}
+	\delta &= \pfrac{2\pi \rho r_e}{k^2} \: , \label{eqn:dispersion} \\
+	\beta &= \pfrac{\mu}{2k} \: , \label{eqn:extinction}
+\end{align}
+relate $\delta, \beta$ to the electron density $\rho$ and the absorption coefficient $\mu$ via the electron radius $r_e = e^2 / m_e c^2$
+and $k = 2\pi / \lambda$ \cite{McMorrow_2011_3}.
 
 
 
@@ -79,10 +89,11 @@ for the p-polarized component \cite{Parratt_1954}. Assuming small angles, an exp
 	\sin\theta \cong \theta
 \end{equation*}
 can be made to linear order. With this and by again neglecting products of $\delta, \beta, \theta_i, \theta_t \ll 1$, one finds
-\begin{equation*}
+\begin{equation}
 	r_s \cong r_p \cong \pfrac{\theta_i - \theta_t}{\theta_i + \theta_t} \cong
 	\pfrac{\theta_i - \sqrt{\theta_i^2 - 2\delta \pm 2i\beta}}{\theta_i + \sqrt{\theta_i^2 - 2\delta \pm 2i\beta}} \equiv r
-\end{equation*}
+	\label{eqn:fresnel}
+\end{equation}
 as the amplitude reflectivity, with the corresponding transmittivity $t = 1 - r$. Here, the findings from \eqref{eqn:angles} are used.
 Accordingly,
 \begin{align*}
@@ -142,11 +153,17 @@ and by subtracting, rearranging and inserting, one arrives at
 	d = \pfrac{\lambda}{2} \sqrt{\pfrac{m_1^2 - m_2^2}{\varphi_1^2 - \varphi_2^2}} \: , &&
 	\delta = \pfrac{m_1^2 \varphi_2^2 - m_2^2 \varphi_1^2}{2 (m_1^2 - m_2^2)}
 \end{align*}
-for the thickness $d$ and real refractive correction $\delta.$
-
+for the thickness $d$ and real refractive correction $\delta.$ In the case of adjacent minima,
+\begin{equation}
+	d \cong \pfrac{\lambda}{2(\varphi_1 - \varphi_2)}
+	\label{eqn:thick}
+\end{equation}
+serves as a reasonable approximation.
 
 
 \subsection{Stratified media}
+
+\cite{Schreiber_2004}
 
 \begin{figure}[H]
 	\centering
