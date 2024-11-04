@@ -143,15 +143,6 @@ Plot Refraktivität
 
 #eventuell refraktivität auf y achse wie im altprotokoll?????
 alpha_i, I = np.genfromtxt('data/Reflektivität.UXD', unpack=True, skip_header=56) 
-minimax =[]
-minimay =[]
-
-for i in [52, 150]:
-    if I[i] < I[i - 1] and I[i] < I[i + 1]:
-        minimax.append(alpha_i[i])
-        minimay.append(I[i])
-        i = i+1
-        print(i)
         
 #Limit the range to entries 52 to 150 
 alpha_i_limited = alpha_i[52:120] 
