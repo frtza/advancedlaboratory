@@ -106,7 +106,8 @@ describe the reflectivity and transmittivity in terms of intensity ratios.
 \subsection{Kiessig fringes}
 
 When X-rays encounter a thin layer at low angles, oscillating dips in reflectivity are observed, named Kiessig fringes
-after their description in \cite{Kiessig_1931}. Labeling and conventions from Figure \ref{fig:kiessig} are adopted.
+after their description in \cite{Kiessig_1931} as interference minima after multiple reflection. Labeling and conventions
+from Figure \ref{fig:kiessig} are adopted.
 
 \begin{figure}[H]
 	\centering
@@ -161,13 +162,78 @@ for the thickness $d$ and real refractive correction $\delta.$ In the case of ad
 serves as a reasonable approximation.
 
 
+
 \subsection{Stratified media}
 
-\cite{Schreiber_2004}
+When considering the reflectivity of multiple homogenous layers with sharp boundaries, the transmission and reflection of all lower layers
+has to be taken into account. To do so, Parratt introduced an exact recursive formalism \cite{Parratt_1954}. This assumes an infinite substrate
+and surrounding medium, allowing one to start with simple Fresnel reflectivity at the very bottom layer before iterating up towards the surface
+as sketched in Figure \ref{fig:parratt}.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.66\textwidth]{content/graphics/parratt.pdf}
+	\includegraphics[width=0.55\textwidth]{content/graphics/parratt.pdf}
 	\caption{Conceptual visualization of the Parratt algorithm presented in \cite{Parratt_1954}.}
 	\label{fig:parratt}
+\end{figure}
+
+The wave vector $n_j^2 k^2 = k_j^2 = k_{j, x}^2 + k_{j, z}^2$ in combination with the continuity of the tangential component $k_{j, x} = k_x$
+can be used to write
+\begin{equation*}
+	k_{j, z}^2 = n_j^2 k^2 - k_{j, x}^2 = n_j^2 k^2 - k_x^2 = (1 - \delta_j \pm i\beta_j)^2 k^2 - k_x^2 \cong
+	(1 - 2\delta_j \pm 2i\beta_j) k^2 - k_x^2\: ,
+\end{equation*}
+where the last step neglects products of $\delta_j , \beta_j \ll 1$, leading to
+\begin{equation*}
+	k_{j, z} \cong \sqrt{k_z^2 - 2\delta_j k^2 \pm 2i\beta_j k^2} \: .
+\end{equation*}
+Further, one identifies $k_z = k \sin\alpha_i \cong k \alpha_i$ for
+\begin{equation}
+	k_{j, z} \cong k \sqrt{\alpha_i^2 - 2\delta_j \pm 2i\beta_j} \: ,
+	\label{eqn:kz}
+\end{equation}
+analogous to the result from \eqref{eqn:angles}. Adopting the conventions in \cite{Schreiber_2004, Tolan_1999}, Fresnel's coefficients
+can be written as
+\begin{equation}
+	r_{j, j + 1} = \pfrac{k_{z, j} - k_{z, j + 1}}{k_{z, j} + k_{z, j + 1}}
+	\label{eqn:fresnel-kz}
+\end{equation}
+at the boundary between layers $j$ and $j+1$. With this, the Parratt algorithm reads
+\begin{equation}
+	x_j = \pfrac{r_j}{t_j} = e^{-2i k_{j, z} d_j} \pfrac{r_{j, j + 1} + x_{j + 1} e^{2i k_{j + 1, z} d_j}}
+	{1 + r_{j, j + 1} x_{j + 1} e^{2i k_{j + 1, z} d_j}} \: ,
+	\label{eqn:parratt}
+\end{equation}
+which for $N$ layers has starting parameters $x_{N + 1} = r_{N + 1} = 0$ since there are no reflections from the infinte substrate
+$N + 1$ and $t_0 = 1$ as the normalization of the incident ray in the surrounding air or vacuum. The intensity reflectivity is obtained
+via $R = |r_0|^2 = |x_0|^2$. Accounting for rough boundaries, the specular Fresnel factors are modified such that
+\begin{equation}
+	r_{j, j + 1} \rightarrow r_{j, j + 1} e^{-2 k_{j, z} k_{j + 1, z} \sigma_{j, j + 1}^2},
+	\label{eqn:roughness}
+\end{equation}
+where deviations following an uncorrelated Gaussian distribution much smaller than the layer thickness $d_j$ are assumed and the roughness
+is measured by $\sigma_{j, j + 1}$.
+
+
+
+\subsection{Geometry factor}
+
+At low glancing angles $\alpha_i$, the beam width $\tilde{d}$ exceeds the effective size $D \sin\alpha_i$ of the sample, meaning the reflected
+intensity no longer corresponds to the full beam as shown in Figure \ref{fig:geometry}. Correcting for this, the intensity $I$ is divided by the
+geometry factor
+\begin{equation}
+	G = \left\{ \begin{array}{ll} \pfrac{D \sin\alpha_i}{\tilde{d}} & \alpha_i < \alpha_g \\ 1 & \alpha_i \geq \alpha_g \\ \end{array} \right.
+	\label{eqn:geom-factor}
+\end{equation}
+as $I \rightarrow I / G$, with the geometry angle defined by $\tilde{d} = D\sin\alpha_i \cong D\alpha_g$ or
+\begin{equation}
+	\alpha_g \cong \pfrac{\tilde{d}}{D} \: .
+	\label{eqn:geom-angle}
+\end{equation}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.66\textwidth]{content/graphics/geometry.jpg}
+	\caption{Beam geometry for partial obstruction by the sample at low angles \cite{xray}.}
+	\label{fig:geometry}
 \end{figure}
