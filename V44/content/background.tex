@@ -64,10 +64,10 @@ by setting $\theta_t = 0$ in \eqref{eqn:angles}. Noting $k \rightarrow nk$ for t
 \end{equation*}
 and from this
 \begin{align}
-	\delta &= \pfrac{2\pi \rho r_e}{k^2} \: , \label{eqn:dispersion} \\
+	\delta &= \pfrac{2\pi \rho_e r_e}{k^2} \: , \label{eqn:dispersion} \\
 	\beta &= \pfrac{\mu}{2k} \: , \label{eqn:extinction}
 \end{align}
-relate $\delta, \beta$ to the electron density $\rho$ and the absorption coefficient $\mu$ via the electron radius $r_e = e^2 / m_e c^2$
+relate $\delta, \beta$ to the electron density $\rho_e$ and the absorption coefficient $\mu$ via the electron radius $r_e = e^2 / m_e c^2$
 and $k = 2\pi / \lambda$ \cite{McMorrow_2011_3}.
 
 
@@ -195,7 +195,7 @@ Further, one identifies $k_z = k \sin\alpha_i \cong k \alpha_i$ for
 analogous to the result from \eqref{eqn:angles}. Adopting the conventions in \cite{Schreiber_2004, Tolan_1999}, Fresnel's coefficients
 can be written as
 \begin{equation}
-	r_{j, j + 1} = \pfrac{k_{z, j} - k_{z, j + 1}}{k_{z, j} + k_{z, j + 1}}
+	r_{j, j + 1} = \pfrac{k_{j, z} - k_{j + 1, z}}{k_{j, z} + k_{j + 1, z}}
 	\label{eqn:fresnel-kz}
 \end{equation}
 at the boundary between layers $j$ and $j+1$. With this, the Parratt algorithm reads
