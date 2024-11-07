@@ -1,3 +1,43 @@
+
 \section{Discussion}
 
-paar notizen zu parratt in github commit message
+When conducting experiments on physical problems, one often finds differences between measured and calculated values. The same applies here; thus, the following section compares data and calculates deviations. Further, some reasons for inaccuracies are mentioned and briefly discussed.
+
+\subsection{Values Measured During the Adjustment Process}
+
+During the adjustment process, values such as the sample size were measured. The value derived from the data is calculated to be $D_{\text{exp}} = (21 \pm 3)\, \unit{\milli \meter}$, while the theoretical value is $D_{\text{theo}} = 20 \, \unit{\milli \meter}$. When comparing these values, a deviation of 
+\begin{equation*}
+    \frac{\Delta D}{D_{\text{theo}}} = (5.00 \pm 15.00) \, \%
+\end{equation*}
+can be found. Even though the deviation is not negligible, the experimentally found value encompasses the theoretical value.
+
+These values for $D$ were used to calculate the geometry angle $\alpha_g$. The deviation between experiment and theory is
+\begin{equation*}
+    \frac{\Delta \alpha_g}{\alpha_{g,1}} = (29.63 \pm 37.73) \% \: .
+\end{equation*}
+Even though the differences between the values of $D$ are not very significant, the resulting geometry angles show considerable deviation. The deviation of the value found using the theoretical value of $D$, even though it is larger than 1/4, still encompasses the data from the experiment.
+
+\section{Comparison of Experimental Results for Silicon and Polystyrene Layers}
+Literature values for the given materials are given by 
+
+\begin{align*}
+    r_e \rho_{\text{Si,lit}} &= 20 \times 10^{10} \, \text{cm}^{-2}, \\
+    r_e \rho_{\text{Poly,lit}} &= 9.5 \times 10^{10} \, \text{cm}^{-2}, \\
+    \delta_{\text{Si,lit}} &= 7.6 \times 10^{-6}, \\
+    \delta_{\text{Poly,lit}} &= 3.5 \times 10^{-6}, \\
+    \alpha_{c,\text{Si,lit}} &= 0.174^\circ, \\
+    \alpha_{c,\text{Poly,lit}} &= 0.153^\circ \text{    \cite{Henke1993}}.
+\end{align*}
+The comparison of experimental values for Polystyrene (Layer 1) and Silicon (Layer 2) with literature values reveals significant deviations. Polystyrene shows a 58.9\% deviation in electron density \( r_e \rho \), and Silicon shows a 90.5\% deviation. The extinction coefficient \( \delta \) for Polystyrene deviates by 79.4\%, while Silicon's value matches the literature. The critical angle \( \alpha_c \) for Polystyrene deviates by 26.1\%, and for Silicon, the deviation is 60.3\%.
+
+
+The observed discrepancies are likely caused by a combination of factors, including potential impurities and measurement inaccuracies. In addition to these, the evaluation methods used in the analysis may have introduced inaccuracies.
+
+
+\subsection{Parratt-Algorithm}
+
+The evaluation of the Parratt algorithm for X-ray reflectometry presents several challenges and nuances. Utilizing programmatic fitting often proves unsatisfactory for the Parratt algorithm. Instead, manual optimization is time-consuming and inaccurate. A global fit is also difficult to achieve, as it often trades accuracy between critical and higher angles. Additionally, high-angle measurements tend to be very noisy, making it hard to determine what exactly should be fitted.
+
+When considering the parameters, it becomes evident that dispersions control the height of oscillations and the shape of the critical angle cutoff. Extinctions have smaller effects on the curve shape and influence minor features such as a slight peak below the critical angle. The roughness of the outer layer determines the smoothness and prominence of fringes, especially at larger angles. Inner layer roughness affects the height of the curve, particularly at larger angles, while thickness influences the spacing and prominence of the fringes.
+
+These aspects highlight the need for careful analysis and optimization of parameters to achieve meaningful results when applying the Parratt algorithm in X-ray reflectometry. The challenges of manual and global fitting, along with the significance of each parameter, must be considered to obtain precise and reliable outcomes.
