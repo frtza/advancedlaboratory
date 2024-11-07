@@ -57,6 +57,11 @@ geometry angle
 \begin{equation*}
 	\alpha_{g, 1} = \qty{0.7+-0.2}{\degree} \: .
 \end{equation*}
+Reading the geometry angle from Figure \ref{fig:rocking-curve}, a somewhat lower value of
+\begin{equation*}
+	\alpha_{g, 2} = \qty{0.54+-0.03}{\degree}
+\end{equation*}
+is obtained, though it still falls inside the uncertainty of the previous result.
 
 \begin{figure}[H]
 	\centering
@@ -65,12 +70,7 @@ geometry angle
 	\label{fig:x-scan}
 \end{figure}
 
-Reading the geometry angle from Figure \ref{fig:rocking-curve}, a somewhat lower value of
-\begin{equation*}
-	\alpha_{g, 2} = \qty{0.54+-0.03}{\degree}
-\end{equation*}
-is obtained, though it still falls inside the uncertainty of the previous result.
-
+\vspace{3em}
 
 \begin{figure}[H]
 	\centering
@@ -83,12 +83,33 @@ is obtained, though it still falls inside the uncertainty of the previous result
 
 \subsection{Measurement}
 
+Having completed the adjustments, raw data from the diffusive scan is subtracted from the reflectivity scan to correct for scattering
+effects which otherwise decrease the signal to noise ratio. This step is depicted in Figure \ref{fig:reflex-diffuse}.
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.88\textwidth]{content/plots/5.jpg}
 	\caption{Intensity curves for reflectivity and diffusive background.}
 	\label{fig:reflex-diffuse}
 \end{figure}
+
+Proceeding from this, the calculated intensity is divided by the geometry factor \eqref{eqn:geom-factor} to correct for less than complete
+beam obstruction. The resulting curve is displayed in Figure \ref{fig:geom-corr} and shows a plateau of total reflection below a critical
+angle
+\begin{equation*}
+	\alpha_{c} = \qty{0.21+-0.01}{\degree} \: .
+\end{equation*}
+The shaded region represents unity reflectivity $R = 1$ and therefore allows one to use the average intensity in this range
+$I = \num{1.8+-0.2}$ as a normalization factor. Identifying $\alpha_c \cong \sqrt{2\delta}$, the dispersion
+\begin{equation*}
+	\delta = \num{6.4+-0.6e-6}
+\end{equation*}
+can serve as an initial guess for the corresponding parameters in the recursive Parratt formalism. Additionally,
+equation \eqref{eqn:dispersion} can be used to estimate the electron density
+\begin{equation*}
+	\rho_e r_e = \qty{1.7+-0.2e11}{\per\centi\meter\squared} \: .
+\end{equation*}
+By evaluating the Kiessig peaks in Figure \ref{fig:kiessig-peaks}, one finds the layer thickness via \eqref{eqn:thick}.
 
 \begin{figure}[H]
 	\centering
@@ -97,12 +118,40 @@ is obtained, though it still falls inside the uncertainty of the previous result
 	\label{fig:geom-corr}
 \end{figure}
 
+\vspace{3em}
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.88\textwidth]{content/plots/7.jpg}
 	\caption{Detailed reflectivity curve with Kiessig oscillation minima.}
 	\label{fig:kiessig-peaks}
 \end{figure}
+
+\newpage
+
+To this end, the average angular distance $\Delta \alpha_i = \qty{0.052+-0.005}{\degree}$ between adjacent minima with wavelength
+$\lambda = \qty{1.5406e-10}{\meter}$ for the $\text{Cu } K_\alpha$ emission line yields
+\begin{equation*}
+	d = \qty{8.6+-0.8e-8}{\meter} \: .
+\end{equation*}
+Finally, Figure \ref{fig:parratt-fresnel} includes two fits to the observed reflectivity. First, a Fresnel curve for an ideally smooth
+$\text{Si}$ surface is plotted according to \eqref{eqn:fresnel} with parameters
+\begin{align*}
+	\delta = \num{7.6+-2.3e-6} \: , && \beta = \num{0.0+-0.4e-6} \: .
+\end{align*}
+Furthermore, a manual optimization of the Parratt algorithm is performed based on the previously obtained input quantities, arriving at
+\begin{align*}
+	\delta_1 &= \num{7.2e-7} \: , & \delta_2 &= \num{5.7e-6} \: , \\
+	\beta_1 &= \num{8.6e-9} \: , & \beta_2 &= \num{7.3e-8} \: , \\
+	\sigma_{01} &= \qty{8.9e-10}{\meter} \: , & \sigma_{12} &= \qty{7.9e-10}{\meter} \: , \\
+	d_1 &= \qty{8.6e-8}{\meter} \: .
+\end{align*}
+From these, one finds
+\begin{align*}
+	\alpha_{c, 1} &= \qty{0.069}{\degree} \: , & \alpha_{c, 2} &= \qty{0.193}{\degree} \: ,\\
+	\rho_{e, 1} r_e &= \qty{1.91e10}{\per\centi\meter\squared} \: , &
+	\rho_{e, 2} r_e &= \qty{1.51e11}{\per\centi\meter\squared} \: .
+\end{align*}
 
 \begin{figure}[H]
 	\centering
