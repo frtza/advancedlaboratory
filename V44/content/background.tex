@@ -9,6 +9,11 @@ discrete component emitted after penetration of the inner atomic shells \cite{Mc
 
 \subsection{Radiation production}
 
+The general operating principle of an X-ray tube such as those depicted in Figure \ref{fig:tube} relies on electrons emitted from a heating
+filament, which are then accelerated by a strong electric field to deposit their energy inside the anode material. This process heats up the
+anode, requiring a sufficient cooling solution and limiting the maximum power output of the construction. Use of rotating anodes effectively
+spreads the focal spot over a larger area, allowing for better heat dissipation and higher overall beam intensities. 
+
 \begin{figure}[H]
 	\begin{subfigure}{0.5\textwidth}
 		\centering
@@ -27,6 +32,19 @@ discrete component emitted after penetration of the inner atomic shells \cite{Mc
 	\label{fig:tube}
 \end{figure}
 
+The maximum electron kinetic energy available from this process is given by
+\begin{equation*}
+	E = e U \: ,
+\end{equation*}
+where $e$ is the elementary charge and $U$ measures the potential drop or voltage set for the experiment.
+Through scattering processes inside the anode, the inbound charges are decelerated, producing the continuous bremsstrahlung component
+shown in Figure~\ref{fig:spectrum}. Adding to this, incident electrons can transfer large amounts of energy to $K$ shell electrons,
+freeing them from their tightly bound states to the member atoms and leading to higher energy state electrons from the $L$ and $M$
+shells filling the lower state, emitting a photon corresponding to the energy difference as a result. This mechanism is depicted
+in Figure~\ref{fig:levels}. As can be seen in Figure~\ref{fig:spectrum}, these discrete spikes are much more intense than the superimposed
+continuous part. To utilize this narrow high intensity component, a Göbel mirror can be used, which parallelizes the X-ray beam while also
+being designed to extract only the desired spectral window.
+
 \begin{figure}[H]
 	\begin{subfigure}{0.5\textwidth}
 		\centering
@@ -41,9 +59,11 @@ discrete component emitted after penetration of the inner atomic shells \cite{Mc
 		\caption{Diagram of energy levels adopted from \cite{McMorrow_2011_2}.}
 		\label{fig:levels}
 	\end{subfigure}
-	\caption{Representation of involvde physical processes.}
+	\caption{Representation of involved physical processes.}
 	\label{fig:process}
 \end{figure}
+
+\enlargethispage{2\baselineskip}
 
 
 
@@ -59,7 +79,7 @@ and transmission as shown in Figure \ref{fig:fresnel}.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.33\textwidth]{content/graphics/fresnel.pdf}
+	\includegraphics[width=0.3\textwidth]{content/graphics/fresnel.pdf}
 	\caption{Depiction of reflection and refraction of light rays on a smooth surface.}
 	\label{fig:fresnel}
 \end{figure}
