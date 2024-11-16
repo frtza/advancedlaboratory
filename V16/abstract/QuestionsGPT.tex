@@ -1,0 +1,105 @@
+\documentclass[a4paper,12pt]{article}
+
+% Pakete einbinden
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+% Dokumentbeginn
+\begin{document}
+
+% Titel
+\title{Rutherford-Streuungs-Experiment}
+\author{}
+\date{}
+
+\maketitle
+
+% Abstract
+\section*{Abstract}
+In diesem Experiment wird die Streuung von Alphateilchen an einer Goldfolie untersucht.
+
+% Referenzen
+\section*{Referenzen}
+\begin{enumerate}
+    \item H. Haken, H.C. Wolf, \textit{Atomic and Quantum Physics}, Springer Verlag.
+    \item G. Pfennig, H. Klewe-Nebenius, W. Seelmann-Eggebert, \textit{Karlsruher Nuklidkarte 1998}.
+    \item A.C. Messelinos, \textit{Experiments in Modern Physics}, Academic Press, New York.
+    \item W.R. Leo, \textit{Techniques for Nuclear and Particle Physics Experiments}, Springer.
+\end{enumerate}
+
+% Vorbereitung mit Antworten
+\section*{Vorbereitung}
+Nachfolgend sind die Antworten auf die Vorbereitungsfragen, die das Experiment unterstützen:
+
+\begin{enumerate}
+    \item \textbf{Welche Annahmen werden bei der Herleitung der Bethe-Bloch-Gleichung und der Rutherford-Streuungsformel getroffen?}
+    \begin{itemize}
+        \item \textbf{Bethe-Bloch-Gleichung:} Es wird angenommen, dass:
+        \begin{itemize}
+            \item das Projektil relativistische oder nicht-relativistische Geschwindigkeiten besitzt,
+            \item die Energieverluste durch Ionisation und Anregung des Mediums dominiert werden,
+            \item Streuung an einzelnen Elektronen unabhängig erfolgt.
+        \end{itemize}
+        \item \textbf{Rutherford-Streuungsformel:} Annahmen sind:
+        \begin{itemize}
+            \item Die Streuung erfolgt elastisch.
+            \item Der Streukern bleibt unbeweglich (hohe Masse).
+            \item Die Wechselwirkung erfolgt rein coulombisch.
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Was ist ein Streuquerschnitt? Wie unterscheidet er sich vom differentiellen Streuquerschnitt?}
+    \begin{itemize}
+        \item Der Streuquerschnitt ist ein Maß für die Wahrscheinlichkeit, dass ein Teilchen gestreut wird. 
+        \item Der differentielle Streuquerschnitt beschreibt die Streuung in einem bestimmten Raumwinkel $\mathrm{d}\Omega$.
+    \end{itemize}
+
+    \item \textbf{Verwenden Sie die Bethe-Bloch-Gleichung, um die Energieverlustleistung von Alphateilchen in Luft zu berechnen. Bei welchem Kammerdruck werden Energieverluste spürbar?}
+    \begin{itemize}
+        \item Die Energieverlustleistung \( -\frac{\mathrm{d}E}{\mathrm{d}x} \) kann aus der Bethe-Bloch-Gleichung berechnet werden: 
+        \[
+        -\frac{\mathrm{d}E}{\mathrm{d}x} = K \cdot z^2 \frac{Z}{A} \frac{1}{\beta^2} \left[\ln\left(\frac{2m_e c^2 \beta^2 \gamma^2}{I}\right) - \beta^2\right].
+        \]
+        Für Alphateilchen (bei Raumtemperatur und Luftdruck) werden Verluste bei etwa 1/10 des Normaldrucks (0,1 atm) messbar.
+
+    \end{itemize}
+
+    \item \textbf{Wie sieht das Termdiagramm von \(^{241}\mathrm{Am}\) aus? Welche Arten von radioaktiver Strahlung emittiert Americium? Was muss im Experiment beachtet werden?}
+    \begin{itemize}
+        \item Das Termdiagramm zeigt, dass \(^{241}\mathrm{Am}\) primär Alpha-Strahlung emittiert (5,486 MeV).
+        \item Zusätzlich gibt es geringe Mengen $\gamma$-Strahlung.
+        \item Abschirmmaßnahmen sind erforderlich, um das Experiment sicher durchzuführen.
+    \end{itemize}
+
+    \item \textbf{Wie funktioniert ein Oberflächenbarrierendetektor und eine Drehschieberpumpe?}
+    \begin{itemize}
+        \item \textbf{Oberflächenbarrierendetektor:} Ein Halbleiterdetektor, der durch erzeugte Ladungsträger bei Ionisierung Strahlung detektiert.
+        \item \textbf{Drehschieberpumpe:} Ein mechanisches Gerät, das durch rotierende Schieber den Druck in einer Kammer reduziert.
+    \end{itemize}
+
+    \item \textbf{Wie groß muss die gemessene Zählrate sein, um eine relative statistische Unsicherheit von maximal 3\% zu erreichen?}
+    \begin{itemize}
+        \item Die relative Unsicherheit $\sigma_r$ ist gegeben durch:
+        \[
+        \sigma_r = \frac{1}{\sqrt{N}}.
+        \]
+        Für $\sigma_r = 3\%$ ($0,03$) ergibt sich:
+        \[
+        N = \frac{1}{(0,03)^2} \approx 1111.
+        \]
+        Die Zählrate muss also mindestens 1111 Ereignisse betragen.
+    \end{itemize}
+
+    \item \textbf{Warum ist Gold besonders geeignet als Streumaterial?}
+    \begin{itemize}
+        \item Gold hat eine hohe Ordnungszahl ($Z = 79$), was die Coulomb-Wechselwirkung verstärkt.
+        \item Die dünne Goldfolie lässt Alphateilchen hindurch und minimiert Energieverluste.
+    \end{itemize}
+\end{enumerate}
+
+\end{document}
