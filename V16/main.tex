@@ -1,0 +1,37 @@
+\input{header.tex}
+
+\selectlanguage{german}
+\sisetup{locale=US}
+\publishers{TU Dortmund – Department of Physics}
+
+\subject{\texorpdfstring{\vspace{2ex}}{}V16\texorpdfstring{\vspace{-2ex}}{}} % number
+\title{Rutherford Streuexperiment} % title: name of the experiment
+\date{
+	Experiment: 18. November 2024 % date
+	\\ Abgabe: XX. November 2024 % date
+}
+
+\begin{document}
+
+\pagenumbering{gobble}
+
+\maketitle
+\thispagestyle{empty}
+
+\tableofcontents
+\newpage
+
+\pagenumbering{arabic}
+
+\input{content/objective.tex}
+\input{content/theory.tex}
+\input{content/procedure.tex}
+\input{content/results.tex}
+\input{content/discussion.tex}
+
+\printbibliography{}
+
+\newpage
+\input{content/appendix.tex}
+
+\end{document}
