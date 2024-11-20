@@ -1,1 +1,41 @@
 \section{Diskussion}
+
+Der folgende Abschnitt fasst die ermittelten Ergebnisse zusammen und bewertet diese. Allgemein lässt sich feststellen, dass diese Größen
+im Rahmen der Messunsicherheit plausible Werte aufweisen.
+
+\subsection*{Reichweite}
+
+Die für $E_\alpha = \qty{5.486}{\mega\electronvolt}$ und Normaldruck numerisch bestimmte Reichweite in Luft
+\begin{equation*}
+	R_\alpha = \qty{6.9}{\centi\meter}
+\end{equation*}
+liegt wie erwartet zwischen den Werten $\qty{0.5}{\centi\meter}$ und $\qty{9.5}{\centi\meter}$ für $\qty{1}{\mega\electronvolt}$ und
+$\qty{10}{\mega\electronvolt}$ Energien aus \cite{Kolanoski_2007}. Da für die numerische Rechnung allerdings die klassische Energieverlustformel
+\eqref{eqn:Bethe} verwendet wird, ist zu erwarten, dass der tatsächliche Wert $R_\alpha$ etwas geringer als das hier angegebene Ergebnis ausfällt.
+
+Indem Luft als ideales Gas angenommen wird, folgt aus $pV = nRT$ der Zusammenhang $p \propto V^{-1} \propto \rho \propto N$
+und damit $R\alpha \propto p^{-1}$ als Abhängigkeit zur Abschätzung der Relevanz der Abschwächung bei veränderlichem Druck.
+
+\subsection*{Foliendicke}
+
+Mit einem realen Wert von $\qty{2}{\micro\meter}$ liegt die ermittelte Foliendicke
+\begin{equation*}
+	d = \qty{5.1+-0.4}{\micro\meter}
+\end{equation*}
+zwar in der richtigen Größenordnung, entspricht allerdings trotzdem einer $\qty{155+-20}{\percent}$ Abweichung. Dazu kommen einige mögliche
+Ursachen in Frage. Zunächst wird der linear verlaufende Abschnitt der Messung nach Augenmaß abgeschätzt. Die dabei ausgeschlossenen Werte
+flachen wahrscheinlich durch Rauschen ab, könnten aber auch die untere Asymptote der kumulierten Verteilungsfunktion angeben. Den abflachenden
+Verlauf gegen sehr geringen Druck fällt ebenfalls aus, sodass die Annahme von $U_\alpha$ als halbes Maximum fragwürdig ist. Zuletzt sollte hier
+noch angemerkt werden, dass bei der Messung die verstärkten Spannungspulse am Detektor teilweise starke Schwankungen aufzeigen und die maximale
+Amplitude daher nicht gut abgelesen werden konnte. Letzterer Punkt sollte jedoch vor allem zu einer größeren Unsicherheit und nicht zu festen
+Abweichungen der Messergebnisse führen.
+
+\subsection*{Streuwinkelabhänigkeit}
+
+Beim Überprüfen der $C \propto \sin^{-4}(\theta / 2)$ Proportionalität zeigt der Fit an das Plateau die beste Abschätzung der Winkelverschiebung.
+Für größere Winkel verläuft die angepasste Funktion jedoch steiler als die Messung. Insgesamt lässt sich die gesuchte Abhängigkeit durch die
+gewählte Parametrisierung also nicht zufriedenstellend an alle Datenpunkte nähern. Dies ist ein durchaus erwartetes Ergebnis, da der
+Teilchenstrahl nicht wie in der Herleitung der Streuformel angenommen eine Punktquelle beschreibt, sondern eine signifikante Breite hat. Um
+eine korrekte Beschreibung zu erhalten, müsste also für jede Winkeleinstellung über ein gewisses Winkelintervall integriert werden, um die
+Alphastrahlung zu modellieren, die den Detektor erreicht. Mögliche Lösungsansätzte sind eine engere Blende oder ein längerer Detektorarm, was
+aber wiederum die Anzahl der aufgezeichneten Impulse drastisch reduzieren würde und so die Statistik verschlechtert.
