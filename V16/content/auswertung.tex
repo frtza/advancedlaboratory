@@ -7,7 +7,7 @@ Die Aktivität des verwendeten Isotops $^{241}\mathrm{Am}$ wird für das Jahr 19
 Unter Berücksichtigung der Halbwertszeit von Americium ergibt sich für das Jahr 2024 eine Aktivität von \SI{314.5}{\kilo \becquerel}.  
 Ein graphischer Verlauf der Aktivität ist in \autoref{fig:Aktivität} dargestellt.
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{content/messung/Aktivität.pdf}
     \caption{Graphischer Verlauf der Aktivität von $^{241}\mathrm{Am}$ über die Zeit.}
@@ -51,12 +51,32 @@ Für den Zerfall von $^{241}\text{Am}$ gilt
 
 \textbf{BETHE BLOCH THEORIE}
 
+\begin{table}[H]
+	\centering
+	\caption{Messdaten von Kammerdruck und maximaler Amplitude.}
+	\hspace{10em}
+	\begin{subfigure}{0.18\textwidth}
+    	\centering
+    	\caption{Ohne Folie.}
+    	\includegraphics[width=\textwidth]{content/tabelle/OhneFolie.jpg}
+    	\label{tab:OhneFolie}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{0.18\textwidth}
+    	\centering
+    	\caption{Mit Folie.}
+    	\includegraphics[width=\textwidth]{content/tabelle/MitFolie.jpg}
+    	\label{tab:MitFolie}
+	\end{subfigure}
+	\hspace{10em}
+\end{table}
+
 \subsection*{Bestimmung der Dicke der Goldfolie}
 
 Die gemessenen Maximalspannungen in Abhängigkeit des Drucks wurden sowohl mit als auch ohne Goldfolie im Strahlengang aufgenommen.  
 Anschließend wurden lineare Regressionen durchgeführt. Die entsprechenden Graphen sind in \autoref{fig:Golddicke} dargestellt.
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{content/messung/Golddicke.pdf}
     \caption{Lineare Regressionen der Maximalspannungen $U(p)$ in Abhängigkeit des Drucks mit und ohne Goldfolie.}
@@ -79,7 +99,7 @@ In der durchgeführten Messung könnten jedoch abflachende Verläufe eher auf Me
 anstatt eine direkte Konsequenz der Asymptote bei $p \to \infty$ darzustellen. Einzelne Amplitudenwerte zeigen teils starke Schwankungen.  
 Der Zusammenhang zwischen Druck und Energie ist in \autoref{fig:EnergiePuls} dargestellt.
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{content/messung/EnergiePuls.pdf}
     \caption{Druckabhängigkeit der Energie der $\alpha$-Strahlung.}
@@ -103,3 +123,17 @@ Wird dies in die Bethe-Bloch-Gleichung \ref{eqn:Bethe} eingesetzt und nach $\Del
 $$d = \Delta x_\alpha = \Delta E_\alpha \frac{4\pi m_e v_\alpha^2 \varepsilon_0^2}{e^4 N z^2 Z \ln (2m_e v_\alpha^2 / I)}
 = \Delta E_\alpha \frac{8\pi m_e E_\alpha \varepsilon_0^2}{m_\alpha e^4 N z^2 Z \ln (4m_e E_\alpha / m_\alpha I)} = (5.1\pm 0.4) \, \unit{\micro \meter}
 \; .$$
+
+\begin{table}[H]
+    \centering
+    \caption{Messdaten der Zählrate in Abhängigkeit des Streuwinkels.}
+    \includegraphics[width=0.36\textwidth]{content/tabelle/Streuwinkel.jpg}
+    \label{tab:Streuwinkel}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{content/messung/Streuwinkel.pdf}
+    \caption{Streuwinkelabhängigkeit der Zählrate.}
+    \label{fig:Streuwinkel}
+\end{figure}
