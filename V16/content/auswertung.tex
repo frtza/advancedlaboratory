@@ -218,10 +218,12 @@ berechnen, wobei eine Poissonverteilung angenommen wird. Die Beziehung
 \begin{equation*}
 	\sigma = \pfrac{C}{A} \, \pfrac{F}{\mathscr{N}}
 \end{equation*}
+für den Wirkungsquerschnitt, der die Zahl $\mathscr{N} \kern-0.3pt = NV$ von Streuzentren im Volumen $V \kern-0.3pt = dF$ enthält,
+deutet im Vergleich mit \eqref{eqn:Rutherford} auf einen $C \propto \sin^{-4}(\vartheta / 2)$ Zusammenhang hin.
 
 \begin{table}[H]
     \centering
-    \caption{Messdaten der Zählrate in Abhängigkeit zum Streuwinkel.}
+    \caption{Messdaten der Zählrate in Abhängigkeit vom Streuwinkel.}
     \includegraphics[width=0.32\textwidth]{content/tabelle/Streuwinkel.jpg}
     \label{tab:Streuwinkel}
 \end{table}
@@ -229,6 +231,20 @@ berechnen, wobei eine Poissonverteilung angenommen wird. Die Beziehung
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{content/messung/Streuwinkel.pdf}
-    \caption{Streuwinkelabhängigkeit der Zählrate.}
+    \caption{Winkelabhängigkeit der Zählrate mit verschieden parametrisierten Fits.}
     \label{fig:Streuwinkel}
 \end{figure}
+
+Um diese Abhängigkeit zu untersuchen, wird eine modifizierte Funktion der Form
+\begin{equation*}
+	C = \pfrac{a}{\sin^4 \bigl( (\vartheta - b) / 2 \bigr) + c}
+\end{equation*}
+mir drei Freiheitsgraden angesetzt. Dabei gibt $a$ Asymptote und Skalierung an, der Parameter $b$ erlaubt eine Verschiebung des Maximumwinkels
+und $c$ dient zur Korrektur der Singularität auf einen Peak endlicher Höhe. Als Test werden mehrere nichtlineare Ausgleichsrechnungen
+vorgenommen, global an alle Messwerte, an die ersten 14 Werte des Plateaus, und an die letzten 4 Werte der Asymptote. Es ergeben sich
+\begin{align*}
+	a_\text{glob} &= \qty{1.1+-0.4e-4}{\per\second} & b_\text{glob} &= \qty{3+-5}{\degree} & c_\text{glob} &= \num{10+-3e-6} \\
+	a_\text{plat} &= \qty{1.4+-0.1e-5}{\per\second} & b_\text{plat} &= \qty{1.69+-0.05}{\degree} & c_\text{plat} &= \num{1.2+-0.1e-6} \\
+	a_\text{asym} &= \qty{7e-5}{\per\second} & b_\text{asym} &= \qty{2e-9}{\degree} & c_\text{asym} &= \num{-3e-5} \vspace{-2em}
+\end{align*}
+als Koeffizienten, wobei der asymptotische Fit keine stabile Konvergenz zeigt und dadurch keine Kovarianz geschätzt werden kann.
