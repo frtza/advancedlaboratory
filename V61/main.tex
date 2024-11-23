@@ -1,0 +1,40 @@
+\input{header.tex}
+
+\usepackage{xspace}
+\newcommand{\HeNe}{He\texorpdfstring{\kern+1.2pt}{}-Ne\xspace}
+
+\selectlanguage{english}
+\sisetup{locale=US}
+\publishers{TU Dortmund – Department of Physics}
+
+\subject{\texorpdfstring{\vspace{2ex}}{}V61\texorpdfstring{\vspace{-2ex}}{}} % number
+\title{He\texorpdfstring{\kern+1.8pt}{}-Ne Laser} % title: name of the experiment
+\date{
+	Experiment: November 25, 2024 % date
+	\\ Submission: November ??, 2024 % date
+}
+
+\begin{document}
+
+\pagenumbering{gobble}
+
+\maketitle
+\thispagestyle{empty}
+
+\tableofcontents
+\newpage
+
+\pagenumbering{arabic}
+
+\input{content/objective.tex}
+\input{content/background.tex}
+\input{content/procedure.tex}
+\input{content/result.tex}
+\input{content/discussion.tex}
+
+\printbibliography{}
+
+\newpage
+\input{content/appendix.tex}
+
+\end{document}
