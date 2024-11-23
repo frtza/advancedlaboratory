@@ -1,0 +1,69 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\begin{document}
+
+\textbf{1. What are the three basic components of a laser? What defines the wavelength of a laser?}
+
+The three basic components of a laser are:
+
+\begin{itemize}
+    \item \textbf{The Active Medium:} This is the material that is excited to a higher energy state, either by electrical discharge or optical pumping. It is where stimulated emission occurs. Examples include gases (e.g., He-Ne), solid-state materials (e.g., ruby, Nd:YAG), or semiconductors (e.g., diode lasers).
+    \item \textbf{The Pumping Mechanism:} This is the source of energy used to excite the active medium. It could be electrical energy, optical pumping, or other means.
+    \item \textbf{The Optical Cavity (Resonator):} This consists of two mirrors placed at the ends of the active medium. The mirrors reflect light back and forth through the active medium, leading to the amplification of light through stimulated emission. One of the mirrors is partially transparent to allow the laser light to escape.
+\end{itemize}
+
+The wavelength of a laser is determined by the energy difference between the two levels involved in the transition. According to the equation \( E = h \nu \), where \( h \) is Planck’s constant, \( \nu \) is the frequency, and \( E \) is the energy difference. The wavelength \( \lambda \) is related to the frequency by \( \lambda = \frac{c}{\nu} \), where \( c \) is the speed of light.
+
+\textbf{2. Discuss the most important processes in the active medium (absorption, stimulated emission, and spontaneous emission). Discuss the relationship between the amplification of the light and the population inversion in the active medium.}
+
+The most important processes in the active medium are:
+
+\begin{itemize}
+    \item \textbf{Absorption:} When a photon interacts with an atom or molecule, it may excite an electron from a lower energy state to a higher one. This process requires energy equal to the energy difference between the two states.
+    \item \textbf{Spontaneous Emission:} After excitation, an atom or molecule may spontaneously decay to a lower energy state, emitting a photon with a random phase and direction. This process is probabilistic and not useful for laser operation.
+    \item \textbf{Stimulated Emission:} When an electron is in an excited state, it can be induced to drop to a lower energy state by the interaction with an incident photon, resulting in the emission of a second photon with the same energy, phase, and direction as the incident photon. This is the key process in lasing.
+\end{itemize}
+
+\textbf{Population Inversion:} For a laser to produce coherent light, a population inversion must be established, meaning that more particles are in the excited state than in the lower state. This is necessary for stimulated emission to dominate over absorption and for light amplification to occur.
+
+\textbf{3. Why is a two-level laser not possible? Which transition is responsible for the red line of the He-Ne laser? How is the population inversion achieved?}
+
+A two-level laser is not possible because, in a two-level system, any photon that is emitted would quickly be reabsorbed by the same atom or molecule, preventing the buildup of coherent light. There needs to be a mechanism to separate the populations of the two levels and allow for continuous stimulated emission.
+
+In the \textbf{He-Ne laser}, the transition responsible for the red line (at a wavelength of 632.8 nm) is from the 3s level of the helium atom to the 2p level of the neon atom. This transition is stimulated by the population inversion created by optical pumping, which excites helium atoms, and the energy is transferred to the neon atoms to achieve the necessary inversion for lasing.
+
+\textbf{4. Calculate the stability parameter \( g_1 \cdot g_2 \) as a function of the resonator length L for at least two resonator configurations and plot the result. The available mirror configurations can be found in Table 1. What is the maximum resonator length that can be achieved?}
+
+This question requires specific calculations and a table with mirror configurations, which are not provided here. To calculate the stability parameter \( g_1 \cdot g_2 \), the parameters of the mirrors, such as their curvature and position, need to be known. Once these parameters are provided, the stability parameter can be calculated and plotted based on the length of the resonator \( L \). The maximum length achievable depends on the specific configuration and the stability condition, where \( g_1 \cdot g_2 \leq 1 \) for stable laser operation.
+
+\textbf{5. Describe the intensity curve in the plane perpendicular to the propagation direction for TEM00 and TEM01 modes. Explain the term “intracavity aperture for mode selection.” What is the difference between longitudinal and transversal modes?}
+
+The TEM00 mode is the fundamental mode of a laser beam and has a Gaussian intensity distribution in the transverse plane. The beam is symmetric, with the highest intensity at the center and decreasing toward the edges.
+
+The TEM01 mode is a higher-order mode with a doughnut-shaped intensity distribution. The intensity is zero at the center, with a ring of maximum intensity around it.
+
+\textbf{Intracavity Aperture for Mode Selection:} An intracavity aperture can be used to select specific modes by blocking higher-order modes (such as TEM01) while allowing the fundamental mode (TEM00) to pass. This helps improve the beam quality and stability of the laser output.
+
+\textbf{Longitudinal vs. Transversal Modes:} Longitudinal modes refer to different frequencies (or wavelengths) of the light oscillating in the laser cavity, related to the resonance condition. Transversal modes refer to the spatial distribution of the light intensity in the plane perpendicular to the propagation direction.
+
+\textbf{6. Describe the broadening of the optical transition in gas due to the Doppler effect. How large is the spectral broadening for the optical transition in Ne gas at room temperature? Describe the mode spectrum (frequency spectrum) for the laser with typical resonator length \( L = 1.5 \, \text{m} \). How does mode selection work with the help of a Fabry-Perot etalon?}
+
+The Doppler effect broadens the optical transition in gases because atoms or molecules moving at different velocities relative to the laser beam will experience slightly different frequencies due to their motion. The spectral broadening in neon gas can be calculated using the Doppler shift formula \( \Delta \omega = \frac{v}{c} \cdot \omega_0 \), where \( v \) is the velocity of the atom, \( c \) is the speed of light, and \( \omega_0 \) is the central frequency of the transition. At room temperature, the Doppler broadening for neon gas is typically around a few GHz.
+
+For a laser with a resonator length of \( L = 1.5 \, \text{m} \), the mode spectrum consists of discrete frequencies spaced by \( \Delta \nu = \frac{c}{2L} \). This spacing determines the longitudinal modes of the laser.
+
+A \textbf{Fabry-Perot etalon} is an interferometric filter that selects modes by allowing only those with certain frequencies (those that fit the cavity resonance conditions) to pass through.
+
+\textbf{7. What is the role of the Brewster windows? What is the resulting polarization of the laser?}
+
+Brewster windows are optical components mounted at the ends of the laser tube to reduce reflections and improve the output power of the laser. Their main functions are:
+
+\begin{itemize}
+    \item \textbf{Minimizing Reflection Losses:} Brewster windows are positioned at the Brewster angle to minimize light reflection at the surface of the window. At this angle, the reflection for light polarized in the plane of incidence is minimized, allowing more light to pass through.
+    \item \textbf{Polarization of the Output Light:} The Brewster window only allows light that is polarized in a specific direction to pass. This means that the transmitted light is linearly polarized.
+\end{itemize}
+
+\textbf{Resulting Polarization of the Laser:} The laser light exiting through the Brewster window is \textbf{linearly polarized}. The electric field of the transmitted light is aligned perpendicular to the plane of incidence of the Brewster window, meaning the light is fully polarized in one direction.
+
+\end{document}

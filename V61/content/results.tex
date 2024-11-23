@@ -1,0 +1,28 @@
+\section{Results}
+\label{sec:results}
+
+\begin{table}
+	\label{tab:general}
+	\centering
+	\caption{General measurements.}
+	\input{build/table_general.tex}
+\end{table}
+
+\begin{table}
+	\label{tab:specific}
+	\centering
+	\caption{Specific measurements.}
+	\input{build/table_specific.tex}
+\end{table}
+
+\begin{figure}[H]
+	\label{fig:plot}
+	\includegraphics{build/plot.pdf}
+	\caption{Measurements and theory prediction.}
+\end{figure}
+
+For $c^2 = ma^2 + n$ and using \verb+numpy.polyfit+ \cite{numpy} we find
+\begin{align*}
+	m = \input{build/m.tex} && n = \input{build/n.tex}
+\end{align*}
+as parameters.
