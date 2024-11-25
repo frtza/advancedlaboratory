@@ -1,0 +1,4 @@
+# Abstand in cm +1.6cm # Intensität mW 
+70.5 0.513
+81.2 0.514
+88.4 0.343
