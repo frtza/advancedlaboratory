@@ -165,22 +165,38 @@ timescales.
 
 \subsection{Stability for different resonators}
 
+To characterize spherical mirrors, the parameter
 \begin{equation*}
 	g_k = 1 - \pfrac{L}{R_k}
 \end{equation*}
-
-$0 \leq g_1 g_2 \leq 1$
+presents a convenient alternative to the curvature radii. With this, the radius $\textsl{w}_0$ at the waist of a Gaussian beam as depicted in
+Figure \ref{fig:beam} can be calculated via
+\begin{equation*}
+	\textsl{w}_0^4 = \frac{\lambda^2 L^2 g_1 g_2 (1 - g_1 g_2)}{\pi^2 (g_1 + g_2 - 2 g_1 g_2)^2} \: .
+\end{equation*}
+It is immediately obvious that for $\textsl{w}_0$ to be a real solution,
+\begin{equation*}
+	0 \leq g_1 g_2 \leq 1
+\end{equation*}
+needs to hold, defining a stability condition for any mode to exist in a given resonator.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.60\textwidth]{content/graphics/resonators.pdf}
+	\includegraphics[width=0.46\textwidth]{content/graphics/beam.pdf}
+	\caption{Adaptation of a Gaussian beam to a spherical mirror resonator. \cite{Eichler_2018}}
+	\label{fig:beam}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.56\textwidth]{content/graphics/resonators.pdf}
 	\caption{Types of stable resonator configurations. \cite{Eichler_2018}}
 	\label{fig:resonators}
 \end{figure}
 
 \begin{table}
 	\centering
-	\caption{.}
+	\caption{Available mirrors for the construction of the cavity.}
 	\begin{tabular}{clrll}
 		\toprule
 		Mirror & \multicolumn{2}{c}{Design} & \multicolumn{2}{c}{Surface} \\
@@ -197,7 +213,7 @@ $0 \leq g_1 g_2 \leq 1$
 \begin{figure}[H]
 	\centering
 	\includegraphics{build/stability.pdf}
-	\caption{.}
+	\caption{Stability diagram as functions of the resonator length.}
 	\label{fig:stability}
 \end{figure}
 
@@ -208,7 +224,7 @@ $0 \leq g_1 g_2 \leq 1$
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.60\textwidth]{content/graphics/modes.pdf}
-	\caption{Select $\text{TEM}_{xy}$ modes for rectangular geometry. \cite{Eichler_2018}}
+	\caption{Observable $\text{TEM}_{xy}$ modes for rectangular geometry. \cite{Eichler_2018}}
 	\label{fig:modes}
 \end{figure}
 
