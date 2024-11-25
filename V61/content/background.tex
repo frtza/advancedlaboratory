@@ -133,7 +133,26 @@ One then expects $N_0 \kern+0.5pt , N_2 \gg N_1 \kern+0.5pt , N_3$ for $N \appro
 stationary configuration. Accordingly, a population inversion $\Delta N_s > 0$ is trivial to achieve, making four level systems a suitable
 choice for laser construction.
 
-Such a system is realized by a \HeNe laser 
+Such a system is realized by a \HeNe laser when the red mode at $\lambda = \qty{633}{\nano\meter}$ is used. Table \ref{tab:table} indicates
+that this corresponds to a transition from the $3\symup{s}_2$ to the $2\symup{p}_4$ level, on which Figure \ref{fig:hene} provides more
+detailed information.
+
+\begin{table}[H]
+	\centering
+	\caption{Properties for different transitions of the \HeNe laser. \cite{Eichler_2018}}
+	\includegraphics[width=0.85\textwidth]{content/graphics/table.pdf}
+	\label{tab:table}
+\end{table}
+
+In this setup, the active medium is a mixture of helium and neon gases. Helium atoms are excited to metastable states via electric discharge
+before colliding with neon atoms to provide excitation and transfer kinetic energy via 
+\begin{equation*}
+	\ce{He}^* + \ce{Ne} \longrightarrow \ce{He} + \ce{Ne}^* + E \: .
+\end{equation*}
+The excess energy $E \simeq \qty{100}{\milli\electronvolt}$ is dissipated as heat after the resonant transfer, as it measures about two times
+the $\qty{300}{\kelvin}$ thermal energy. Due to the selection rules, the upper $2\symup{s}$ and $3\symup{s}$ levels have lifetimes of the order
+$\qty{100}{\nano\second}$ because they can only decay to $\symup{p}$ levels, while lower states exhibit shorter $\qty{10}{\nano\second}$
+timescales.
 
 \begin{figure}[H]
 	\centering
@@ -142,24 +161,55 @@ Such a system is realized by a \HeNe laser
 	\label{fig:hene}
 \end{figure}
 
-\begin{table}[H]
-	\centering
-	\includegraphics[width=0.80\textwidth]{content/graphics/table.pdf}
-	\caption{. \cite{Eichler_2018}}
-	\label{fig:table}
-\end{table}
-
 
 
 \subsection{Stability for different resonators}
+
+\begin{equation*}
+	g_k = 1 - \pfrac{L}{R_k}
+\end{equation*}
+
+$0 \leq g_1 g_2 \leq 1$
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.60\textwidth]{content/graphics/resonators.pdf}
+	\caption{Types of stable resonator configurations. \cite{Eichler_2018}}
+	\label{fig:resonators}
+\end{figure}
 
 
 
 \subsection{Transverse and longitudinal modes}
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.50\textwidth]{content/graphics/rect.pdf}
+	\caption{Select $\text{TEM}_{xy}$ modes for rectangular geometry. \cite{Eichler_2018}}
+	\label{fig:rect}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.45\textwidth]{content/graphics/circ.pdf}
+	\caption{Select $\text{TEM}_{r\vartheta}$ modes for circular geometry. \cite{Eichler_2018}}
+	\label{fig:circ}
+\end{figure}
+
 
 
 \subsection{Doppler broadening of the transition}
+
+Lorentzian
+
+Gaussian
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.60\textwidth]{content/graphics/broadening.pdf}
+	\caption{Typical Doppler broadening compared to natural line width. \cite{Eichler_2018}}
+	\label{fig:broadening}
+\end{figure}
 
 
 
@@ -167,7 +217,7 @@ Such a system is realized by a \HeNe laser
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.60\textwidth]{content/graphics/setup.pdf}
-	\caption{. \cite{Eichler_2018}}
+	\includegraphics[width=0.90\textwidth]{content/graphics/setup.pdf}
+	\caption{Schematic setup of a \HeNe laser generating polarized output. \cite{Eichler_2018}}
 	\label{fig:setup}
 \end{figure}
