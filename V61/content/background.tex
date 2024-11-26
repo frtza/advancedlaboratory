@@ -230,7 +230,7 @@ or misalignment than a stable resonator, providing desirable properties dependin
 
 \subsection{Transverse and longitudinal modes}
 
-During normal operation, different transverse electromagnetic modes $(\text{TEM})$ interfere in the plane perpendicular to the beam axis.
+During multimode operation, different transverse electromagnetic modes $(\text{TEM})$ interfere in the plane perpendicular to the beam axis.
 Their orders are denoted using indices like $\text{TEM}_{r\vartheta}$ and $\text{TEM}_{xy}$ to give the integer number of nodes in direction
 of the respective coordinate. Assuming a Gaussian beam profile, circular symmetry can be parametrized by multiplication with Laguerre
 polynomials. If modes are selected using a thin wire as is the case here, a rectangular symmetry is required. A cut of the electric field
@@ -276,16 +276,36 @@ amplitude. From $I \propto |E|^2$ follows
 as the theoretically expected distributions with arbitrary normalization factors. Additional degrees of freedom may be introduced to
 account for distortive effects such as a finite background or an asymmetric shape due to inaccurate centering of the probe.
 
-Longitudinal modes in direction of beam expansion instead interfere to produce beating patterns in the signal. This is due to slight frequency
-variations that result from the multiple allowed standing wave solutions inside the resonator.
+Longitudinal modes in direction of beam expansion instead interfere to produce beating patterns in the signal. This is due to slight
+frequency variations that result from the multiple allowed standing wave solutions inside the resonator.
 
 
 
 \subsection{Doppler broadening of the transition}
 
-Lorentzian
-
-Gaussian
+This beating pattern is quite complicated, but can be analyzed by decomposing it to its Fourier coefficients. From $L = m\lambda / 2$
+for standing waves follows $f = mc / 2L$ or
+\begin{equation*}
+	\Delta f_\text{PP} = \pfrac{c}{2L}
+\end{equation*}
+as the distance between spectral peaks, which is proportional to the reciprocal resonator length with
+$\Delta f_\text{PP} \simeq \qty{100}{\mega\hertz}$ as a typical value. Additionally, the uncertainty principle requires energy levels
+to have $\Delta E = h / 2\pi \tau$ as a finite width. A natural linewidth
+\begin{equation*}
+	\Delta f_\text{N} = \pfrac{1}{2\pi}
+	\left( \pfrac{1}{\raisebox{0.55ex}{$\tau_1$}} + \pfrac{1}{\raisebox{0.55ex}{$\tau_2$}} \right)
+\end{equation*}
+is the result, which describes a Lorentzian profile
+\begin{equation*}
+	F_\text{N} (f) = \frac{(\Delta f_\text{N} / 2)^2}{(f - f_{12})^2 + (\Delta f_\text{N} / 2)^2} \: .
+\end{equation*}
+Values are of the order $\Delta f_\text{N} \simeq \qty{10}{\mega\hertz}$ for a \HeNe laser. A homogenous broadening is introduced from
+elastic collisions, which cause phase shifts during emission. The width
+\begin{equation*}
+	\Delta f_\text{C} = \sqrt{\pfrac{3}{4mkT \,}} \, d^2 p
+\end{equation*}
+follows from thermodynamics and has values around $\Delta f_\text{C} \simeq \qty{100}{\mega\hertz}$ at temperatures of
+$T = \qty{300}{\kelvin}$ with the Boltzmann constant $k$ as well as $m$ and $d$ as the mass and diameter of the atoms.
 
 \begin{figure}[H]
 	\centering
@@ -294,9 +314,32 @@ Gaussian
 	\label{fig:broadening}
 \end{figure}
 
+Lastly, the motion of emitting particles inhomogenously shortens or lengthens the emitted wavelength according to the Doppler effect.
+This can be written for $v \ll c$ as
+\begin{equation*}
+	f_{12}' = f_{12} (1 \pm v / c) \: ,
+\end{equation*}
+with the sign indicating movement towards or away from the detector. In case of thermal equilibrium, this obeys Maxwell statistics with
+a Gaussian line shape function
+\begin{equation*}
+	F_\text{D} (f) = 2^{- 4 (f - f_{12})^2 / \Delta f_\text{D}^2}
+\end{equation*}
+and a full width half maximum
+\begin{equation*}
+	\Delta f_\text{D} = 2 f_{12} \sqrt{2kT \ln 2 / m} / c \: .
+\end{equation*}
+Due to values around $\Delta f_\text{D} \simeq \qty{1.5}{\giga\hertz}$ for a \HeNe laser, the Gaussian represents an enveloping function
+with much larger spread than other contributions as can be seen in Figure \ref{fig:broadening}.
+
 
 
 \subsection{Brewster window and polarization}
+
+Inserting a Brewster plate at the Brewster angle inside the cavity before the mirror as shown in Figure \ref{fig:setup} allows the light
+component with polarization parallel to the plane of incidence to be transmitted with zero losses due to vanishing reflectivity, while
+about $\qty{20}{\percent}$ of the orthogonally polarized intensity are reflected and therefore lost. Due to the nonlinear operation of
+a laser and by assuming losses per cycle of $\qty{2}{\percent}$ at the out coupler as well as a gain around $\qty{10}{\percent}$ inside
+the active medium, one finds that only the parallel part is capable of lasing, making the output fully linearly polarized.
 
 \begin{figure}[H]
 	\centering
@@ -305,6 +348,12 @@ Gaussian
 	\label{fig:setup}
 \end{figure}
 
+The intensity of a polarized beam decreases on a perfect polarizer according to Malus
+\begin{equation*}
+	I(\theta) = I_0 \cos^2\theta \: ,
+\end{equation*}
+with $\theta$ giving the angle between the initial polarization and the polarizer axis.
 
 
-\subsection{Wavelength from the diffraction pattern}
+
+% \subsection{Wavelength from the diffraction pattern}
