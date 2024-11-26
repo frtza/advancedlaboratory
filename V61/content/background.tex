@@ -182,7 +182,7 @@ needs to hold, defining a stability condition for any mode to exist in a given r
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.46\textwidth]{content/graphics/beam.pdf}
+	\includegraphics[width=0.47\textwidth]{content/graphics/beam.pdf}
 	\caption{Adaptation of a Gaussian beam to a spherical mirror resonator. \cite{Eichler_2018}}
 	\label{fig:beam}
 \end{figure}
@@ -221,9 +221,29 @@ length.
 	\label{fig:stability}
 \end{figure}
 
+It should be noted that an unstable resonator with $g_1 g_2 < 0$ or $g_1 g_2 > 1$ does not necessarily preclude laser operation. Unstable
+lasing implies large diffraction losses, as significant parts of laser power leak around the mirror edges, in turn requiring high optical
+gain in the active medium to compensate. The resulting configuration can however be less sensitive to disturbances such as thermal lensing
+or misalignment than a stable resonator, providing desirable properties depending on the application.
+
 
 
 \subsection{Transverse and longitudinal modes}
+
+During normal operation, different transverse electromagnetic modes $(\text{TEM})$ interfere in the plane perpendicular to the beam axis.
+Their orders are denoted using indices like $\text{TEM}_{r\vartheta}$ and $\text{TEM}_{xy}$ to give the integer number of nodes in direction
+of the respective coordinate. Assuming a Gaussian beam profile, circular symmetry can be parametrized by multiplication with Laguerre
+polynomials. If modes are selected using a thin wire as is the case here, a rectangular symmetry is required. A cut of the electric field
+strength in $x$ direction then follows
+\begin{equation*}
+	E_n (\xi) = H_m (\xi) e^{-\xi^2 / 2} \: ,
+\end{equation*}
+where $H_m (\xi)$ is the appropriate Hermite polynomial and $\xi = \sqrt{2} \, x / \textsl{w}_0$ connects the parameter to the spacial
+coordinate. The first three solutions
+\begin{align*}
+	H_0 = 1 \: , && H_1 (\xi) = 2 \xi \: , && H_2 (\xi) = 4 \xi^2 - 2
+\end{align*}
+lead to the patterns shown in Figure \ref{fig:modes} below.
 
 \begin{figure}[H]
 	\centering
@@ -238,13 +258,26 @@ length.
 % 	\caption{Select $\text{TEM}_{xy}$ modes for rectangular geometry. \cite{Eichler_2018}}
 % 	\label{fig:rect}
 % \end{figure}
-% 
+
 % \begin{figure}[H]
 % 	\centering
 % 	\includegraphics[width=0.45\textwidth]{content/graphics/circ.pdf}
 % 	\caption{Select $\text{TEM}_{r\vartheta}$ modes for circular geometry. \cite{Eichler_2018}}
 % 	\label{fig:circ}
 % \end{figure}
+
+Obtaining the intensity, which is the quanitity that is actually measured, requires squaring the absolute value of the electric field
+amplitude. From $I \propto |E|^2$ follows
+\begin{align*}
+	I_{\text{TEM}_{00}} (x) &= I_{00} e^{-2 x^2 / \textsl{w}_0^{\, 2}} \: , \\
+	I_{\text{TEM}_{10}} (x) &= I_{10} x^2 e^{-2 x^2 / \textsl{w}_0^{\, 2}} / \textsl{w}_0^{\, 2} \: , \\
+	I_{\text{TEM}_{20}} (x) &= I_{20} (4 x^2 / \textsl{w}_0^{\, 2} - 1)^2 e^{-2 x^2 / \textsl{w}_0^{\, 2}}
+\end{align*}
+as the theoretically expected distributions with arbitrary normalization factors. Additional degrees of freedom may be introduced to
+account for distortive effects such as a finite background or an asymmetric shape due to inaccurate centering of the probe.
+
+Longitudinal modes in direction of beam expansion instead interfere to produce beating patterns in the signal. This is due to slight frequency
+variations that result from the multiple allowed standing wave solutions inside the resonator.
 
 
 
@@ -271,3 +304,7 @@ Gaussian
 	\caption{Schematic setup of a \HeNe laser generating polarized output. \cite{Eichler_2018}}
 	\label{fig:setup}
 \end{figure}
+
+
+
+\subsection{Wavelength from the diffraction pattern}
