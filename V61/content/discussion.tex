@@ -1,4 +1,60 @@
+% \newpage
+\subsection{Measuring the Wavelength}
+
+To calculate the wavelength, one finds
+\begin{equation*}
+	\lambda = \frac{g x_n}{n \sqrt{d^2 + x_n^2}} \: ,
+\end{equation*}
+with the distance $x_n$ between the maximum of order $n$ and the main peak, the slit width $g$ and the spacing $d$ of the screen.
+
+\begin{table}
+	\centering
+	\caption{Measured diffraction peak distances on a screen at $d = \qty{83.2+-1.0}{\centi\meter}$ from different gratings
+			 with calculated wavelengths.}
+	\sisetup{table-format=2.1}
+	\begin{tabular}{c S S S S}
+		\toprule
+		& \multicolumn{2}{c}{$g = 1/80$ mm} & \multicolumn{2}{c}{$g = 1/100$ mm} \\
+		\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+		{$n$} & {$x_{n, \text{left}}$ / cm} & {$x_{n, \text{right}}$ / cm} & {$x_{n, \text{left}}$ / cm} & {$x_{n, \text{right}}$ / cm} \\
+		\midrule
+		1 &  4.5 &  4.3 &  5.4 &  5.4 \\
+		2 &  8.7 &  8.4 & 11.1 & 10.7 \\
+		3 & 12.8 & 12.9 & 16.5 & 16.1 \\
+		4 & 17.1 & 17.3 & 22.2 & 21.8 \\
+		5 & 21.6 & 22.2 &  &  \\
+		\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+		& \multicolumn{2}{c}{$\lambda = \qty{641+-10}{\nano\meter}$} &
+		\multicolumn{2}{c}{$\lambda = \qty{644+-9}{\nano\meter}$} \\
+		\cmidrule(lr){2-5}
+		& \multicolumn{4}{c}{$\lambda = \qty{643+-12}{\nano\meter}$} \\
+		\bottomrule
+	\end{tabular}
+	\label{tab:wavelength}
+\end{table}
+
+Listed in Table \ref{tab:wavelength} are the measurements with their corresponding results. The derived wavelength
+$\lambda = \qty{643+-12}{\nano\meter}$ can be compared to the value $\lambda = \qty{633}{\nano\meter}$ from the
+literature \cite{Eichler_2018}.
+
+
+
+\subsection{Implementation of Calculations}
+
+To analyze the measured data, the Python \cite{python} packages NumPy \cite{numpy} and SciPy \cite{scipy} are used, with Matplotlib
+\cite{matplotlib} generating the graphical presentation and Uncertainties \cite{uncertainties} allowing for automated linear order
+propagation of errors.
+
+
+
 \section{Discussion}
 
-
-STABILITY COND FÜR PLANAR KACKE WEIL SCHWEIRGE JUSTAGE DURCH DAS FEHLEN DES FOKUS 
+Summarizing the obtained results, all theoretical expectations are fulfilled within the given tolerances. Due to limitations in the extend
+of the setup as well as difficulties in alignment, especially for the plane konvex resonator configuration, the expected intensity drop when
+reaching the stability limits could not be observed, though the measured lasing range is still in agreement with the allowed $L$ intervals.
+The function given by the respective Hermite polynomials and a Gaussian distribution describes the observed TEM profile reasonably well,
+though measuring steps could have tighter spacing to get a more conclusive picture. The angular dependence of the polarizer fits the theory
+very well, giving a minimum intensity at $\qty{155}{\degree}$ compatible with zero, thus confirming the laser beam to be fully polarized thanks
+to the Brewster window. Similarly, the dependence of frequency maxima position on the reciprocal resonator length can also be verified, while
+the Doppler broadening represents the dominant influence on the line width. Lastly, the wavelength calculated via diffraction maxima agrees
+with the expected value from the involved transition.

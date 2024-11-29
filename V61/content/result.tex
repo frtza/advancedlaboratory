@@ -5,7 +5,7 @@
 % propagation of errors obtained from fit functions. The code is included in the appendix.
 
 \subsection{Verifying the Stability Condition}
-As shown in \autoref{fig:stability} the stability condition for the used mirrors is fulfilled for different resonator lengths $L$. In the case of one planar mirror ($R_1=\inf$) and one out coupling mirror with radius $R_2=1400\, \unit{\nano \meter}$ the stability condition is true for 
+As shown in \autoref{fig:stability} the stability condition for the used mirrors is fulfilled for different resonator lengths $L$. In the case of one planar mirror ($R_1=\infty$) and one out coupling mirror with radius $R_2=1400\, \unit{\nano \meter}$ the stability condition is true for 
 a resonator length of up to $1.4\, \unit{\meter}$. Thus one would expect to see the laser working fine for smaller resonators. Analogously for a high reflective mirror ($R_1=1400\, \unit{\nano \meter}$) instead of the planar surface one find a maximum length of $L\leq 2.8\, \unit{\meter}$.
 \begin{figure}
 	\centering
@@ -19,11 +19,11 @@ a resonator length of up to $1.4\, \unit{\meter}$. Thus one would expect to see 
 	\caption{Measured Intensity in dependency of resonator length $L$ to verify the Stability Condition for two convex mirrors.}
 	\label{fig:stability1}
 \end{figure}
-The measured intensities for different resonator lengths are displayed in \autoref{fig:stability2} and \autoref{fig:stability1}. One can see that the intensities are $>>0$ and therefore a stable operation of the laser is possible.
+The measured intensities for different resonator lengths are displayed in \autoref{fig:stability2} and \autoref{fig:stability1}. One can see that the intensities are $\ll 0$ and therefore a stable operation of the laser is possible.
 
 \subsection{Observing Transverse Modes}
 
-The measured intensities for different deviations of the detector in $y$ directions are shown in \autoref{fig:TEM00}, \autoref{fig:TEM01} and \autoref{fig:TEM02}. The respective curve-fits follow the in \autoref{eqn:TEMEQN} shown equations. Since the measurements are not exactly as 
+The measured intensities for different deviations of the detector in $y$ directions are shown in \autoref{fig:TEM00}, \autoref{fig:TEM01} and \autoref{fig:TEM02}. The respective curve-fits follow the equations shown in \eqref{eqn:TEMEQN1}, \eqref{eqn:TEMEQN2}, \eqref{eqn:TEMEQN3}. Since the measurements are not exactly as 
 predicted, the actual equations need to be adjusted.
 
 \subsubsection{$\text{TEM}_{00}$}
@@ -48,7 +48,7 @@ The parameters for the fit are given by
 
 \subsubsection{$\text{TEM}_{10}$}
 
-Analogously to the adjustment for intensity of $\text{TEM}_00$ the new fit curve can be determined to 
+Analogously to the adjustment for intensity of $\text{TEM}_{00}$ the new fit curve can be determined to 
 \begin{equation*}
     I_{\text{fit,TEM}_{10}}(x) = I_{10} \cdot \left( \frac{x - l}{w_0} \right)^2 \cdot e^{-\frac{2(x - m)^2}{w_0^2}}\; .
 \end{equation*}
@@ -83,15 +83,15 @@ The proper fit function can be defined by
 The parameters are
 \begin{align*}
     I_{20} &= \left( 0.176\pm0.009 \right) \, \text{mW} \\
-    m &= \left( 0.176\pm0.009 \right) \, \text{mm} \\
-    w_0 &= \left( 0.176\pm0.009 \right) \, \text{mm} \\
-    l &= \left( 0.176\pm0.009 \right) \, \text{mm}
+    m &= \left( 9.266\pm0.190 \right) \, \text{mm} \\
+    w_0 &= \left( 9.082\pm0.184 \right) \, \text{mm} \\
+    l &= \left( 8.511\pm0.181 \right) \, \text{mm}
 \end{align*}
 
 \subsection{Determining the Polarization}
 
 In order to determine the polarization of the laser, the measured intensities are plotted against the polarization filter's angle.
-The general dependency of angle and intensity is given via \autoref{eqn:pol}. But similar to the chapters above, the equation needs to be slightly adjusted.
+The general dependency of angle and intensity is given via \eqref{eqn:pol}. But similar to the chapters above, the equation needs to be slightly adjusted.
 The final form is
 \begin{equation*}
     I=I_0\cos(\phi-\alpha)^2+c\; .
@@ -105,17 +105,19 @@ The introduced parameter $c$ is needed to compensate any offset and $\alpha$ is 
 \end{figure}
 The parameters are
 \begin{align*}
-    I_0 = (4.140\pm 0.032) \, \text{mW}\\
-\alpha = 1.133\pm 0.004\\
-c = (-0.003\pm 0.018)\, \text{mW}\; .
+    I_0 &= (4.140\pm 0.032) \, \text{mW}\\
+\alpha &= 1.133\pm 0.004\\
+c &= (-0.003\pm 0.018)\, \text{mW}\; .
 \end{align*}
 
 \subsection{Analyzing Spectra in Multimode Operation}
 
-The experimental data are shown in \autoref{tab:MULTI}, where $f_i$ is the frequency of peak $i$, $\text{Ampl}$ ist amplitude and $L$ the resonator length
+The experimental data for frequency and amplitude are shown in \autoref{tab:MULTI} with the resonator length.
 
 \begin{table}[h!]
 \centering
+\caption{Experimental data after the FFT.}
+\noindent\makebox[\linewidth]{
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
 \hline
 L in cm & \makecell{$f_1$ \\(MHz)} & \makecell{$\text{Ampl}_1$ \\(mV)} & \makecell{$f_2$ \\(MHz)} & \makecell{$\text{Ampl}_2$ \\(mV)} & \makecell{$f_3$ \\(MHz)} & \makecell{$\text{Ampl}_3$ \\(mV)} & \makecell{$f_4$ \\(MHz)} & \makecell{$\text{Ampl}_4$ \\(mV)} & \makecell{$f_5$ \\(MHz)} & \makecell{$\text{Ampl}_5$ \\(mV)} \\
@@ -126,13 +128,15 @@ L in cm & \makecell{$f_1$ \\(MHz)} & \makecell{$\text{Ampl}_1$ \\(mV)} & \makece
 90.1 & 169 & 1000 & 335 & 950 & 501 & 896 & 667 & 905 & 832 & 800 \\
 \hline
 \end{tabular}
-\caption{Experimental data after the FFT.}
+}
 \label{tab:MULTI}
 \end{table}
 In order to investigate the dependence of the resonator length and the measured frequencies one needs to calculate the $\Delta f$ between the peaks.
 
 \begin{table}[h!]
     \centering
+    \caption{Calculated differences between peak frequencies.}
+	\noindent\makebox[\linewidth]{
     \begin{tabular}{|c|c|c|c|c|c|}
     \hline
     L in cm & $\Delta f_{1,2}$ / MHz &$\Delta f_{2,3}$ / MHz & $ \Delta f_{3,4}$ / MHz  & $\Delta f_{4,5}$ / MHz & avg. $\Delta f$ / MHz \\  
@@ -143,10 +147,10 @@ In order to investigate the dependence of the resonator length and the measured 
     90.1 & 166.0 & 166.0 & 166.0 & 165.0 & 165.75 \\
     \hline
     \end{tabular}
-    \caption{111111.}
+	}
     \label{tab:diffF}
 \end{table}
-By solving \autoref{eqn:bla} for $L$ one can obtain the following resonator lengths 
+By solving \eqref{eqn:bla} for $L$ one can obtain the following resonator lengths 
 \begin{align*}
     	\Delta f &= 278.50\, \text{MHz} \rightarrow 53.8\, \text{cm}\\
         \Delta f &= 228.25\, \text{MHz} \rightarrow 65.7\, \text{cm}\\
@@ -189,7 +193,7 @@ The parameters can be determined to
     m &= (252 \pm 92) \, \text{MHz} \\
     s &= (578 \pm 71) \, \text{MHz}\; .
 \end{align*}
-From here the full width half maximum ($\Delta f_{\text{D}}$) can be calculated using \autoref{eqn:fwhm}
+From here the full width half maximum ($\Delta f_{\text{D}}$) can be calculated using \eqref{eqn:fwhm}
 \begin{equation*}
     \Delta f_{\text{D}} = (1.4 \pm 0.2) \, \text{GHz}\; . 
 \end{equation*}
