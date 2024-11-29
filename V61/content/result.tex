@@ -1,8 +1,9 @@
 \section{Results}
 
-% To analyse the measured data, the Python \cite{python} packages NumPy \cite{numpy} and SciPy \cite{scipy} are used, with Matplotlib
-% \cite{matplotlib} generating the graphical presentation and Uncertainties \cite{uncertainties} allowing for automated linear order
-% propagation of errors obtained from fit functions. The code is included in the appendix.
+To analyze the measured data, the Python \cite{python} packages NumPy \cite{numpy} and SciPy \cite{scipy} are used, with Matplotlib
+\cite{matplotlib} generating the graphical presentation and Uncertainties \cite{uncertainties} allowing for automated linear order
+propagation of errors.
+
 
 \subsection{Verifying the Stability Condition}
 As shown in \autoref{fig:stability} the stability condition for the used mirrors is fulfilled for different resonator lengths $L$. In the case of one planar mirror ($R_1=\infty$) and one out coupling mirror with radius $R_2=1400\, \unit{\nano \meter}$ the stability condition is true for 
@@ -23,7 +24,7 @@ The measured intensities for different resonator lengths are displayed in \autor
 
 \subsection{Observing Transverse Modes}
 
-The measured intensities for different deviations of the detector in $y$ directions are shown in \autoref{fig:TEM00}, \autoref{fig:TEM01} and \autoref{fig:TEM02}. The respective curve-fits follow the equations shown in \eqref{eqn:TEMEQN1}, \eqref{eqn:TEMEQN2}, \eqref{eqn:TEMEQN3}. Since the measurements are not exactly as 
+The measured intensities for different deviations of the detector in $x$ directions are shown in \autoref{fig:TEM00}, \autoref{fig:TEM01} and \autoref{fig:TEM02}. The respective curve-fits follow the equations shown in \eqref{eqn:TEMEQN1}, \eqref{eqn:TEMEQN2}, \eqref{eqn:TEMEQN3}. Since the measurements are not exactly as 
 predicted, the actual equations need to be adjusted.
 
 \subsubsection{$\text{TEM}_{00}$}
@@ -36,7 +37,7 @@ The definition of a new centre of the curve $m$ is necessary because the detecto
 \begin{figure}
 	\centering
 	\includegraphics[width=0.8\textwidth]{content/plots/TEM00.pdf}
-	\caption{Measured Intensity in dependency of the detectors $y$-position for observing $\text{TEM}_{00}$.}
+	\caption{Measured Intensity in dependency of the detectors $x$-position for observing $\text{TEM}_{00}$.}
 	\label{fig:TEM00}
 \end{figure}
 The parameters for the fit are given by
@@ -56,7 +57,7 @@ The newly introduced parameter $l$ is needed to describe the asymmetrical proper
 \begin{figure}
 	\centering
 	\includegraphics[width=0.8\textwidth]{content/plots/TEM01.pdf}
-	\caption{Measured Intensity in dependency of the detectors $y$-position for observing $\text{TEM}_{10}$.}
+	\caption{Measured Intensity in dependency of the detectors $x$-position for observing $\text{TEM}_{10}$.}
 	\label{fig:TEM01}
 \end{figure}
 For the new defined equation the parameters can be determined to 
@@ -77,7 +78,7 @@ The proper fit function can be defined by
 \begin{figure}
 	\centering
 	\includegraphics[width=0.8\textwidth]{content/plots/TEM02.pdf}
-	\caption{Measured Intensity in dependency of the detectors $y$-position for observing $\text{TEM}_{20}$.}
+	\caption{Measured Intensity in dependency of the detectors $x$-position for observing $\text{TEM}_{20}$.}
 	\label{fig:TEM02}
 \end{figure}
 The parameters are
@@ -100,7 +101,7 @@ The introduced parameter $c$ is needed to compensate any offset and $\alpha$ is 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.8\textwidth]{content/plots/POLARI.pdf}
-	\caption{Measured Intensity in dependency of the detectors $y$-position for observing $\text{TEM}_{10}$.}
+	\caption{Measured Intensity in dependency of the polarization filter's angle.}
 	\label{fig:POLARI}
 \end{figure}
 The parameters are
@@ -169,7 +170,7 @@ with $a$ having the theoretical value of $a=c/2$ and $b=-1$ as one can obtain fr
     \caption{Dependence of resonator length and distance between spectral peaks.}
     \label{fig:Resonlänge}
 \end{figure}
-The fits parameters are given by 
+The fit parameters are given by 
 \begin{align*}
     a&= (147.1 \pm 0.1) 10^8\, \frac{\text{m}}{\text{s}} \\
     b&= -0.983 \pm 0.004\; .
