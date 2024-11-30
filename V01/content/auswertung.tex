@@ -56,6 +56,10 @@ Fehlerfortpflanzung in linearer Ordnung dienen.
 	\label{fig:calibration}
 \end{figure}
 
+\begin{equation*}
+	t(K) = AK + B
+\end{equation*}
+
 \begin{align*}
 	A = \input{build/a.tex} \: , && B = \input{build/b.tex}
 \end{align*}
@@ -70,6 +74,10 @@ Fehlerfortpflanzung in linearer Ordnung dienen.
 	\caption{.}
 	\label{fig:lifetime}
 \end{figure}
+
+\begin{equation*}
+	N(t) = m + ne^{-\lambda t}
+\end{equation*}
 
 \begin{align*}
 	m = \input{build/m.tex} \: , && n = \input{build/n.tex}
@@ -93,7 +101,15 @@ Fehlerfortpflanzung in linearer Ordnung dienen.
 \end{align*}
 
 \begin{equation*}
-	P = \input{build/pp.tex}
+	\langle N \rangle = N_\text{stopp} \frac{T_\text{such}}{T_\text{mess}}
+\end{equation*}
+
+\begin{equation*}
+	P_k = \pfrac{\langle N \rangle ^k}{k!} e^{-\langle N \rangle}
+\end{equation*}
+
+\begin{equation*}
+	P_1 = \input{build/pp.tex}
 \end{equation*}
 
 \begin{equation*}
