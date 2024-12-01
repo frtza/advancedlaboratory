@@ -12,115 +12,130 @@ je eine Zeit zugeordnet werden, bevor mit der eigentlichen Langzeitmessung fortg
 
 \subsection{Verzögerungszeit}
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{build/delay.pdf}
-	\caption{.}
-	\label{fig:delay}
-\end{figure}
-
+Der Verlauf der in Tabelle \ref{tab:delay} gezeigten Messdaten wird in Abbildung \ref{fig:delay} als Trapez mit Null als Asymptote
+genähert. Es ergeben sich
 \begin{equation*}
 	a = \input{build/aa.tex}
 \end{equation*}
-
+für die Steigung der linken Flanke sowie Knickpunkte
 \begin{align*}
 	b &= \input{build/bb.tex} \: , & c &= \input{build/cc.tex} \: , \\
-	d &= \input{build/dd.tex} \: , & e &= \input{build/ee.tex}
+	d &= \input{build/dd.tex} \: , & e &= \input{build/ee.tex} \: .
 \end{align*}
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{build/delay.pdf}
+	\caption{Gemessene Zählraten gegen die eingestellte Verzögerung.}
+	\label{fig:delay}
+\end{figure}
+
+Daraus lassen sich einige relevante Größen berechnen. Die maximale Zählrate lautet
 \begin{equation*}
 	N_\text{Plateau} = \input{build/nn.tex}
 \end{equation*}
-
+im Bereich des Plateaus, welches eine Breite
 \begin{equation*}
 	T_\text{Plateau} = \input{build/dt.tex}
 \end{equation*}
-
+aufweist. Die Hälfte dieses Maximums ist bei
 \begin{align*}
 	t_\text{links} = \input{build/t1.tex} \: , && t_\text{rechts} = \input{build/t2.tex}
 \end{align*}
-
+erreicht. Damit folgt die Halbwertsbreite
 \begin{equation*}
-	T_\text{Hälfte} = \input{build/ddtt.tex}
+	T_\text{Hälfte} = t_\text{rechts} - t_\text{links} = \input{build/ddtt.tex}
 \end{equation*}
-
+und letztendlich eine Auflösungszeit
 \begin{equation*}
-	T_\text{Auflösung} = \input{build/t.tex}
+	T_\text{Auflösung} = T_\text{Hälfte} - T_\text{Plateau} = \input{build/t.tex} \: .
 \end{equation*}
 
 
 
 \subsection{Kanalkalibration}
 
+Es wird ein linearer Zusammenhang zwischen Kanalnummer $K$ und der Zeit $t$ angesetzt.
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{build/calibration.pdf}
-	\caption{.}
+	\caption{Beobachteter Zusammenhang zwischen Kanalnummer und Zeitskala.}
 	\label{fig:calibration}
 \end{figure}
 
+Aus der entsprechenden Formel für die Ausgleichsrechnung
 \begin{equation*}
 	t(K) = AK + B
 \end{equation*}
-
+bestimmen sich die in Abbildung \ref{fig:calibration} verwendeten Parameter
 \begin{align*}
 	A = \input{build/a.tex} \: , && B = \input{build/b.tex}
 \end{align*}
+zur Umrechnung der Zeitskala aus dem Kanal. Diese Werte ergeben sich, indem an die Daten aus Tabelle \ref{tab:calibration}
+angepasst wird.
 
 
 
 \subsection{Langzeitmessung}
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{build/lifetime.pdf}
-	\caption{.}
-	\label{fig:lifetime}
-\end{figure}
-
+Für die Messung der Zählrate $N$ gegen die Zeitdifferenz $t$ aus Tabelle \ref{tab:lifetime} lässt sich
 \begin{equation*}
 	N(t) = m + ne^{-\lambda t}
 \end{equation*}
+als exponentieller Zusammenhang mit Normierung $n$ ansetzen, der um $m$ als Hintergrund verschoben ist. Aufgrund der
+beobachteten Streuung werden ausschließlich die Kanäle mit Indizes $\input{build/k1.tex}$ bis $\input{build/k2.tex}$
+verwendet und in Abbildung \ref{fig:lifetime} aufgetragen.
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{build/lifetime.pdf}
+	\caption{Daten aus der Langzeitmessung mit exponentieller Fitfunktion.}
+	\label{fig:lifetime}
+\end{figure}
+
+Die Werte der genannten Parameter lauten
 \begin{align*}
-	m = \input{build/m.tex} \: , && n = \input{build/n.tex}
+	m = \input{build/m.tex} \: , && n = \input{build/n.tex} \: .
 \end{align*}
-
+Zusätzlich ergibt sich
 \begin{equation*}
 	\lambda = \input{build/lam.tex}
 \end{equation*}
-
+als Zerfallskonstante und schließlich
 \begin{equation*}
 	\tau = \input{build/tau.tex}
 \end{equation*}
+für die Lebensdauer kosmischer Myonen, wobei $\qty{2.197}{\micro\second}$ den Literaturwert angibt \cite{Tishchenko_2013}.
 
 
 
 \subsection{Hintergrundrate}
 
+Anhand der charakterisierenden Eigenschaften der Messreihe
 \begin{align*}
 	T_\text{such} &= \input{build/tsuch.tex} \: , & T_\text{mess} &= \input{build/tmess.tex} \: , \\
 	N_\text{start} &= \input{build/nstart} \: , & N_\text{stopp} &= \input{build/nstopp}
 \end{align*}
-
+lässt sich ein Erwartungswert
 \begin{equation*}
-	\langle N \rangle = N_\text{stopp} \frac{T_\text{such}}{T_\text{mess}} = \input{build/nerw.tex}
+	\langle N \rangle = N_\text{start} \frac{T_\text{such}}{T_\text{mess}} = \input{build/nerw.tex}
 \end{equation*}
-
+für die Zählrate innerhalb des Suchzeitintervalls aufstellen. Unter der Annahme einer für Zählexperimente gültigen
+Poissonverteilung
 \begin{equation*}
 	P_k = \pfrac{\langle N \rangle ^k}{k!} e^{-\langle N \rangle}
 \end{equation*}
-
+folgt für die Wahrscheinlichkeit, dass genau ein weiteres Myon einfällt,
 \begin{equation*}
-	P_1 = \input{build/pp.tex}
+	P_1 = \input{build/pp.tex} \: .
 \end{equation*}
-
+Somit lässt sich die Anzahl zusätzlicher Pulse zu
 \begin{equation*}
-	O = \input{build/oo.tex}
+	O_1 = P_1 N_\text{start} = \input{build/oo.tex}
 \end{equation*}
-
-\input{build/len.tex}
-
+abschätzen, welche sich homogen über $\input{build/len.tex}$ Kanäle verteilen. Pro Kanal gilt demnach
 \begin{equation*}
 	M = \input{build/mm.tex}
 \end{equation*}
+als Hintergrundrate, die mit dem Wert $n = \input{build/m.tex}$ aus dem vorherigen Vorgehen verglichen werden kann.
