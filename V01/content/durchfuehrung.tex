@@ -3,28 +3,26 @@
 Der Versuchsaufbau besteht aus einem Szintillator-Tank mit einem ungefähren Volumen von 50 Litern. An jedem Ende des Tanks sind Photomultiplier (PM) montiert, die die durch Myonen oder deren Zerfallsprodukte verursachten Szintillationssignale detektieren. Eine Kombination von NIM-Modulen ermöglicht die Messung des Zeitintervalls zwischen den gleichzeitig eintreffenden Myon- und Zerfallsproduktsignalen. Die Ausgänge der beiden PMs werden über eine Verzögerung zu einem Diskriminator mit einstellbarer Schwelle geführt. Auch die Dauer des Ausgangsimpulses des Diskriminators ist einstellbar. Beide Signale gelangen dann in eine Koinzidenzschaltung, die nur ein Ausgangssignal erzeugt, wenn die Eingangsimpulse gleichzeitig eintreffen. Dies wird von der elektronischen Entsprechung einer Stoppuhr gefolgt.
 
 \begin{figure}
-	\centering
-	\includegraphics[width=0.7\textwidth]{content/grafik/Aufbau.pdf}
-	\caption{Schematische Darstellung des verwendeten Versuchsaufbaus \cite{myon}.}
-	\label{fig:Aufbau}
+    \centering
+    \includegraphics[width=0.7\textwidth]{content/grafik/Aufbau.pdf}
+    \caption{Schematische Darstellung des verwendeten Versuchsaufbaus \cite{myon}.}
+    \label{fig:Aufbau}
 \end{figure}
-
 
 Das Ausgangssignal der Koinzidenzeinheit erreicht zwei UND-Gatter und über eine weitere Verzögerungsleitung von $\Delta t = 30 \, \text{ns}$ ein Monoflop, das die Suchzeit $T_s$ setzt. Die UND-Gatter sind mit dem Zeit-Amplituden-Umsetzer (TAC) so verbunden, dass eines die Zeitmessung startet, während das andere sie stoppt. Zwei Zähler zählen jeweils die Start- und Stoppimpulse. Eine geeignete Kombination von Komponenten stellt sicher, dass die Zeitmessung startet, wenn ein Myon in das aktive Volumen eintritt. Zerfällt das Myon im Tank, wird die Messung gestoppt.
 
 Das Signal vom TAC gelangt in den Mehrkanalanalysator (MCA), der von einem PC gesteuert wird. Zur Kalibrierung des MCA steht ein Doppelpulsgenerator (DPG) zur Verfügung, der zwei Pulse mit variablem Zeitintervall bei einer Frequenz von 1 kHz erzeugt.
 
-Wenn die PMs mit Hochspannung versorgt werden, sollten an den jeweiligen Ausgängen Spannungspulse mit variierenden Amplituden sichtbar sein. Überprüfen Sie dies mit Hilfe eines Oszilloskops.
+Wenn die PMs mit Hochspannung versorgt werden, sollten an den jeweiligen Ausgängen Spannungspulse mit variierenden Amplituden sichtbar sein. Dies wird mit Hilfe eines Oszilloskops überprüft.
 
-Im nächsten Schritt muss die Schwellenwertspannung der Diskriminatoren so eingestellt werden, dass an beiden Ausgängen etwa 30 Pulse pro Sekunde gemessen werden. Stellen Sie eine Impulsdauer von $\Delta t = 10 \, \mu\text{s}$ ein. Dazu den Pulszähler anschließen. Um die Koinzidenzapparatur anzupassen, variieren Sie systematisch eine der Verzögerungsleitungen und beobachten Sie die Pulsrate am Ausgang der Koinzidenzeinheit. Der Messbereich sollte groß genug sein, um die Halbwertsbreite der Verteilung zu bestimmen. Wählen Sie schließlich eine geeignete Verzögerung für die gesamte Messung. Die Ereignisrate sollte etwa $20 \, \text{s}^{-1}$ betragen.
+Im nächsten Schritt wird die Schwellenwertspannung der Diskriminatoren so eingestellt, dass an beiden Ausgängen etwa 30 Pulse pro Sekunde gemessen werden. Eine Impulsdauer von $\Delta t = 10 \, \mu\text{s}$ wird eingestellt. Dazu wird der Pulszähler angeschlossen. Um die Koinzidenzapparatur anzupassen, wird systematisch eine der Verzögerungsleitungen variiert und die Pulsrate am Ausgang der Koinzidenzeinheit beobachtet. Der Messbereich sollte groß genug sein, um die Halbwertsbreite der Verteilung zu bestimmen. Schließlich wird eine geeignete Verzögerung für die gesamte Messung gewählt. Die Ereignisrate sollte etwa $20 \, \text{s}^{-1}$ betragen.
 
-Schließen Sie die restlichen Teile der Schaltung an. Stellen Sie eine Suchzeit $T_s$ am Monoflop ein und passen Sie den Messbereich des TAC entsprechend an.
+Die restlichen Teile der Schaltung werden angeschlossen. Eine Suchzeit $T_s$ wird am Monoflop eingestellt und der Messbereich des TAC entsprechend angepasst.
 
-Zur Kalibrierung des MCA schließen Sie den Doppelpulsgenerator an und messen, welches Zeitintervall der Doppelpulse welchem Kanal des MCA entspricht. Um eine gleichmäßige Effizienz über den gesamten Messbereich zu überprüfen, wählen Sie für alle Messpunkte die gleiche Messzeit und vergleichen die absoluten Zählraten.
+Zur Kalibrierung des MCA wird der Doppelpulsgenerator angeschlossen und gemessen, welches Zeitintervall der Doppelpulse welchem Kanal des MCA entspricht. Um eine gleichmäßige Effizienz über den gesamten Messbereich zu überprüfen, wird für alle Messpunkte die gleiche Messzeit gewählt und die absoluten Zählraten verglichen.
 
-Nach erfolgreicher Kalibrierung starten Sie die Messung der Lebensdauer der Myonen.
+Nach erfolgreicher Kalibrierung wird die Messung der Lebensdauer der Myonen gestartet.
 
 \section{Messung}
 
-Richten Sie die in \autoref{fig:Aufbau} gezeigte Schaltung ein und bestimmen Sie die Lebensdauer der kosmischen Myonen aus einer Reihe von Messungen der einzelnen Lebensdauern.
-
+Die in \autoref{fig:Aufbau} gezeigte Schaltung wird eingerichtet und die Lebensdauer der kosmischen Myonen aus einer Reihe von Messungen der einzelnen Lebensdauern bestimmt.
