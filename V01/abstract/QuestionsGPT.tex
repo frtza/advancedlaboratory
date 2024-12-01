@@ -1,0 +1,57 @@
+\documentclass[a4paper,12pt]{article}
+
+% Pakete einbinden
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+% Dokumentbeginn
+\begin{document}
+
+% Titel
+\title{Vorbereitung auf das Kolloquium}
+\author{}
+\date{}
+
+\maketitle
+
+\section{Theorie}
+
+{\small
+\subsection{Was sind Myonen? Welche Eigenschaften haben sie? Woher kommen kosmische Myonen? In welcher Höhe entstehen sie? Wie zerfallen sie?}
+Myonen sind Elementarteilchen und gehören zur zweiten Generation der Leptonen. Sie haben eine elektrische Ladung von -1 (für $\mu^-$) oder +1 (für $\mu^+$) und eine Masse von etwa 206-fachen der Elektronenmasse. Kosmische Myonen entstehen in der Erdatmosphäre durch den Zerfall von Pionen, die wiederum durch hochenergetische Protonen, die auf Atomkerne der Luftmoleküle treffen, erzeugt werden. Diese Prozesse finden in Höhen von etwa 15 km bis 20 km statt. Myonen zerfallen in Elektronen (bzw. Positronen), Elektron-Neutrinos und Myon-Neutrinos:
+$$\mu^- \rightarrow e^- + \bar{\nu}_e + \nu_\mu$$
+$$\mu^+ \rightarrow e^+ + \nu_e + \bar{\nu}_\mu$$
+
+\subsection{Erkläre die Bedeutung der Lebensdauer.}
+Die Lebensdauer ist die Zeitspanne, in der die Hälfte einer großen Anzahl von Teilchen zerfallen ist. Sie ist ein Maß für die Stabilität eines Teilchens und wird oft als mittlere Lebensdauer $\tau$ bezeichnet.
+
+\subsection{Berechne die Reichweite eines kosmischen Myons ($E_{\mu}$ = 10 GeV) klassisch und relativistisch aus der Sicht eines Beobachters auf der Erde.}
+Klassisch:
+$$d = v \cdot t = c \cdot \tau$$
+Relativistisch (unter Berücksichtigung der Zeitdilatation):
+$$d = c \cdot \tau \cdot \gamma$$
+wobei $\gamma = \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}}$ der Lorentzfaktor ist.
+
+\subsection{Welche Ereignisraten erwarten Sie für diese Fälle auf der Erdoberfläche?}
+Die Ereignisrate auf der Erdoberfläche kann durch die Intensität der kosmischen Myonenstrahlung und deren Detektionswahrscheinlichkeit berechnet werden.
+
+\subsection{Welche Rauschunterdrückungstechniken werden angewendet? Schätzen Sie die verbleibende Hintergrundrate U. Gehen Sie davon aus, dass die Wahrscheinlichkeit, dass während der Suchzeit Ts ein weiteres Myon eintritt, poissonverteilt ist und ein Stoppsignal auslöst.}
+Rauschunterdrückungstechniken umfassen unter anderem Abschirmungen gegen elektromagnetische Interferenzen und Verwendung von Koinzidenzmethoden. Die Hintergrundrate kann unter der Annahme einer Poissonverteilung berechnet werden:
+$$P(k; \lambda) = \frac{\lambda^k e^{-\lambda}}{k!}$$
+
+\subsection{Wie funktioniert ein Mehrkanalanalysator und welche Größen werden im beobachteten Spektrum gegeneinander aufgetragen? Welche Form des Spektrums erwarten Sie?}
+Ein Mehrkanalanalysator sortiert und zählt Ereignisse basierend auf ihrer Energie. Im beobachteten Spektrum wird die Anzahl der Ereignisse gegen ihre Energie aufgetragen. Man erwartet ein exponentiell abfallendes Spektrum.
+
+\subsection{Welche Methode wird verwendet, um die Lebensdauer kosmischer Myonen im Experiment zu bestimmen? Wie wird das grundlegende Messprinzip schaltungstechnisch realisiert; welche Aufgaben werden von den einzelnen Komponenten übernommen? Machen Sie sich mit der Darstellung logischer Komponenten in Schaltplänen vertraut.}
+Die Lebensdauer kosmischer Myonen wird durch Messung des zeitlichen Abstands zwischen dem Eintreffen eines Myons und dessen Zerfall bestimmt. Dies wird durch eine Schaltung mit Szintillator, Photomultiplier, Zeitmessgerät und Auswerteeinheit realisiert.
+
+\subsection{Was ist der „NIM-Standard“ (Nuclear Instrument Modules)? Erwerben Sie grundlegende Kenntnisse über „NIM-Module“, „NIM-Logiksignale“, „TTL-Signale“ und „ECL-Signale“.}
+Der NIM-Standard ist ein Standard für Elektronikmodule, die in der Nuklear- und Teilchenphysik verwendet werden. NIM-Module verwenden NIM-Logiksignale, während TTL- und ECL-Signale verschiedene Logikpegel zur Informationsübertragung darstellen.
+}
+
+\end{document}
