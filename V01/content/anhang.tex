@@ -4,5 +4,35 @@
 
 \centering
 
-\vfill
-\vfill
+\null\vfill
+\begin{table}[H]
+	\centering
+	\caption{Messwerte zu Verzögerungszeit und Zählrate.}
+	\input{build/delay.tex}
+	\label{tab:delay}
+\end{table}
+\vfill\null
+
+\newpage
+
+\null\vfill
+\begin{table}[H]
+	\centering
+	\caption{Messwerte zu Kanalindex und Zeitintervall.}
+	\input{build/calibration.tex}
+	\label{tab:calibration}
+\end{table}
+\vfill\null
+
+\newpage
+
+\null\vfill
+\begin{table}[H]
+	\centering
+	\caption{Zählraten sortiert nach unten und rechts mit aufsteigender Kanalnummer.}
+	\noindent\makebox[\linewidth]{
+	\input{build/lifetime.tex}
+	}
+	\label{tab:lifetime}
+\end{table}
+\vfill\null
