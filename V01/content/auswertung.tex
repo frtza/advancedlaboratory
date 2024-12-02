@@ -35,6 +35,7 @@ amplitudenabhängigen Verschiebung der Ausgangspulse führen und so die Messung 
 einem bestimmten Bruchteil des Maximums ausgelöst, sodass dieser Fehler vermieden wird.
 
 \begin{figure}[H]
+	\vspace{\baselineskip}
 	\begin{subfigure}{0.48\textwidth}
 		\includegraphics[width=\textwidth]{content/messung/unfiltered.jpg}
 		\caption{Puls vor Diskriminator.}
@@ -105,16 +106,22 @@ und letztendlich eine mittlere Anstiegszeit
 \begin{equation*}
 	T_\text{Anstieg} = T_\text{Hälfte} - T_\text{Plateau} = \input{build/t.tex} \: .
 \end{equation*}
+Um für weitere Messungen eine maximale Zählrate zu erzielen, wird die Verzögerung
+\begin{equation*}
+	t_\text{optimal} = \input{build/opt.tex}
+\end{equation*}
+entsprechend der Mitte des Plateaus eingestellt.
 
 
 
 \subsection{Kanalkalibration}
 
-Ausgehend von der Umwandlung der gemessenen Zeitdiffernez von Eintreten und Zerfall zur Eingangsamplitude am
+Ausgehend von der Umwandlung der gemessenen Zeitdifferenz von Eintreten und Zerfall zur Eingangsamplitude am
 Vielkanalanalysator wird ein linearer Zusammenhang zwischen Kanalnummer $K$ und der Zeit $t$ angesetzt. Sollte
 die Zuordnung zu zwei benachbarten Kanälen erfolgen, wird der Mittelwert der Indizes verwendet.
 
 \begin{figure}[H]
+	\vspace{\baselineskip}
 	\centering
 	\includegraphics[width=\textwidth]{build/calibration.pdf}
 	\caption{Beobachteter Zusammenhang zwischen Kanalnummer und Zeitskala.}
@@ -129,11 +136,10 @@ bestimmen sich die in Abbildung \ref{fig:calibration} verwendeten Parameter
 \begin{align*}
 	A = \input{build/a.tex} \: , && B = \input{build/b.tex} \: .
 \end{align*}
-
 Diese Werte ergeben sich, indem an die Daten aus Tabelle \ref{tab:calibration} angepasst wird. Daran lässt sich ebenfalls
 eine global homogene Effizienz feststellen, da im Messintervall ähnliche Zählraten unabhängig der Kanalnummer auftreten.
-Dies lässt sich auch an der geringen Streuung des Mittelwerts $\input{build/Nmess.tex}$ verifizieren, welcher in etwa mit
-der an der Apparatur gegebenen Pulsfrequenz von $\input{build/Ntheo.tex}$ übereinstimmt.
+Dies lässt sich auch an der relativ geringen Streuung des Mittelwerts $\input{build/Nmess.tex}$ verifizieren, welcher in etwa mit
+der am Doppelpulsgenerator gegebenen Frequenz von $\input{build/Ntheo.tex}$ übereinstimmt.
 
 
 
@@ -152,6 +158,7 @@ verwendet und in Abbildung \ref{fig:lifetime} aufgetragen.
 	\includegraphics[width=\textwidth]{build/lifetime.pdf}
 	\caption{Daten aus der Langzeitmessung mit exponentieller Fitfunktion.}
 	\label{fig:lifetime}
+	\vspace{-\baselineskip}
 \end{figure}
 
 Die Werte der genannten Parameter lauten
@@ -198,4 +205,4 @@ abschätzen, welche sich homogen über $\input{build/len.tex}$ Kanäle verteilen
 \begin{equation*}
 	M = \input{build/mm.tex}
 \end{equation*}
-als Hintergrundrate, die mit dem Wert $n = \input{build/m.tex}$ aus dem vorherigen Vorgehen verglichen werden kann.
+als Hintergrundrate, die mit dem Wert $m = \input{build/m.tex}$ aus dem vorherigen Vorgehen verglichen werden kann.
