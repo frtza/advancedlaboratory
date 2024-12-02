@@ -5,19 +5,71 @@ Um die aufgenommenen Daten zu analysieren werden die Python~\cite{python} Pakete
 wobei Matplotlib~\cite{matplotlib} zum Erstellen von Grafiken und zudem Uncertainties~\cite{uncertainties} zur automatisierten
 Fehlerfortpflanzung in linearer Ordnung dienen.
 
-Zunächst wird die Koinzidenzschaltung auf ihr zeitliches Auflösungsvermögen geprüft. Weiter muss den Kanälen des Vielkanalanalysators
-je eine Zeit zugeordnet werden, bevor mit der eigentlichen Langzeitmessung fortgefahren werden kann.
+Nach einer Prüfung der Pulsform und Einrichtung der Diskriminatorschranken wird die Koinzidenzschaltung auf ihr zeitliches
+Auflösungsvermögen geprüft. Anschließend muss den Kanälen des Vielkanalanalysators jeweils eine Zeit zugeordnet werden,
+bevor mit der eigentlichen Langzeitmessung fortgefahren werden kann.
+
+
+
+\subsection{Justageschritt}
+
+Durch direktes Abgreifen der Signale beider Photomultiplier lässt sich am Oszilloskop der in Abbildung \ref{fig:pulse} gezeigte
+Verlauf beobachten. Hier entsprechen die Kanäle 1 und 2 jeweils dem im Aufbau vorderen oder rechten sowie hinteren oder linken
+Photovervielfacher. Zunächst fällt auf, dass Peak 1 bei gleicher Skalierung eine signifikant geringere Amplitude als Peak 2
+aufweist. Außerdem treten in Kanal 2 deutlich mehr Pulse auf, eine Beobachtung die auch am Diskriminatorausgang bestehen bleibt.
+Auch durch Justieren des Schrankenwerts lässt sich das nicht ändern, wogegen die Einstellung von Kanal 1 auf die benötigten
+$\qty{30}{\per\second}$ erfolgreich ist. Mithilfe der Koinzidenzschaltung sollte dieser Fehler demnach kompensiert werden.
+
+\begin{figure}[H]
+	\vspace{\baselineskip}
+	\centering
+	\includegraphics[width=0.6\textwidth]{content/messung/pulse.jpg}
+	\caption{Am Oszilloskop aufgenommene Pulsformen aus den Photomultipliern.}
+	\label{fig:pulse}
+\end{figure}
+
+Anhand Abbildung \ref{fig:pulse} kann zusätzlich der Vorteil eines Constant Fraction Discriminators veranschaulicht werden, indem
+die eigentlich gleichzeitigen Verläufe als Beispiele für unterschiedlich hohe, zeitlich versetzte Pulse mit annäherend gleicher
+Form am selben Diskriminator verwendet werden. Ein festgelegter Schwellenwert würde dann aufgrund der Skalierung zu einer
+amplitudenabhängigen Verschiebung der Ausgangspulse führen und so die Messung verfälschen. Im gegebenen Fall wird stattdessen bei
+einem bestimmten Bruchteil des Maximums ausgelöst, sodass dieser Fehler vermieden wird.
+
+\begin{figure}[H]
+	\begin{subfigure}{0.48\textwidth}
+		\includegraphics[width=\textwidth]{content/messung/unfiltered.jpg}
+		\caption{Puls vor Diskriminator.}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{0.48\textwidth}
+		\includegraphics[width=\textwidth]{content/messung/filtered.jpg}
+		\caption{Puls nach Diskriminator.}
+	\end{subfigure}
+	\caption{Vergleich der Pulsform vor und nach der Diskriminatorstufe.}
+	\label{fig:filter}
+\end{figure}
+
+In Abbildung \ref{fig:filter} sind Signale ohne und mit zwischengeschaltetem Diskriminator dargestellt. Für das endgültige Signal
+lässt sich signifikant weniger Rauschen beobachten. Ausßerdem kann am Diskriminatorausgang die Breite eingestellt werden. Damit
+werden Pulse mit Maxima der Ordnung $\qty{1}{\volt}$ und Halbwertsbreiten von etwa $\qty{10}{\nano\second}$ in die
+Koinzidenzschaltung gegeben, wobei die Zählrate aus dem ersten Photovervielfacher etwa eine Größenordnung geringer als die des
+zweiten ist.
 
 
 
 \subsection{Verzögerungszeit}
 
-Der Verlauf der in Tabelle \ref{tab:delay} gezeigten Messdaten wird in Abbildung \ref{fig:delay} als Trapez mit Null als Asymptote
-genähert. Es ergeben sich
+Neben der Funktion zur Störunterdrückung durch Redundanz erlaubt der Aufbau mit zwei Photomultipliern auch eine eindimensional
+räumliche Einstellung des verwendeten Volumens im organischen Szintillationsmedium, da die Verzögerung des Lichtblitzes im Bereich
+der Auflösung der Koinzidenzschaltung liegt. Der Verlauf der in Tabelle \ref{tab:delay} gezeigten Messdaten wird in Abbildung
+\ref{fig:delay} als Trapez mit Null als Asymptote genähert.
+
+Per Ausgleichsrechnung ergibt sich
 \begin{equation*}
 	a = \input{build/aa.tex}
 \end{equation*}
-für die Steigung der linken Flanke sowie Knickpunkte
+für die Steigung der positiven Flanke.
+
+Es folgen außerdem die Knickstellen
 \begin{align*}
 	b &= \input{build/bb.tex} \: , & c &= \input{build/cc.tex} \: , \\
 	d &= \input{build/dd.tex} \: , & e &= \input{build/ee.tex} \: .
@@ -30,7 +82,8 @@ für die Steigung der linken Flanke sowie Knickpunkte
 	\label{fig:delay}
 \end{figure}
 
-Daraus lassen sich einige relevante Größen berechnen. Die maximale Zählrate lautet
+Daraus lassen sich einige relevante Größen berechnen. Die maximale Zählrate, für die ein Zielwert von $\qty{20}{\per\second}$
+angegeben ist, lautet
 \begin{equation*}
 	N_\text{Plateau} = \input{build/nn.tex}
 \end{equation*}
@@ -38,24 +91,28 @@ im Bereich des Plateaus, welches eine Breite
 \begin{equation*}
 	T_\text{Plateau} = \input{build/dt.tex}
 \end{equation*}
-aufweist. Die Hälfte dieses Maximums ist bei
+aufweist. Bei den Zeiten
 \begin{align*}
 	t_\text{links} = \input{build/t1.tex} \: , && t_\text{rechts} = \input{build/t2.tex}
 \end{align*}
-erreicht. Damit folgt die Halbwertsbreite
+ist die Hälfte dieses Maximums erreicht.
+
+Damit folgt die Halbwertsbreite
 \begin{equation*}
 	T_\text{Hälfte} = t_\text{rechts} - t_\text{links} = \input{build/ddtt.tex}
 \end{equation*}
-und letztendlich eine Auflösungszeit
+und letztendlich eine mittlere Anstiegszeit
 \begin{equation*}
-	T_\text{Auflösung} = T_\text{Hälfte} - T_\text{Plateau} = \input{build/t.tex} \: .
+	T_\text{Anstieg} = T_\text{Hälfte} - T_\text{Plateau} = \input{build/t.tex} \: .
 \end{equation*}
 
 
 
 \subsection{Kanalkalibration}
 
-Es wird ein linearer Zusammenhang zwischen Kanalnummer $K$ und der Zeit $t$ angesetzt.
+Ausgehend von der Umwandlung der gemessenen Zeitdiffernez von Eintreten und Zerfall zur Eingangsamplitude am
+Vielkanalanalysator wird ein linearer Zusammenhang zwischen Kanalnummer $K$ und der Zeit $t$ angesetzt. Sollte
+die Zuordnung zu zwei benachbarten Kanälen erfolgen, wird der Mittelwert der Indizes verwendet.
 
 \begin{figure}[H]
 	\centering
@@ -64,16 +121,19 @@ Es wird ein linearer Zusammenhang zwischen Kanalnummer $K$ und der Zeit $t$ ange
 	\label{fig:calibration}
 \end{figure}
 
-Aus der entsprechenden Formel für die Ausgleichsrechnung
+Aus der entsprechenden Formel für die Umrechnung von Kanal zu Zeitskala
 \begin{equation*}
 	t(K) = AK + B
 \end{equation*}
 bestimmen sich die in Abbildung \ref{fig:calibration} verwendeten Parameter
 \begin{align*}
-	A = \input{build/a.tex} \: , && B = \input{build/b.tex}
+	A = \input{build/a.tex} \: , && B = \input{build/b.tex} \: .
 \end{align*}
-zur Umrechnung der Zeitskala aus dem Kanal. Diese Werte ergeben sich, indem an die Daten aus Tabelle \ref{tab:calibration}
-angepasst wird.
+
+Diese Werte ergeben sich, indem an die Daten aus Tabelle \ref{tab:calibration} angepasst wird. Daran lässt sich ebenfalls
+eine global homogene Effizienz feststellen, da im Messintervall ähnliche Zählraten unabhängig der Kanalnummer auftreten.
+Dies lässt sich auch an der geringen Streuung des Mittelwerts $\input{build/Nmess.tex}$ verifizieren, welcher in etwa mit
+der an der Apparatur gegebenen Pulsfrequenz von $\input{build/Ntheo.tex}$ übereinstimmt.
 
 
 
