@@ -300,7 +300,7 @@ to have $\Delta E = h / 2\pi \tau$ as a finite width. A natural linewidth
 	\Delta f_\text{N} = \pfrac{1}{2\pi}
 	\left( \pfrac{1}{\raisebox{0.55ex}{$\tau_1$}} + \pfrac{1}{\raisebox{0.55ex}{$\tau_2$}} \right)
 \end{equation*}
-is the result, which describes a Lorentzian profile
+with lifetimes $\tau_1$ of the lower and $\tau_2$ of the upper energy level is the result, which describes a Lorentzian profile
 \begin{equation*}
 	F_\text{N} (f) = \frac{(\Delta f_\text{N} / 2)^2}{(f - f_{12})^2 + (\Delta f_\text{N} / 2)^2} \: .
 \end{equation*}
@@ -310,7 +310,8 @@ elastic collisions, which cause phase shifts during emission. The width
 	\Delta f_\text{C} = \sqrt{\pfrac{3}{4mkT \,}} \, d^2 p
 \end{equation*}
 follows from thermodynamics and has values around $\Delta f_\text{C} \simeq \qty{100}{\mega\hertz}$ at temperatures of
-$T = \qty{300}{\kelvin}$ with the Boltzmann constant $k$ as well as $m$ and $d$ as the mass and diameter of the atoms.
+$T = \qty{300}{\kelvin}$ with the Boltzmann constant $k$ as well as the mass $m$ and diameter $d$ of the atoms.
+The variable $p$ denotes the pressure of an ideal gas.
 
 \begin{figure}[H]
 	\centering
@@ -319,7 +320,7 @@ $T = \qty{300}{\kelvin}$ with the Boltzmann constant $k$ as well as $m$ and $d$ 
 	\label{fig:broadening}
 \end{figure}
 
-Lastly, the motion of emitting particles inhomogenously shortens or lengthens the emitted wavelength according to the Doppler effect.
+Lastly, the motion of emitting particles inhomogenously shifts the emitted frequency according to the Doppler effect.
 This can be written for $v \ll c$ as
 \begin{equation*}
 	f_{12}' = f_{12} (1 \pm v / c) \: ,
@@ -343,9 +344,10 @@ with much larger spread than other contributions as can be seen in Figure \ref{f
 
 Inserting a Brewster plate at the Brewster angle inside the cavity before the mirror as shown in Figure \ref{fig:setup} allows the light
 component with polarization parallel to the plane of incidence to be transmitted with zero losses due to vanishing reflectivity, while
-about $\qty{20}{\percent}$ of the orthogonally polarized intensity are reflected and therefore lost. Due to the nonlinear operation of
-a laser and by assuming losses per cycle of $\qty{2}{\percent}$ at the out coupler as well as a gain around $\qty{10}{\percent}$ inside
-the active medium, one finds that only the parallel part is capable of lasing, making the output fully linearly polarized.
+about $\qty{20}{\percent}$ of the orthogonally polarized intensity are reflected at each interface and therefore lost. For two passes
+through two windows, losses accumulate from a total of eight reflections. Due to the nonlinear operation of a laser and by assuming
+losses per cycle of $\qty{2}{\percent}$ at the out coupler as well as a gain around $\qty{10}{\percent}$ inside the active medium,
+one finds that only the parallel part is capable of lasing, making the output fully linearly polarized.
 
 \begin{figure}[H]
 	\centering
