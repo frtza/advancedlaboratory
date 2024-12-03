@@ -7,7 +7,9 @@
 \null\vfill
 \begin{table}[H]
 	\centering
-	\caption{Messwerte zu Verzögerungszeit und Zählrate.}
+	\caption{Messwerte zu Verzögerungszeit und Zählrate. Aus poissonverteilter Zählung wird für
+			 den Fehler die Quadratwurzel der Gesamtzahl gebildet und dann durch das Messintervall
+			 $\qty{10}{\second}$ dividiert.}
 	\input{build/delay.tex}
 	\label{tab:delay}
 \end{table}
@@ -18,7 +20,8 @@
 \null\vfill
 \begin{table}[H]
 	\centering
-	\caption{Messwerte zu Kanalindex und Zeitintervall.}
+	\caption{Messwerte zu Kanalindex, Zeitintervall und Zählrate. Einzelne Einträge entsprechen jeweils einer
+			 Laufzeit von $\qty{10}{\second}$ am Doppelpulsgenerator.}
 	\input{build/calibration.tex}
 	\label{tab:calibration}
 \end{table}
@@ -29,7 +32,10 @@
 \null\vfill
 \begin{table}[H]
 	\centering
-	\caption{Zählraten sortiert nach unten und rechts mit aufsteigender Kanalnummer.}
+	\caption{Zählraten sortiert nach unten und rechts mit aufsteigender Kanalnummer. In der Messzeit
+			 $\protect\input{build/tmess.tex}$ wurden $\protect\input{build/nstart.tex}$ Startpulse und
+			 $\protect\input{build/nstopp.tex}$ Stopppulse registriert. Die nachfolgenden Werte beziehen
+			 sich auf dieselbe Messzeit.}
 	\noindent\makebox[\linewidth]{
 	\input{build/lifetime.tex}
 	}
