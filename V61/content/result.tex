@@ -176,7 +176,7 @@ The fit parameters are given by
     b&= -0.983 \pm 0.004\; .
 \end{align*}
 
-Further it is possible to measure and visualize the Doppler broadening described in \autoref{sec:doppler}. For doing so one additional measurement was performed with a larger resonator. Due to the larger resonator, the distance between the spectral peaks decreases and therefore more peaks can be seen, allowing to collect more data. The data are visualized and fitted in \autoref{fig:BRUCH}.
+Furthermore, an attempt can be made to measure and visualize the Doppler broadening described in \autoref{sec:doppler}. For doing so, one additional measurement was performed with a larger resonator. Due to the larger resonator, the distance between the spectral peaks decreases and therefore more peaks can be seen, allowing to collect more data. The data are visualized and fitted in \autoref{fig:BRUCH}.
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.8\textwidth]{content/plots/AUA.pdf}
@@ -185,7 +185,7 @@ Further it is possible to measure and visualize the Doppler broadening described
 \end{figure}
 The fitted curve follows the form 
 \begin{equation*}
-    U(f)= n\cdot \exp\left(-\frac{(f-m)^2}{2s^2}\right)\; .
+    U(f)= n\cdot \exp\left(-\frac{f^2}{2s^2}\right)\; .
 \end{equation*}
 
 The parameters can be determined to
@@ -197,4 +197,5 @@ From here the full width half maximum ($\Delta f_{\text{D}}$) can be calculated 
 \begin{equation*}
     \Delta f_{\text{D}} = (1.7 \pm 0.1) \, \text{GHz}\; . 
 \end{equation*}
-In comparison, the theoretical value mentioned in \autoref{sec:doppler} is $\Delta f_\text{D} \approx \qty{1.5}{\giga\hertz}$ for a \HeNe laser.
+In comparison, the theoretical value mentioned in \autoref{sec:doppler} is $\Delta f_\text{D} \approx \qty{1.5}{\giga\hertz}$ for a \HeNe laser, while a bandwidth
+of $\Delta f_\text{BW} = \qty{0.9}{\giga\hertz}$ is given for the photodiode.
