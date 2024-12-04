@@ -1,1 +1,52 @@
 \section{Diskussion}
+
+Zusammenfassend lässt sich festellen, dass mit den bisher genannten Werten plausible Ergebnisse
+vorliegen. Sowohl für die Einstellung der Messapparatur als auch die eigentliche Messung sind die
+Daten mit der Erwartung vereinbar. Im folgenden wird auf die jeweiligen Messabschnitte einzeln
+eingegangen.
+
+
+
+\subsection{Einstellung}
+
+Der in Abbildung \ref{fig:delay} gezeigte Zählratenverlauf lässt sich gut als Trapez mit Halbwertsbreite
+$\input{build/ddtt.tex}$ nähern, dessen Plateau bei $\input{build/nn.tex}$ in etwa dem Sollwert
+$\qty{20}{\per\second}$ entspricht. Bei der Einstellung der optimalen Verzögerungszeit ist es in diesem
+Fall egal, ob die Mitte des Plateaus $\input{build/opt.tex}$ oder alternativ die Mitte der Halbwertsbreite
+$\input{build/alt.tex}$ verwendet werden, da die Skala nur halbzahlige Schritte zulässt.
+
+Damit und unter Berücksichtigung des Endergebnisses scheint sich die zuvor aufgestellte Annahme, dass die
+erhöhte Zählrate am Abgriff des zweiten Photomultipliers ab der Koinzidenzschaltung einen vernachlässigbaren
+Fehlereinfluss darstellt, zu bestätigen. Ob der Ursprung dieser Abweichung am Photovervielfacher
+selbst oder im Diskriminator liegt, kann nicht abschließend geklärt werden. Gegen einen fehlerhaften
+Diskriminator spricht, dass am selben Ausgang unter Austauschen des ersten gegen den zweiten
+Photomultiplier die besagte höhere Zählrate beobachtet werden kann. Außerdem ist diese bereits
+am Oszilloskop ohne zwischengeschalteten Diskriminator zu erkennen. Andererseits stellt sich das
+Einstellen des Potentiometers am Diskriminator für den zweiten Photovervielfacher als schwierig
+heraus, da dieses teilweise keinen Effekt zu haben scheint, was wiederum auf einen Fehler des
+Bauteils hindeuten könnte.
+
+Bei der Kalibrierung des Vielkanalanalysators wird durch den Verlauf in Abbildung \ref{fig:calibration}
+sowie den geringen Fehler der Fitparameter ein linearer Zusammenhang zwischen Kanalindex und entsprechendem
+Zeitintervall bestätigt. Die Zählraten in Tabelle \ref{tab:calibration} belegen zudem eine uniforme Effizienz
+über den relevanten Messbereich.
+
+
+
+\subsection{Messung}
+
+Die Langzeitmessung zur Bestimmung der Lebensdauer in Abbildung \ref{fig:lifetime} folgt mit dem
+unmodifizierten Binning des Vielkanalanalysators in guter Näherung der angesetzten Exponentialverteilung.
+Unter Ausschluss solcher Wertebereiche, die über mehrere Kanäle Null ergeben, folgt für Myonen
+$\input{build/tau.tex}$ als mittlere Zerfallszeit, deren Fehlerbereich den Literaturwert
+$\qty{2.197}{\micro\second}$ \cite{Tishchenko_2013} beinhaltet und die somit als Ergebnis akzeptiert wird.
+
+Anhand der Ausgleichrechnung gilt für das gegebene Messintervall von $\input{build/tmess.tex}$ eine
+Hintergrundrate $\input{build/m.tex}$ durch fälscherlicherweise als Stopppuls gewertetes Eintreten weiterer
+Myonen. Diese ist ebenso mit dem Wert $\input{build/mm.tex}$ aus der Poissonstatistik vereinbar.
+
+Zuletzt kann noch eine weitere Struktur in den Daten aus Tabelle \ref{tab:lifetime} vermutet werden. Dabei
+handelt es sich um einen Peak im Bereich $\qty{0.5}{\micro\second}$ mit bis zu $\num{100}$ als Zählrate.
+Für dieses Phänomen gibt es zunächst keine offensichtliche Erklärung, wobei erst durch bessere Statistik
+aus längerer Messung geklärt werden müsste, ob dies überhaupt ein echter Effekt ist oder eine zufällige
+Schwankung repräsentiert.
