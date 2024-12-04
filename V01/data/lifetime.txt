@@ -1,4 +1,4 @@
-# N # Messzeit: 154196 # Start: 2945138 # Stopp: 8464 #
+# N # Messzeit: 154196 # Start: 2945138 # Stopp: 7304 ? 4818 ? 8464 #
        0
        0
        0
