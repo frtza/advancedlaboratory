@@ -13,12 +13,12 @@ bevor mit der eigentlichen Langzeitmessung fortgefahren werden kann.
 
 \subsection{Justageschritt}
 
-Durch direktes Abgreifen der Signale beider Photomultiplier lässt sich am Oszilloskop der in Abbildung \ref{fig:pulse} gezeigte
+Durch direktes Abgreifen der Signale beider Photomultiplier lässt sich am Oszilloskop der in Abbildung \eqref{fig:pulse} gezeigte
 Verlauf beobachten. Hier entsprechen die Kanäle 1 und 2 jeweils dem im Aufbau vorderen oder rechten sowie hinteren oder linken
 PMT. Zunächst fällt auf, dass Peak 1 bei gleicher Skalierung eine signifikant geringere Amplitude als Peak 2
 aufweist. Außerdem treten in Kanal 2 deutlich mehr Pulse auf, eine Beobachtung die auch am Diskriminatorausgang bestehen bleibt.
-Auch durch Justieren des Schrankenwerts lässt sich das nicht ändern, wogegen die Einstellung von Kanal 1 auf die benötigten
-$\qty{30}{\per\second}$ erfolgreich ist. Mithilfe der Koinzidenzschaltung sollte dieser Fehler demnach kompensiert werden.
+Durch Justieren des Schrankenwerts lässt sich das ebenfalls nicht ändern, wogegen die Einstellung von Kanal 1 auf die benötigten
+$\qty{30}{\per\second}$ erfolgreich ist. An der Koinzidenzschaltung sollte dieser Fehler also kompensiert~werden.
 
 \begin{figure}[H]
 	\vspace{\baselineskip}
@@ -28,7 +28,9 @@ $\qty{30}{\per\second}$ erfolgreich ist. Mithilfe der Koinzidenzschaltung sollte
 	\label{fig:pulse}
 \end{figure}
 
-Anhand Abbildung \ref{fig:pulse} kann zusätzlich der Vorteil eines Constant Fraction Discriminators veranschaulicht werden, indem
+\newpage
+
+Anhand Abbildung \eqref{fig:pulse} kann zusätzlich der Vorteil eines Constant Fraction Discriminators veranschaulicht werden, indem
 die eigentlich gleichzeitigen Verläufe als Beispiele für unterschiedlich hohe, zeitlich versetzte Pulse mit annäherend gleicher
 Form am selben Diskriminator verwendet werden. Ein festgelegter Schwellenwert würde dann aufgrund der Skalierung zu einer
 amplitudenabhängigen Verschiebung der Ausgangspulse führen und so die Messung verfälschen. Im gegebenen Fall wird stattdessen bei
@@ -49,7 +51,7 @@ einem bestimmten Bruchteil des Maximums ausgelöst, sodass dieser Fehler vermied
 	\label{fig:filter}
 \end{figure}
 
-In Abbildung \ref{fig:filter} sind Signale ohne und mit zwischengeschaltetem Diskriminator dargestellt. Für das endgültige Signal
+In Abbildung \eqref{fig:filter} sind Signale ohne und mit zwischengeschaltetem Diskriminator dargestellt. Für das endgültige Signal
 lässt sich signifikant weniger Rauschen beobachten. Ausßerdem kann am Diskriminatorausgang die Breite eingestellt werden. Damit
 werden Pulse mit Maxima der Ordnung $\qty{1}{\volt}$ und Halbwertsbreiten von etwa $\qty{10}{\nano\second}$ in die
 Koinzidenzschaltung gegeben, wobei die Zählrate aus dem ersten PMT etwa eine Größenordnung geringer als die des
@@ -61,8 +63,8 @@ zweiten ist.
 
 Neben der Funktion zur Störunterdrückung durch Redundanz erlaubt der Aufbau mit zwei Photomultipliern auch eine eindimensional
 räumliche Einstellung des verwendeten Volumens im organischen Szintillationsmedium, da die Verzögerung des Lichtblitzes im Bereich
-der Auflösung der Koinzidenzschaltung liegt. Der Verlauf der in Tabelle \ref{tab:delay} gezeigten Messdaten wird in Abbildung
-\ref{fig:delay} als Trapez mit Null als Asymptote genähert.
+der Auflösung der Koinzidenzschaltung liegt. Der Verlauf der in Tabelle \eqref{tab:delay} gezeigten Messdaten wird in Abbildung
+\eqref{fig:delay} als Trapez mit Null als Asymptote genähert.
 
 Per Ausgleichsrechnung ergibt sich
 \begin{equation*}
@@ -132,11 +134,11 @@ Aus der entsprechenden Formel für die Umrechnung von Kanal zu Zeitskala
 \begin{equation*}
 	t(K) = AK + B
 \end{equation*}
-bestimmen sich die in Abbildung \ref{fig:calibration} verwendeten Parameter
+bestimmen sich die in Abbildung \eqref{fig:calibration} verwendeten Parameter
 \begin{align*}
 	A = \input{build/a.tex} \: , && B = \input{build/b.tex} \: .
 \end{align*}
-Diese Werte ergeben sich, indem an die Daten aus Tabelle \ref{tab:calibration} angepasst wird. Daran lässt sich ebenfalls
+Diese Werte ergeben sich, indem an die Daten aus Tabelle \eqref{tab:calibration} angepasst wird. Daran lässt sich ebenfalls
 eine global homogene Effizienz feststellen, da im Messintervall ähnliche Zählraten unabhängig der Kanalnummer auftreten.
 Dies lässt sich auch an der relativ geringen Streuung des Mittelwerts $\input{build/Nmess.tex}$ verifizieren, welcher in etwa mit
 der am Doppelpulsgenerator gegebenen Frequenz von $\input{build/Ntheo.tex}$ übereinstimmt.
@@ -145,13 +147,13 @@ der am Doppelpulsgenerator gegebenen Frequenz von $\input{build/Ntheo.tex}$ übe
 
 \subsection{Langzeitmessung}
 
-Für die Messung der Zählrate $N$ gegen die Zeitdifferenz $t$ aus Tabelle \ref{tab:lifetime} lässt sich
+Für die Messung der Zählrate $N$ gegen die Zeitdifferenz $t$ aus Tabelle \eqref{tab:lifetime} lässt sich
 \begin{equation*}
 	N(t) = m + ne^{-\lambda t}
 \end{equation*}
 als exponentieller Zusammenhang mit Normierung $n$ ansetzen, der um $m$ als Hintergrund verschoben ist. Aufgrund der
 beobachteten Streuung werden ausschließlich die Kanäle mit Indizes $\input{build/k1.tex}$ bis $\input{build/k2.tex}$
-verwendet und in Abbildung \ref{fig:lifetime} aufgetragen.
+verwendet und in Abbildung \eqref{fig:lifetime} aufgetragen.
 
 \begin{figure}[H]
 	\centering
