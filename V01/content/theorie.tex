@@ -6,24 +6,61 @@ In dem folgenden Kapitel werden die nötigen theoretischen Grundlagen, um die ch
 
 Basierend auf dem Standardmodell der Teilchenphysik gibt es verschiedene Elementarteilchen, Quarks, Leptonen und Eichbosonen. Quarks und Leptonen lassen sich in drei Generationen einteilen, die sechs Quarks unterliegen der starken Wechselwirkung und besitzen drei verschiedene Farbladungen. Leptonen unterliegen u.a. der schwachen Wechselwirkung und lassen sich in drei geladene Leptonen und drei Neutrinos einteilen, wobei erstere auch der elektromagnetischen Wechselwirkung unterliegen. Leptonen gehören zur Familie der Fermionen, sind also Spin-1/2-Teilchen, die der Fermi-Dirac-Statistik folgen. Die drei Generationen der Leptonen unterscheiden sich durch ihre Masse und haben unterschiedliche Lebensdauern. Elektronen gehören zur ersten Leptonen-Generation, Myonen zur zweiten Generation mit etwa 206-facher Masse der Elektronen. Im Gegensatz zu Elektronen sind Myonen und Tauonen nicht stabil, sondern zerfallen aufgrund ihrer endlichen Lebensdauer.
 
-Myonen entstehen in der höheren Erdatmosphäre. Hochenergetische Protonen der kosmischen Strahlung treffen auf Atomkerne von Stickstoff- und Sauerstoffmolekülen in der Atmosphäre. Dabei entstehen Pionen, die eine sehr kurze Lebensdauer haben und in Myonen zerfallen, $$\pi^+ \rightarrow \mu^+ + \nu_\mu\; ,$$ $$\pi^- \rightarrow \mu^- + \bar{\nu}_\mu\; .$$
+Myonen entstehen in der höheren Erdatmosphäre. Hochenergetische Protonen der kosmischen Strahlung treffen auf Atomkerne von Stickstoff- und Sauerstoffmolekülen in der Atmosphäre und lösen hadronische Schauer aus. Dabei entstehen Pionen, die eine sehr kurze Lebensdauer haben und in Myonen zerfallen, $$\pi^+ \rightarrow \mu^+ + \nu_\mu\; ,$$ $$\pi^- \rightarrow \mu^- + \bar{\nu}_\mu\; .$$
 
-Myonen haben eine längere Lebensdauer und bewegen sich nahezu mit Lichtgeschwindigkeit, wodurch sie die Erdoberfläche erreichen und in einem Szintillator detektiert werden können. Im Szintillator wechselwirken die Myonen mit den Molekülen, geben ihre kinetische Energie in gequantelten Anteilen ab und regen die Moleküle an, diese geben überschüssige Energie als Photonen ab. Das Eintreffen eines Myons erzeugt somit viele Photonen im sichtbaren Bereich. Einige Myonen haben so geringe Energie, dass sie im Szintillator komplett abgebremst werden und dort zerfallen. Der Myonenzerfall in Elektronen und Neutrinos kann wie folgt dargestellt werden, $$\mu^- \rightarrow e^- + \bar{\nu}_e + \nu_\mu\; . $$
+Myonen haben eine längere Lebensdauer und bewegen sich nahezu mit Lichtgeschwindigkeit, wodurch sie die Erdoberfläche erreichen und in einem Szintillator detektiert werden können. Im Szintillator wechselwirken die Myonen mit den Molekülen, geben ihre kinetische Energie in quantisierter Form ab und regen die Moleküle an. Dieser Vorgang heißt Ionisation, es entstehen Kaskaden geladener Teilchen. Die bei der Relaxation frei werdende Energie wird schließlich teilweise als Photonen abgegeben. Das Eintreffen eines Myons erzeugt somit viele Photonen im detektierbaren Bereich. Einige Myonen haben so geringe Energie, dass sie im Szintillator komplett abgebremst werden und dort zerfallen. Der Myonenzerfall in Elektronen und Neutrinos durch die schwache Wechselwirkung kann wie folgt dargestellt werden, $$\mu^- \rightarrow e^- + \bar{\nu}_e + \nu_\mu\; . $$
 
 Das Antimyon verhält sich ähnlich und zerfällt in Positron und Neutrinos, $$\mu^+ \rightarrow e^+ + \nu_e + \bar{\nu}_\mu\; .$$
 
 Die entstehenden Elektronen und Positronen erzeugen ebenfalls ein Photon im Szintillator, sodass der zeitliche Abstand zwischen den beiden Photonen der individuellen Lebensdauer des detektierten Myons entspricht.
 
+
+
 \subsection{Bestimmung der mittleren Lebensdauer von Elementarteilchen}
 
-Da der Zerfall des Myons ein statistischer Prozess ist, haben einzelne Myonen unterschiedliche Lebensdauern, daher ist eine allgemeine Definition der Lebensdauer als mittlere Lebensdauer notwendig. Die Zerfälle der einzelnen Teilchen sind unabhängig voneinander, daher ergibt sich für eine Gesamtteilchenzahl $N$ die Anzahl $dN$ der Teilchen, die in der Zeit $dt$ zerfallen, $$dN = -N \cdot dW = -\lambda N \cdot dt\; . $$
-
-wobei $dW = \lambda dt$ die Zerfallswahrscheinlichkeit eines einzelnen Teilchens im Zeitintervall $dt$ ist und $\lambda$ die Zerfallskonstante darstellt. Durch Umstellen und lösen der DGL kann, $$\frac{N(t)}{N_0} = e^{-\lambda t}\;  $$ gefunden werden.
-
-Durch Bildung von $$\frac{dN(t)}{N_0} = \frac{N(t) - N(t+dt)}{N_0}\;  ,  $$
-
-ergibt sich die exponentielle Verteilungsfunktion der Lebensdauer $t$, $$\frac{dN(t)}{N_0} = \lambda e^{-\lambda t} dt\; .$$
-
-Die mittlere Lebensdauer ergibt sich als Mittelwert aus allen möglichen Lebensdauern gewichtet mit der Verteilungsfunktion. Dies entspricht dem Erwartungswert, $$\tau = \int_{-\infty}^{\infty} \lambda t e^{-\lambda t} dt = \frac{1}{\lambda}\; . $$
-
+Da der Zerfall des Myons ein statistischer Prozess ist, haben einzelne Myonen unterschiedliche Lebensdauern, daher ist eine allgemeine Definition
+der Lebensdauer als mittlere Lebensdauer notwendig. Die Zerfälle der einzelnen Teilchen sind unabhängig voneinander, daher ergibt sich für eine
+Gesamtteilchenzahl $N$ die Anzahl $dN$ der Teilchen, die in der Zeit $dt$ zerfallen,
+\begin{equation}
+	dN = -N \cdot dW = -\lambda N \cdot dt\: .
+\end{equation}
+wobei $dW = \lambda dt$ die Zerfallswahrscheinlichkeit eines einzelnen Teilchens im Zeitintervall $dt$ ist und $\lambda$ die Zerfallskonstante
+darstellt. Durch Separation der Variablen zu
+\begin{equation}
+	\pfrac{dN}{N} = -\lambda \cdot dt \: ,
+\end{equation}
+Integration nach
+\begin{equation}
+	\int_{N_0}^{N(t)} \pfrac{dN}{N} = \ln N(t) - \ln N_0 = \ln (N(t) / N_0) = \int_0^{t} -\lambda \, dt = -\lambda t
+\end{equation}
+und Lösen für
+\begin{equation}
+	\frac{N(t)}{N_0} = e^{-\lambda t}
+\end{equation}
+kann ein exponentieller Zusammenhang gefunden werden. Um daraus eine Wahrscheinlichkeitsdichte zu bilden, muss der Normierungsfaktor
+$C = \lambda$ aus der Bedingung
+\begin{equation}
+	1 = \int_0^\infty Ce^{-\lambda t} dt = \pfrac{C}{\lambda}
+\end{equation}
+bestimmt werden. Die Berechnung des Erwartungswertes erfolgt durch Integration des Produkts dieser resultierenden Verteilungsfunktion mit der
+individuellen Lebensdauer,
+\begin{equation}
+	\tau = \langle t \rangle = \int_{0}^{\infty} \lambda t e^{-\lambda t} dt = \pfrac{1}{\lambda} \: .
+\end{equation}
 Die mittlere Lebensdauer $\tau$ entspricht also der inversen Zerfallskonstante $\lambda$.
+
+
+
+% Durch Bildung von
+% \begin{equation}
+% 	\frac{dN(t)}{N_0} = \frac{N(t) - N(t+dt)}{N_0}\:  ,
+% \end{equation}
+% ergibt sich die exponentielle Verteilungsfunktion der Lebensdauer $t$,
+% \begin{equation}
+% 	\frac{dN(t)}{N_0} = \lambda e^{-\lambda t} dt\: .
+% \end{equation}
+% Die mittlere Lebensdauer ergibt sich als Mittelwert aus allen möglichen Lebensdauern gewichtet mit der Verteilungsfunktion. Dies entspricht dem
+% Erwartungswert,
+% \begin{equation}
+% 	\tau = \int_{-\infty}^{\infty} \lambda t e^{-\lambda t} dt = \frac{1}{\lambda}\: .
+% \end{equation}
