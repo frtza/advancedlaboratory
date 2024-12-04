@@ -51,11 +51,10 @@ einem bestimmten Bruchteil des Maximums ausgelöst, sodass dieser Fehler vermied
 	\label{fig:filter}
 \end{figure}
 
-In Abbildung \eqref{fig:filter} sind Signale ohne und mit zwischengeschaltetem Diskriminator dargestellt. Für das endgültige Signal
-lässt sich signifikant weniger Rauschen beobachten. Ausßerdem kann am Diskriminatorausgang die Breite eingestellt werden. Damit
-werden Pulse mit Maxima der Ordnung $\qty{1}{\volt}$ und Halbwertsbreiten von etwa $\qty{10}{\nano\second}$ in die
-Koinzidenzschaltung gegeben, wobei die Zählrate aus dem ersten PMT etwa eine Größenordnung geringer als die des
-zweiten ist.
+In Abbildung \eqref{fig:filter} sind zwei exemplarische Signale ohne und mit zwischengeschaltetem Diskriminator dargestellt. Für
+das endgültige Signal lässt sich signifikant weniger Rauschen beobachten. Außerdem kann am Diskriminatorausgang die Breite eingestellt
+werden. Damit werden Pulse mit Maxima der Ordnung $\qty{1}{\volt}$ und Halbwertsbreiten von etwa $\qty{10}{\nano\second}$ in die
+Koinzidenzschaltung gegeben, wobei die Zählrate aus dem ersten PMT etwa eine Größenordnung geringer als die des zweiten ist.
 
 
 
@@ -126,7 +125,7 @@ die Zuordnung zu zwei benachbarten Kanälen erfolgen, wird der Mittelwert der In
 	\vspace{\baselineskip}
 	\centering
 	\includegraphics[width=\textwidth]{build/calibration.pdf}
-	\caption{Beobachteter Zusammenhang zwischen Kanalnummer und Zeitskala.}
+	\caption{Beobachteter Zusammenhang zwischen Kanalnummer und Zeitabstand zwischen Pulsen des Doppelpulsgenerators.}
 	\label{fig:calibration}
 \end{figure}
 
@@ -171,11 +170,11 @@ Zusätzlich ergibt sich
 \begin{equation*}
 	\lambda = \input{build/lam.tex}
 \end{equation*}
-als Zerfallskonstante und schließlich
+für die Zerfallskonstante und schließlich die Lebensdauer von Myonen
 \begin{equation*}
-	\tau = \input{build/tau.tex}
+	\tau = \input{build/tau.tex} \: ,
 \end{equation*}
-für die Lebensdauer kosmischer Myonen, wobei $\qty{2.197}{\micro\second}$ den Literaturwert angibt \cite{Tishchenko_2013}.
+wobei $\qty{2.196980(2)}{\micro\second}$ den Literaturwert angibt \cite{Tishchenko_2013}.
 
 
 
