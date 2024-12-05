@@ -8,7 +8,7 @@ Basierend auf dem Standardmodell der Teilchenphysik gibt es verschiedene Element
 
 Myonen entstehen in der höheren Erdatmosphäre. Hochenergetische Protonen der kosmischen Strahlung treffen auf Atomkerne von Stickstoff- und Sauerstoffmolekülen in der Atmosphäre und lösen hadronische Schauer aus. Dabei entstehen Pionen, die eine sehr kurze Lebensdauer haben und in Myonen zerfallen, $$\pi^+ \rightarrow \mu^+ + \nu_\mu\; ,$$ $$\pi^- \rightarrow \mu^- + \bar{\nu}_\mu\; .$$
 
-Myonen haben eine längere Lebensdauer und bewegen sich nahezu mit Lichtgeschwindigkeit, wodurch sie die Erdoberfläche erreichen und in einem Szintillator detektiert werden können. Im Szintillator wechselwirken die Myonen mit den Molekülen, geben ihre kinetische Energie in quantisierter Form ab und regen die Moleküle an. Dieser Vorgang heißt Ionisation, es entstehen Kaskaden geladener Teilchen. Die bei der Relaxation frei werdende Energie wird schließlich teilweise als Photonen abgegeben. Das Eintreffen eines Myons erzeugt somit viele Photonen im detektierbaren Bereich. Einige Myonen haben so geringe Energie, dass sie im Szintillator komplett abgebremst werden und dort zerfallen. Der Myonenzerfall in Elektronen und Neutrinos durch die schwache Wechselwirkung kann wie folgt dargestellt werden, $$\mu^- \rightarrow e^- + \bar{\nu}_e + \nu_\mu\; . $$
+Myonen haben eine längere Lebensdauer und bewegen sich nahezu mit Lichtgeschwindigkeit, wodurch sie die Erdoberfläche erreichen und in einem Szintillator detektiert werden können. Im Szintillator wechselwirken die Myonen mit den Molekülen, geben ihre kinetische Energie in quantisierter Form ab und regen die Moleküle an. Dieser Vorgang heißt Ionisation. Die bei der Relaxation des Elektrons frei werdende Energie wird als Photon abgegeben, welches detektiert werden kann. Einige Myonen haben so geringe Energie, dass sie im Szintillator komplett abgebremst werden und dort zerfallen. Der Myonenzerfall in Elektronen und Neutrinos durch die schwache Wechselwirkung kann wie folgt dargestellt werden, $$\mu^- \rightarrow e^- + \bar{\nu}_e + \nu_\mu\; . $$
 
 Das Antimyon verhält sich ähnlich und zerfällt in Positron und Neutrinos, $$\mu^+ \rightarrow e^+ + \nu_e + \bar{\nu}_\mu\; .$$
 
@@ -20,18 +20,18 @@ Die entstehenden Elektronen und Positronen erzeugen ebenfalls ein Photon im Szin
 
 Da der Zerfall des Myons ein statistischer Prozess ist, haben einzelne Myonen unterschiedliche Lebensdauern, daher ist eine allgemeine Definition
 der Lebensdauer als mittlere Lebensdauer notwendig. Die Zerfälle der einzelnen Teilchen sind unabhängig voneinander, daher ergibt sich für eine
-Gesamtteilchenzahl $N$ die Anzahl $dN$ der Teilchen, die in der Zeit $dt$ zerfallen,
+Gesamtteilchenzahl $N$ die Anzahl $\symup dN$ der Teilchen, die in der Zeit $\symup dt$ zerfallen,
 \begin{equation}
-	dN = -N \cdot dW = -\lambda N \cdot dt\: .
+	\symup dN = -N \cdot \symup dW = -\lambda N \cdot \symup dt\: .
 \end{equation}
-wobei $dW = \lambda dt$ die Zerfallswahrscheinlichkeit eines einzelnen Teilchens im Zeitintervall $dt$ ist und $\lambda$ die Zerfallskonstante
+wobei $\symup dW = \lambda \symup dt$ die Zerfallswahrscheinlichkeit eines einzelnen Teilchens im Zeitintervall $\symup dt$ ist und $\lambda$ die Zerfallskonstante
 darstellt. Durch Separation der Variablen zu
 \begin{equation}
-	\pfrac{dN}{N} = -\lambda \cdot dt \: ,
+	\pfrac{\symup dN}{N} = -\lambda \cdot \symup dt \: ,
 \end{equation}
 Integration nach
 \begin{equation}
-	\int_{N_0}^{N(t)} \pfrac{dN}{N} = \ln N(t) - \ln N_0 = \ln (N(t) / N_0) = \int_0^{t} -\lambda \, dt = -\lambda t
+	\int_{N_0}^{N(t)} \pfrac{\symup dN}{N} = \ln N(t) - \ln N_0 = \ln (N(t) / N_0) = \int_0^{t} -\lambda \, \symup dt = -\lambda t
 \end{equation}
 und Lösen für
 \begin{equation}
@@ -40,12 +40,12 @@ und Lösen für
 kann ein exponentieller Zusammenhang gefunden werden. Um daraus eine Wahrscheinlichkeitsdichte zu bilden, muss der Normierungsfaktor
 $C = \lambda$ aus der Bedingung
 \begin{equation}
-	1 = \int_0^\infty Ce^{-\lambda t} dt = \pfrac{C}{\lambda}
+	1 = \int_0^\infty Ce^{-\lambda t} \symup dt = \pfrac{C}{\lambda}
 \end{equation}
 bestimmt werden. Die Berechnung des Erwartungswertes erfolgt durch Integration des Produkts dieser resultierenden Verteilungsfunktion mit der
 individuellen Lebensdauer,
 \begin{equation}
-	\tau = \langle t \rangle = \int_{0}^{\infty} \lambda t e^{-\lambda t} dt = \pfrac{1}{\lambda} \: .
+	\tau = \langle t \rangle = \int_{0}^{\infty} \lambda t e^{-\lambda t} \symup dt = \pfrac{1}{\lambda} \: .
 \end{equation}
 Die mittlere Lebensdauer $\tau$ entspricht also der inversen Zerfallskonstante $\lambda$.
 
