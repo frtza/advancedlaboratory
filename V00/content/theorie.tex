@@ -1,3 +1,48 @@
-\section{Theorie}
+\section{Einleitung}
+Quantenkryptographie ist ein faszinierender Bereich der Quantenphysik, der sichere Kommunikation durch die Gesetze der Quantenmechanik ermöglicht. Das Ziel dieses Kapitels ist es, die theoretischen Grundlagen des Analogieversuchs zur Quantenkryptographie zu erläutern, wie er in einem didaktischen Kontext verwendet wird, sowie einen Vergleich zur echten Quantenkryptographie darzustellen.
 
-\cite{krypt}
+\section{Grundlagen der Quantenkryptographie}
+\subsection{Das BB84-Protokoll}
+Das BB84-Protokoll wurde 1984 von Charles Bennett und Gilles Brassard entwickelt und stellt das erste Quantenkryptographie-Protokoll dar. Es basiert auf der Übertragung von Qubits, den fundamentalen Informationsträgern in der Quantenmechanik, in zwei verschiedenen Basen: der rectilinearen Basis (\( |0\rangle, |1\rangle \)) und der diagonalen Basis (\( |+\rangle, |-\rangle \)). In der rectilinearen Basis entsprechen die Zustände horizontal (\(0^\circ\)) und vertikal (\(90^\circ\)) polarisierten Zuständen. Die diagonale Basis repräsentiert Zustände, die diagonal (\(45^\circ\)) und anti-diagonal (\(135^\circ\)) polarisiert sind.
+
+Alice wählt zufällig eine dieser beiden Basen aus und sendet Qubits an Bob. Bob misst diese Qubits ebenfalls in einer zufällig gewählten Basis. Wenn die von Alice und Bob gewählten Basen übereinstimmen, können die Ergebnisse der Messungen zur Schlüsselerzeugung verwendet werden.
+
+\subsection{Sicherheitsprinzip}
+Die Sicherheit des BB84-Protokolls basiert auf zwei fundamentalen Prinzipien der Quantenmechanik: dem No-Cloning-Theorem, das besagt, dass ein unbekannter Quantenzustand nicht exakt kopiert werden kann, und der Tatsache, dass jede Messung den Zustand eines Qubits beeinflusst. Wenn ein Abhörer (Eve) versucht, die Informationen abzufangen, führt dies zwangsläufig zu Störungen in den Messwerten, die Alice und Bob erkennen können.
+
+\section{Der Analogieversuch}
+Der Analogieversuch simuliert die Prinzipien der Quantenkryptographie durch die Manipulation von polarisiertem Licht. Anstelle echter Qubits werden Lichtpulse verwendet, deren Polarisationszustände die Quantenbasen nachahmen.
+
+\subsection{Aufbau des Versuchs}
+Der Versuch umfasst drei Hauptkomponenten: den Sender (Alice), der Polarisationsgeneratoren zur Erzeugung von Lichtpulsen in verschiedenen Polarisationszuständen verwendet, den Empfänger (Bob), der die Pulse mit Polarisationsdetektoren in zwei möglichen Messbasen misst, und einen potenziellen Abhörer (Eve), der die Übertragung abhören und dadurch Störungen im System verursachen kann.
+
+\subsection{Experimentelle Schritte}
+Im Verlauf des Experiments sendet Alice Lichtpulse in zufällig gewählten Polarisationszuständen an Bob, der diese Pulse mit einer ebenfalls zufällig gewählten Basis misst. Nach Abschluss der Übertragung teilen Alice und Bob öffentlich die von ihnen verwendeten Basen, ohne die gemessenen Ergebnisse preiszugeben. Nur in den Fällen, in denen ihre Basen übereinstimmen, können die entsprechenden Bitwerte für die Schlüsselerzeugung genutzt werden. 
+
+\begin{table}[H]
+\centering
+\caption{Polarisationszustände und ihre Zuordnung}
+\begin{tabular}{ccc}
+\toprule
+\textbf{Polarisationswinkel} & \textbf{Basis} & \textbf{Bitwert} \\
+\midrule
+\(0^\circ\) & Rectilinear & 0 \\
+\(90^\circ\) & Rectilinear & 1 \\
+\(45^\circ\) & Diagonal & 0 \\
+\(135^\circ\) & Diagonal & 1 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Erkennung eines Abhörversuchs}
+Ein Abhörversuch durch Eve verändert den Zustand der Lichtpulse und führt zu Fehlern in den von Bob gemessenen Bitwerten. Da Eve die von Alice verwendete Basis nicht kennt, misst sie die Polarisationszustände in 50 Prozent der Fälle in der falschen Basis. Diese falschen Messungen beeinflussen die ursprünglichen Zustände der Lichtpulse, bevor sie an Bob weitergeleitet werden. Die Konsequenz ist eine erhöhte Fehlerrate in den Messergebnissen von Bob.
+
+Um einen Abhörversuch zu erkennen, teilen Alice und Bob nach der Übertragung eine Teilmenge ihrer Ergebnisse und vergleichen die Übereinstimmung. Unter normalen Bedingungen, also ohne Abhörversuch, liegt die Fehlerquote durch zufällige Einflüsse typischerweise unter 11 Prozent. Wird dieser Wert überschritten, deutet dies auf einen Abhörversuch hin, da die zusätzlichen Fehler durch Eves Eingreifen verursacht werden.
+
+\section{Vergleich mit echter Quantenkryptographie}
+Im Gegensatz zum Analogieversuch basiert die echte Quantenkryptographie auf der Übertragung von echten Qubits, die häufig durch einzelne Photonen realisiert werden. Solche Photonen werden durch spezialisierte Geräte wie verschränkte Photonengeneratoren erzeugt und durch hochempfindliche Detektoren gemessen. 
+
+Die echte Quantenkryptographie bietet unbedingte Sicherheit, da kein Abhörversuch unentdeckt bleibt. Die Sicherheitsgarantie basiert dabei nicht auf mathematischen Annahmen, sondern auf den fundamentalen Naturgesetzen der Quantenmechanik. Allerdings gibt es auch praktische Herausforderungen, wie etwa die Schwierigkeit, einzelne Photonen über große Distanzen zu übertragen, oder die technologische Komplexität der notwendigen Geräte.
+
+\section{Zusammenfassung}
+Der Analogieversuch zur Quantenkryptographie ist eine wertvolle Methode, um die Prinzipien der Quantenkommunikation und die Funktionsweise des BB84-Protokolls anschaulich darzustellen. Durch die Verwendung von polarisiertem Licht können wesentliche Konzepte wie Schlüsselerzeugung und die Entdeckung von Abhörversuchen demonstriert werden. Gleichzeitig bleibt die echte Quantenkryptographie mit ihrer unbedingten Sicherheit und ihren technologischen Herausforderungen ein hochaktuelles und faszinierendes Forschungsfeld.
