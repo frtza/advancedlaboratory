@@ -46,7 +46,9 @@ die richtige Leuchtkombination zu testen.
 
 \begin{table}
 	\centering
-	\caption{.}
+	\caption{Unterschiedliche Fälle der Halbwellenplattenorientierung mit geforderten Leuchtanzeigen.
+			 Zum Vergleich sind auch die zugehörigen empfangenen Bits angegeben, die dann durch ein einzelnes
+			 Leuchten des jeweiligen Sensors im Normalbetrieb angezeigt werden.}
 	\label{tab:kombination}
 	\begin{tabular}{rccc}
 		\toprule
@@ -64,23 +66,34 @@ die richtige Leuchtkombination zu testen.
 	\end{tabular}
 \end{table}
 
-Dieses Vorgehen wird zunächst ohne \glqq{Eve}\grqq{} für \glqq{Alice}\grqq{} als Sender und \glqq{Bob}\grqq{} als Empfänger ausgeführt.
-Nach Aufnahme der ersten Messreihe kann \glqq{Eve}\grqq{} eingesetzt werden und wird dann sowohl für die Rolle des Senders als auch des
-Empfängers kalibriert. Dabei sollte eine veränderte Einstellung von \glqq{Alice}\grqq{} und \glqq{Bob}\grqq{} vermieden werden, um die
-Absicht eines zunächst unbemerkten Lauschers zu simulieren, der dann mittels der zweiten Messreihe enttarnt wird.
+Die darin beschriebene Übersetzung definiert für $\qty{0}{\degree}$ die \glqq{$+$}\grqq{} und für $\qty{45}{\degree}$ die
+\glqq{$\times$}\grqq{} Basis. Eine übereinstimmende Basiswahl liefert dann ein eindeutiges \glqq{0}\grqq{} oder \glqq{1}\grqq{}
+Ergebnis, während abweichende Basen zufällige Bits ergeben. Im Fall einzelner Photonen wäre dies quantenmechanisch garantiert,
+für die hier verwendeten Laserpulse sorgt bei ähnlicher Intensität die Schaltung für eine Zufallswahl.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.9\textwidth]{content/aufbau/schema.pdf}
-	\caption{. \cite{krypt}}
+	\includegraphics[width=0.85\textwidth]{content/aufbau/schema.pdf}
+	\caption{Schematischer Aufbau des Quantenkryptografie Analogieversuchs. \cite{krypt}}
 	\label{fig:schema}
 \end{figure}
+
+Das beschriebene Vorgehen wird zunächst ohne \glqq{Eve}\grqq{} nur für \glqq{Alice}\grqq{} als Sender und \glqq{Bob}\grqq{} als
+Empfänger ausgeführt. Nach Aufnahme der ersten Messreihe kann \glqq{Eve}\grqq{} eingesetzt werden und wird dann sowohl für die
+Rolle des Senders als auch des Empfängers kalibriert. Dabei sollte eine veränderte Einstellung von \glqq{Alice}\grqq{} und
+\glqq{Bob}\grqq{} vermieden werden, um die Absicht eines zunächst unbemerkten Lauschers zu simulieren, der dann mittels der
+zweiten Messreihe enttarnt wird. Wie in Abbildung \ref{fig:aufbau} zu sehen ist, kann die Steckplatte mit \glqq{Eve}\grqq{}
+an zwei Griffen aus dem Aufbau gehoben werden, ohne \glqq{Alice}\grqq{} und \glqq{Bob}\grqq{} zu stören. An dieser Stelle
+sei noch angemerkt, dass ein unbemerkter Lauschangriff auf Lichtimpulse statt einzelne Photonen prinzipiell leicht zu
+realisieren ist, indem mithilfe eines passenden Strahlteilers nur ein geringer Anteil des Strahls abgezweigt würde. Die
+vorliegende Umsetzung dient als Analgie zum Abhören von Quanten, welche ohne Änderung kopiert werden müssten. Ein solches
+Klonen ist physikalisch unmöglich, da dabei der initiale Zustand geändert wird.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0\textwidth]{content/aufbau/front.jpg}\\[1ex]
 	\includegraphics[width=1.0\textwidth]{content/aufbau/drauf.jpg}
-	\caption{.}
+	\caption{Vollständiger Aufbau des Quantenkryptografie Analogieversuchs.}
 	\label{fig:aufbau}
 \end{figure}
 
