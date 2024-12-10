@@ -7,8 +7,8 @@ def binom(k, n, p):
 
 K = np.arange(53)
 
-plt.plot(K[0:15], 100 * binom(K[0:15], 22, 0.250), 'D', ms=2, c='firebrick', alpha=0.2)
-plt.plot(K[4:21], 100 * binom(K[4:21], 22, 0.500), 'D', ms=2, c='goldenrod', alpha=0.3)
+plt.plot(K[0:15], 100 * binom(K[0:15], 22, 0.250), 'D', ms=3, c='firebrick', markeredgewidth=0, alpha=0.2)
+plt.plot(K[4:21], 100 * binom(K[4:21], 22, 0.500), 'D', ms=3, c='goldenrod', markeredgewidth=0, alpha=0.3)
 
 plt.plot(K[15:40], 100 * binom(K[15:40], 52, 0.500), 'o', ms=2, c='steelblue', label=r'Basisabgleich (Alice \& Bob)')
 plt.plot( K[0:15], 100 * binom(K[0:15], 52, 0.125),  'o', ms=2, c='firebrick', label=r'Bitfehler (Alice \& Bob)')
