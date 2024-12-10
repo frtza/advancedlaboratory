@@ -101,10 +101,32 @@ Klonen ist physikalisch unmöglich, da dabei der initiale Zustand geändert wird
 
 \subsection{Verfahren}
 
+Nach abgeschlossener Justierung und vollständigem Aufbau können nun die verschlüsselte Übertragung einer Nachricht sowie das
+Testen auf einen Abhörer implementiert werden.
 
 
 \subsubsection{Verschlüsselung einer Nachricht}
 
+Für \glqq{Alice}\grqq{} und \glqq{Bob}\grqq{} werden je 52 zufällige Basiseinstellungen sowie für \glqq{Alice}\grqq{} weitere 52
+willkürliche Bits generiert. Hier passiert dies über Pseudozufallszahlen, wogegen im Idealfall echter Zufall aus quantenmechanischen
+Prozessen wie Zerfall oder Transmission extrahiert würde. Die Anzahl der Messungen wird auf 52 festgelegt, um mit ausreichend hoher
+Sicherheit 20 Schlüsselbits zu erhalten und 4 Zeichen durch 5 Bits zu senden.
+
+Unter den festgelegten Basen sendet \glqq{Alice}\grqq{} nun die zufälligen Bits, \glqq{Bob}\grqq{} empfängt die resultierenden Signale.
+Im Anschluss tauschen sich \glqq{Alice}\grqq{} und \glqq{Bob}\grqq{} öffentlich über ihre jeweilige Basiswahl aus, halten dabei aber die
+gesendeten oder empfangenen Bitwerte geheim. Bei übereinstimmenden Basen werden die ersten 20 dieser Bits in der gegebenen Reihenfolge
+als Schlüssel definiert. \glqq{Alice}\grqq{} kodiert nun ihre Nachricht in Binärform und verschlüsselt diese durch binäre Addition der
+Schlüsselsequenz. Gleiche Ziffern ergeben \glqq{0}\grqq{} und verschiedene \glqq{1}\grqq{} als somit ebenfalls zufälliges Signal, das
+nun in einer gemeinsam bekannten Basis versendet wird. \glqq{Bob}\grqq{} dechiffriert die Nachricht durch erneute Addition des von ihm
+unabhängig gefundenen Schlüssels und erhält so den Text zurück.
 
 
 \subsubsection{Identifikation eines Abhörversuchs}
+
+Um einen Lauscher zu erkennen werden zunächst analog generierte Signale zwischen \glqq{Alice}\grqq{} und \glqq{Bob}\grqq{} ausgetauscht.
+Allerdings ist dazwischen \glqq{Eve}\grqq{} geschaltet, die ebenfalls 52 zufällige Basen einstellt und ihre Messung in eben dieser
+weitergibt. Ist dies erfolgt, informieren sich \glqq{Alice}\grqq{} und \glqq{Bob}\grqq{} wieder über die gemeinsamen Basen, übermitteln
+für diese aber ebenfalls die gesendeten und gemessenen Bitwerte öffentlich. Hatte nun \glqq{Eve}\grqq{} eine abweichende Basis, kann durch
+Zufall ein falscher Wert bei \glqq{Bob}\grqq{} ankommen, obwohl er dieselbe Basis wie \glqq{Alice}\grqq{} einstellt. Daran lässt sich
+unter Annahme statistischer Signifikanz ein Abhörversuch klar identifizieren. In realen Anwendungen würden die Schritte des Abhörtests
+und der verschlüsselten Übertragung in umgekehrter Reihenfolge durchgeführt werden.
