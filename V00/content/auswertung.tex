@@ -2,12 +2,26 @@
 
 \subsection{Verschlüsselung einer Nachricht}
 
+\begin{equation*}
+	f(k, n, p) = \pfrac{n!}{k!(n - k)!} p^k (1 - p)^{n - k}
+\end{equation*}
+
+\begin{figure}[H]
+	\includegraphics{build/kumuliert.pdf}
+	\caption{.}
+	\label{fig:kumuliert}
+\end{figure}
+
+\input{build/p20.tex}
+
 \begin{longtable}[c]{rccrcc}
 	\caption{.}
 	\label{tab:schluessel}
 	\\
 	\expandableinput{content/tabelle/schluessel.tex}
 \end{longtable}
+
+\input{build/p23.tex}
 
 \subsection{Identifikation eines Abhörversuchs}
 
@@ -17,3 +31,19 @@
 	\\
 	\expandableinput{content/tabelle/abhoeren.tex}
 \end{longtable}
+
+\begin{figure}[H]
+	\includegraphics{build/verteilung.pdf}
+	\caption{.}
+	\label{fig:verteilung}
+\end{figure}
+
+\input{build/p22.tex}
+
+\input{build/p11.tex}
+
+\input{build/p4.tex}
+
+\input{build/pp11.tex}
+
+\input{build/pp4.tex}
