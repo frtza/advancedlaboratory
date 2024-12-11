@@ -3,7 +3,7 @@ Quantenkryptographie ist ein faszinierender Bereich der Quantenphysik, der siche
 
 \subsection{Grundlagen der Quantenkryptographie}
 \subsubsection{Das BB84-Protokoll}
-Das BB84-Protokoll wurde 1984 von Charles Bennett und Gilles Brassard entwickelt und stellt das erste Quantenkryptographie-Protokoll dar. Es basiert auf der Übertragung von Qubits, den fundamentalen Informationsträgern in der Quantenmechanik, in zwei verschiedenen Basen: der rectilinearen Basis (\( |0\rangle, |1\rangle \)) und der diagonalen Basis (\( |+\rangle, |-\rangle \)). In der rectilinearen Basis entsprechen die Zustände horizontal (\(0^\circ\)) und vertikal (\(90^\circ\)) polarisierten Zuständen. Die diagonale Basis repräsentiert Zustände, die diagonal (\(45^\circ\)) und anti-diagonal (\(135^\circ\)) polarisiert sind.
+Das BB84-Protokoll wurde 1984 von Charles Bennett und Gilles Brassard entwickelt und stellt das erste Quantenkryptographie-Protokoll dar. Es basiert auf der Übertragung von Qubits, den fundamentalen Informationsträgern in der Quantenmechanik, in zwei verschiedenen Basen: der \textbf{+}-Basis (\( |0\rangle, |1\rangle \)) und der X-Basis (\( |+\rangle, |-\rangle \)). In der \textbf{+}-Basis entsprechen die Zustände horizontal (\(0^\circ\)) und vertikal (\(90^\circ\)) polarisierten Zuständen. Die diagonale Basis repräsentiert Zustände, die diagonal (\(-45^\circ\)) und anti-diagonal (\(45^\circ\)) polarisiert sind.
 
 Alice wählt zufällig eine dieser beiden Basen aus und sendet Qubits an Bob. Bob misst diese Qubits ebenfalls in einer zufällig gewählten Basis. Wenn die von Alice und Bob gewählten Basen übereinstimmen, können die Ergebnisse der Messungen zur Schlüsselerzeugung verwendet werden.
 
@@ -26,10 +26,10 @@ Im Verlauf des Experiments sendet Alice Lichtpulse in zufällig gewählten Polar
 \toprule
 \textbf{Polarisationswinkel} & \textbf{Basis} & \textbf{Bitwert} \\
 \midrule
-\(0^\circ\) & + & 0 \\
-\(90^\circ\) & + & 1 \\
-\(45^\circ\) & x & 0 \\
-\(135^\circ\) & x & 1 \\
+\(0^\circ\) & \textbf{+} & 0 \\
+\(90^\circ\) & \textbf{+} & 1 \\
+\(-45^\circ\) & X & 0 \\
+\(+45^\circ\) & X & 1 \\
 \bottomrule
 \end{tabular}
 \end{table}
