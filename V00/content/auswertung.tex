@@ -1,8 +1,9 @@
 \begin{figure}[H]
 	\includegraphics{build/kumuliert.pdf}
 	\vspace{-1.5\baselineskip}
-	\caption{Kumulierte Wahrscheinlichkeit für das Auftreten von mindestens $k = 20$ passenden Basispaaren in $n$ Messungen
-			 zur Schlüsselgeneration.}
+	\captionsetup{width=0.93\textwidth}
+	\caption{Kumulierte Verteilung für das Auftreten von mindestens $k = 20$ passenden Basispaaren mit $p = \qty{50}{\percent}$
+			 in $n$ Messungen zur Schlüsselgeneration.}
 	\label{fig:kumuliert}
 	\vspace{-2.5\baselineskip}
 \end{figure}
@@ -74,25 +75,47 @@ die einzelnen Schritte an der Apparatur ausgeführt werden. Dies ist offensichtl
 
 \subsection{Identifikation eines Abhörversuchs}
 
+Weiter wird \glqq{Eve}\grqq{} verbaut, um das vorher eingeführte Verfahren zum Prüfen auf einen Lauscher zu erproben. Die
+einzelnen Messungen werden wie zuvor in Tabelle \ref{tab:abhoeren} protokolliert, wobei die Basis von \glqq{Eve}\grqq{}
+zum Vergleich mitegeführt wird. Im realen Fall wäre diese \glqq{Alice}\grqq{} und \glqq{Bob}\grqq{} natürlich nicht bekannt.
+Es werden dann alle übereinstimmenden Einstellungen von \glqq{Alice}\grqq{} und \glqq{Bob}\grqq{} auf gesondert markierte
+Bitfehler untersucht, wobei auch die Basis von \glqq{Eve}\grqq{} im Falle einer Abweichung von \glqq{Alice}\grqq{} und \glqq{Bob}\grqq{}
+hervorgehoben ist. Aus der gesamten Messreihe hat das Ereignis
+\begin{equation*}
+	\text{Basis}_\text{Alice} = \text{Basis}_\text{\kern+1pt Bob} \neq \text{Basis}_\text{\kern+1pt Eve}
+\end{equation*}
+eine Wahrscheinlichkeit von $p = \qty{25}{\percent}$ und es gilt demnach $p = \qty{12.5}{\percent}$ für ein in diesem Fall
+fehlerhaft übertragenes Bit.
+
 \begin{longtable}[c]{rccrccc}
-	\caption{.}
+	\caption{Dokumentation des Signalaustauschs zur Untersuchung auf einen Lauscher. Übereinstimmende Basen von \glqq{Alice}\grqq{}
+			 und \glqq{Bob}\grqq{} sind \cbb{blau} hinterlegt. In diesem Fall korrekt übertragene Bits sind \cbg{grün} und falsche
+			 \cbr{rot} markiert. Zur Untersuchung der Fehlerrate ist es zusätzlich sinnvoll, Abweichungen von \glqq{Eve}\grqq{}
+			 zu gleicher Basiswahl von \glqq{Alice}\grqq{} und \glqq{Bob}\grqq{} \cby{gelb} hervorzuheben.}
 	\label{tab:abhoeren}
 	\\
 	\expandableinput{content/tabelle/abhoeren.tex}
 \end{longtable}
 
+Es werden hier 22 gleiche Basen von \glqq{Alice}\grqq{} und \glqq{Bob}\grqq{} eingestellt. In 11 Fällen weicht
+\glqq{Eve}\grqq{} davon ab, wodurch insgesamt 4 Bitfehler zwischen \glqq{Alice}\grqq{} und \glqq{Bob}\grqq{} entstehen.
+
 \begin{figure}[H]
 	\includegraphics{build/verteilung.pdf}
-	\caption{.}
+	\vspace{-1.5\baselineskip}
+	\captionsetup{width=0.93\textwidth}
+	\caption{Verteilungen für den Basisabgleich mit $p = \qty{50}{\percent}$ sowie dabei auftretende Abweichungen der Abhörbasis
+			 mit $p = \qty{25}{\percent}$ und des übertragenen Bits mit $p = \qty{12.5}{\percent}$ aus $n = 52$ Signalen. Dazu
+			 zeigen transparente Punkte die Verteilungen mit der gemessenen Anzahl der gleichen Basen als Vorwissen.}
 	\label{fig:verteilung}
+	\vspace{-2.5\baselineskip}
 \end{figure}
 
-\input{build/p22.tex}
-
-\input{build/p11.tex}
-
-\input{build/p4.tex}
-
-\input{build/pp11.tex}
-
-\input{build/pp4.tex}
+In Abbildung \ref{fig:verteilung} sind die Wahrscheinlichkeitsverteilungen der untersuchten Ereignisse visualisiert. Es ergibt sich
+$\input{build/p22.tex}$ für die gemessenen 22 gleichen Basisstellungen. Aus 52 Signalen entsprechen 11 mit $\input{build/p11.tex}$
+einem Fehler von \glqq{Eve}\grqq{} bei übereinstimmenden Basen von \glqq{Alice}\grqq{} und \glqq{Bob}\grqq{}. Für 4 Bitfehler gilt
+$\input{build/p4.tex}$ als Wahrscheinlichkeit. Wird für die abweichende Lauscherbasis und das inkorrekte Bit stattdessen $n = 22$
+aus der Anzahl gleicher Basen von \glqq{Alice}\grqq{} und \glqq{Bob}\grqq{} angesetzt, gelten $p = \qty{50}{\percent}$ für ersteren
+und $p = \qty{25}{\percent}$ für letzteren Fall. Dann folgt $\input{build/pp11.tex}$ für 11 Basisfehler und $\input{build/pp4.tex}$
+für 4 Bitfehler. Alle Anzahlen liegen im jeweiligen Bereich der maximalen Wahrscheinlichkeit und sind somit plausible Werte für eine
+fehlerfreie Durchfühurng der Messreihen.
