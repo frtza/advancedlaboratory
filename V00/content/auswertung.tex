@@ -20,24 +20,38 @@ bestimmen. Daraus folgt auch die in Abbildung \ref{fig:kumuliert} aufgetragene k
 \end{equation*}
 für das Auftreten von $k$ oder mehr Ereignissen mit Einzelwahrscheinlichkeit $p$ aus den insgesamt $n$ diskreten Messungen.
 Das zufällige Eintreten gleicher Basen hat $p = \qty{50}{\percent}$~und tritt bei den empfohlenen $n = 52$ Signalen in
-\input{build/p20.tex} der Fälle ausreichend oft für die geforderte Schlüssellänge $k = 20$ auf.
+$\input{build/p20.tex}$ der Fälle ausreichend oft für die geforderte Schlüssellänge $k = 20$ auf.
 
 
 
 \subsection{Verschlüsselung einer Nachricht}
 
+Wie zuvor beschrieben wird nun das Vorgehen zur Erzeugung eines zufälligen Schlüssels in Tabelle \ref{tab:schluessel}
+implementiert. Zur Veranschaulichung sind gleiche Basiseinstellungen farblich hervorgehoben und die
+Polarisationsdrehplattenpositionen von \glqq{Alice}\grqq{} angegeben.
+
 \begin{longtable}[c]{rccrcc}
-	\caption{.}
+	\caption{Dokumentation des Signalaustauschs zur Erzeugung einer Verschlüsselung. Übereinstimmende Basen sind
+			 \cbb{blau} hinterlegt. Zum besseren Verständnis sind zudem Winkeleinstellungen für die unterschiedlichen
+			 Kombinationen von Basis und Bit eingetragen.}
 	\label{tab:schluessel}
 	\\
 	\expandableinput{content/tabelle/schluessel.tex}
+	\vspace{2.5\baselineskip}
 \end{longtable}
 
-\input{build/p23.tex}
+Bei dieser Messreihe stimmen die Basen in 23 Fällen überein. Dieser Anzahl kann eine Wahrscheinlichkeit von
+$\input{build/p23.tex}$ zugeordnet werden, was nach Vergleich mit Abbildung \ref{fig:verteilung} relativ nah am Maximum
+der Verteilung und somit dem Erwartungswert liegt. Es folgt
+\begin{equation*}
+	\text{0 1 0 1 1 1 0 0 1 0 1 0 0 1 1 1 0 0 0 1 0 1 1}
+\end{equation*}
+als unabhängig von \glqq{Alice}\grqq{} und \glqq{Bob}\grqq{} bekannte Sequenz, deren erste 20 Stellen nun für den
+Schlüssel festgelegt werden.
 
 \begin{table}[H]
 	\centering
-	\caption{.}
+	\caption{Vorgehen von \glqq{Alice}\grqq{} zum Senden der Nachricht \texttt{TEST}.}
 	\label{tab:alice}
 	\begin{tabular}{lcccc}
 		\expandableinput{content/tabelle/alice.tex}
@@ -46,12 +60,17 @@ Das zufällige Eintreten gleicher Basen hat $p = \qty{50}{\percent}$~und tritt b
 
 \begin{table}[H]
 	\centering
-	\caption{.}
+	\caption{Vorgehen von \glqq{Bob}\grqq{} zum Empfangen der Nachricht \texttt{TEST}.}
 	\label{tab:bob}
 	\begin{tabular}{lcccc}
 		\expandableinput{content/tabelle/bob.tex}
 	\end{tabular}
 \end{table}
+
+Das Vorgehen zur Verschlüsselung durch Addition, zum Versenden der sicheren Nachricht, und dem abschließenden Entschlüsseln
+sind in Tabelle \ref{tab:alice} für \glqq{Alice}\grqq{} und Tabelle \ref{tab:bob} für \glqq{Bob}\grqq{} so nachgehalten, wie
+die einzelnen Schritte an der Apparatur ausgeführt werden. Dies ist offensichtlich erfolgreich, der gewählte Text
+{\texttt{TEST}} wird ohne Fehler übertragen.
 
 \subsection{Identifikation eines Abhörversuchs}
 
