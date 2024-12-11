@@ -1,16 +1,28 @@
-\section{Auswertung}
-
-\begin{equation*}
-	f(k, n, p) = \pfrac{n!}{k!(n - k)!} p^k (1 - p)^{n - k}
-\end{equation*}
-
 \begin{figure}[H]
 	\includegraphics{build/kumuliert.pdf}
-	\caption{.}
+	\vspace{-1.5\baselineskip}
+	\caption{Kumulierte Wahrscheinlichkeit für das Auftreten von mindestens $k = 20$ passenden Basispaaren in $n$ Messungen
+			 zur Schlüsselgeneration.}
 	\label{fig:kumuliert}
+	\vspace{-2.5\baselineskip}
 \end{figure}
 
-\input{build/p20.tex}
+\section{Auswertung}
+
+Als Serie gleichartiger und unabhängiger Events lassen sich die Wahrscheinlichkeiten für das Eintreten der verschiedenen
+Fälle in diesem Versuch mithilfe der Binomialverteilung
+\begin{equation*}
+	P(c = k) = f(k, n, p) = \pfrac{n!}{k!(n - k)!} \, p^k (1 - p)^{n - k}
+\end{equation*}
+bestimmen. Daraus folgt auch die in Abbildung \ref{fig:kumuliert} aufgetragene kumulierte Verteilung
+\begin{equation*}
+	P(c \geq k) = F(k, n, p) = \!\! \sum_{m \, = \, k}^n \! f(m, n, p)
+\end{equation*}
+für das Auftreten von $k$ oder mehr Ereignissen mit Einzelwahrscheinlichkeit $p$ aus den insgesamt $n$ diskreten Messungen.
+Das zufällige Eintreten gleicher Basen hat $p = \qty{50}{\percent}$~und tritt bei den empfohlenen $n = 52$ Signalen in
+\input{build/p20.tex} der Fälle ausreichend oft für die geforderte Schlüssellänge $k = 20$ auf.
+
+
 
 \subsection{Verschlüsselung einer Nachricht}
 
