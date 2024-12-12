@@ -1,0 +1,25 @@
+\section{Theorie}
+Kryptografie befasst sich mit der Verschlüsselung von Daten, sodass nur Sender und Empfänger die Nachricht lesen können. Die Sicherheit basiert entweder auf komplexen Algorithmen oder praktischen Hindernissen wie der Faktorisierung großer Zahlen. Klassische Verfahren sind jedoch nie absolut sicher, da Schlüssel geknackt werden können. Mithilfe der Quantenphysik lässt sich dieses Problem lösen, indem ein zufälliger Schlüssel generiert wird, der nur Sender und Empfänger bekannt ist. Abhörversuche werden dabei grundsätzlich erkannt.
+
+\subsection{One-Time Pad}
+Das One-Time Pad ist ein Schlüsselverfahren mit einem zufällig generierten schlüssel aus bits, welcher auf die zu verschlüsselnde Nachricht addiert werden soll.
+Hierbei sind die gelten die Regeln
+\begin{align*}
+    0 &+ 0 =0\\
+    1 &+0 =1\\
+    0&+1 =1\\
+    1&+1=0\; .
+\end{align*}
+Falls ein Abhörversuch stattfindet, kann die Nachricht also nur entschlüsselt werden, wenn der zufällig gewählte Schlüssel bekannt ist.
+Die Voraussetzungen für die Sicherheit des Verfahrens sind 
+\begin{enumerate}
+    \item Die Länge des Schlüssels entspricht der Nachrichten Länge,
+    \item Einmalige Verwendung eines Schlüssels,
+    \item Komplett zufällige Wahl des Schlüssels,
+    \item Schlüssel darf nur dem Sender und Empfänger bekannt sein.
+\end{enumerate}
+
+Punkt 3 und 4 sind im klassischen Sinn schwierig umzusetzen, da klassische Zufallszahlen bei genauer Betrachtung nur pseudozufällig sind als Ergebnis eines Algorithmus und die Übermittlung eines Schlüssels prinzipiell auch Abgefangen werden könnte.
+Diese Probleme können durch die Quantenmechanik gelöst werden.
+
+\section{Erstellung eines Schlüssels}
