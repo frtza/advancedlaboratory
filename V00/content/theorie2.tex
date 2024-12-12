@@ -1,6 +1,6 @@
 \section{Theorie}
 Kryptografie befasst sich mit der Verschlüsselung von Daten, sodass nur Sender und Empfänger die Nachricht lesen können. Die Sicherheit basiert entweder auf komplexen Algorithmen oder praktischen Hindernissen wie der Faktorisierung großer Zahlen. Klassische Verfahren sind jedoch nie absolut sicher, da Schlüssel geknackt werden können. Mithilfe der Quantenphysik lässt sich dieses Problem lösen, indem ein zufälliger Schlüssel generiert wird, der nur Sender und Empfänger bekannt ist. Abhörversuche werden dabei grundsätzlich erkannt.
-Der Analogieversuch wird mit dem sgn. BB84 Protokoll durchgeführt %\cite{bennett1984quantum}.
+Der Analogieversuch wird mit dem sgn. BB84 Protokoll durchgeführt \cite{bennett1984quantum}.
 \subsection{One-Time Pad}
 \label{sec:Blabla}
 Das One-Time Pad ist ein Schlüsselverfahren mit einem zufällig generierten schlüssel aus bits, welcher auf die zu verschlüsselnde Nachricht addiert werden soll.
@@ -109,7 +109,7 @@ In der Quantenkryptografie, insbesondere im Quanten-Schlüsselverteilungsverfahr
 Wenn ein Abhörer versucht, das quantenmechanische Signal zu messen und dabei zu klonen (um es weiterzugeben, ohne es zu verändern), verletzt er das No-Cloning-Theorem. Die Messung eines unbekannten Quantenzustandes verändert den Zustand. In der Praxis bedeutet dies, dass die Messung durch den Lauscher den Zustand des Signals verändert und diese Veränderung bei der späteren Überprüfung des Schlüssels erkennbar wird.
 
 In Verfahren wie BB84 vergleichen Alice und Bob nach der Übertragung ihre Basiswahl und die gemessenen Werte. Wenn Eve den Abhörversuch unternimmt, wird sie die Quantenbits messen, was den Zustand des Signals beeinflusst. Da sie den unbekannten Zustand nicht perfekt klonen kann, wird ihre Messung Fehler in die Kommunikation einführen. Diese Fehler können durch Alice und Bob entdeckt werden, wenn sie die Basis und die erhaltenen Messwerte vergleichen. 
-Wenn die Fehlerquote in den Schlüsseln zu hoch ist (normalerweise mehr als etwa 25\%), wissen Alice und Bob, dass ein Abhörer aktiv ist, da solche Fehler ohne Abhörversuch nicht auftreten würden.#
+Wenn die Fehlerquote in den Schlüsseln zu hoch ist (normalerweise mehr als etwa 25\%), wissen Alice und Bob, dass ein Abhörer aktiv ist, da solche Fehler ohne Abhörversuch nicht auftreten würden.
 
 \subsubsection{Einzelphotonen vs. klassischem Licht}
 Auch wenn es im Analogieversuch gerechtfertigt ist, einen Lichtpuls zu verwenden, würde das Verfahren bei quantenmechanischer Betrachtung unter der Verwendung eines Lichtpulses versagen. Grund hierfür ist, dass der gesamte Strahl die Information trägt und es somit möglich wäre einen kleinen Teil abzuzweigen,

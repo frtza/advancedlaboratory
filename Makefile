@@ -1,6 +1,7 @@
 all:
 	make -k -C template
 	make -k -C vorlage
+	make -k -C V00
 	make -k -C V01
 	make -k -C V16
 	make -k -C V44
@@ -11,6 +12,9 @@ template:
 
 vorlage:
 	make -C vorlage
+
+V00:
+	make -C V00
 
 V01:
 	make -C V01
@@ -27,9 +31,10 @@ V61:
 clean:
 	make -k -C template clean
 	make -k -C vorlage clean
+	make -k -C V00 clean
 	make -k -C V01 clean
 	make -k -C V16 clean
 	make -k -C V44 clean
 	make -k -C V61 clean
 
-.PHONY: clean template vorlage V01 V16 V44 V61
+.PHONY: clean template vorlage V00 V01 V16 V44 V61
